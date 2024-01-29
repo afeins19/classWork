@@ -1,2 +1,2 @@
 # Class Work  
-Code from my classs
+Code from my classes.
