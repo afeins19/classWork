@@ -1,0 +1,316 @@
+@misc{aboutrmp,
+  title = {{About RateMyProfessor.com}},
+ howpublished = {\url{https://www.ratemyprofessors.com/About.jsp}},
+  note = {Accessed: 2019-07-10}
+}
+
+@article{anderson1998customer,
+  title={Customer satisfaction and word of mouth},
+  author={Anderson, Eugene W},
+  journal={Journal of service research},
+  volume={1},
+  number={1},
+  pages={5--17},
+  year={1998},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}
+
+@article{best1976consumer,
+  title={Consumer response to unsatisfactory purchases: A survey of perceiving defects, voicing complaints, and obtaining redress},
+  author={Best, Arthur and Andreasen, Alan R},
+  journal={Law \& Soc'y Rev.},
+  volume={11},
+  pages={701},
+  year={1976},
+  publisher={HeinOnline}
+}
+
+@book{bird2009natural,
+  title={Natural language processing with Python: analyzing text with the natural language toolkit},
+  author={Bird, Steven and Klein, Ewan and Loper, Edward},
+  year={2009},
+  publisher={" O'Reilly Media, Inc."}
+}
+
+@misc{bls19occupation,
+  title = {{Computer and Information Technology Occupations}},
+  howpublished = {\url{https://www.bls.gov/ooh/computer-and-information-technology/home.htm}},
+  note = {Accessed: 2019-08-21}
+}
+
+
+
+
+
+
+@article{brown2015impact,
+  title={The impact of professor reputation and section attributes on student course selection},
+  author={Brown, Christopher L and Kosovich, Stephen M},
+  journal={Research in Higher Education},
+  volume={56},
+  number={5},
+  pages={496--509},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{clayson2014does,
+  title={What does ratemyprofessors. com actually rate?},
+  author={Clayson, Dennis E},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={39},
+  number={6},
+  pages={678--698},
+  year={2014},
+  publisher={Routledge}
+}
+
+
+@article{coladarci2007ratemyprofessors,
+  title={RateMyProfessors. com versus formal in-class student evaluations of teaching},
+  author={Coladarci, Theodore and Kornfield, Irv},
+  journal={Practical Assessment, Research \& Evaluation},
+  volume={12},
+  number={6},
+  pages={1--15},
+  year={2007}
+}
+
+@misc{composingprograms,
+  title = {{Composing Programs by Dr. John DeNero}},
+  howpublished = {\url{https://composingprograms.com/}},
+  note = {Accessed: 2019-07-18}
+}
+
+
+@article{davison2009we,
+  title={How do we rate? An evaluation of online student evaluations},
+  author={Davison, Elizabeth and Price, Jammie},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={34},
+  number={1},
+  pages={51--65},
+  year={2009},
+  publisher={Routledge}
+}
+
+@article{doyle81evaluating,
+  title={Evaluating teaching},
+  author={Doyle, Kenneth O},
+  year={1981},
+  publisher={DC Heath.}
+}
+
+@article{emery2003return,
+  title={Return to academic standards: A critique of student evaluations of teaching effectiveness},
+  author={Emery, Charles R and Kramer, Tracy R and Tian, Robert G},
+  journal={Quality assurance in Education},
+  volume={11},
+  number={1},
+  pages={37--46},
+  year={2003},
+  publisher={MCB UP Ltd}
+}
+
+@article{felton2004web,
+  title={Web-based student evaluations of professors: the relations between perceived quality, easiness and sexiness},
+  author={Felton, James and Mitchell, John and Stinson, Michael},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={29},
+  number={1},
+  pages={91--108},
+  year={2004},
+  publisher={Taylor \& Francis Ltd}
+}
+
+@article{felton2008attractiveness,
+  title={Attractiveness, easiness and other issues: Student evaluations of professors on ratemyprofessors. com},
+  author={Felton, James and Koper, Peter T and Mitchell, John and Stinson, Michael},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={33},
+  number={1},
+  pages={45--61},
+  year={2008},
+  publisher={Routledge}
+}
+
+@misc{howwetalk,
+  title = {{How We Talk About Our Teachers}},
+  howpublished = {\url{https://www.wnyc.org/story/how-we-talk-about-our-teachers/}},
+  note = {Accessed: 2019-07-10}
+}
+
+@misc{hussain19how,
+  title = {The companion website for the paper},
+  howpublished = {\url{hidden-for-anonymity-will-publish-when-accepted}},
+  note = {Accessed: 2019-07-24}
+}
+
+@misc{inside17falling,
+  title = {{Falling Behind}},
+  howpublished = {\url{https://www.insidehighered.com/news/2017/10/27/even-booms-student-enrollment-not-enough-degrees-keep-jobs-computer-science}},
+  note = {Accessed: 2019-08-21}
+}
+
+@article{kindred2005he,
+  title={“He will crush you like an academic ninja!”: Exploring teacher ratings on ratemyprofessors. com},
+  author={Kindred, Jeannette and Mohammed, Shaheed N},
+  journal={Journal of Computer-Mediated Communication},
+  volume={10},
+  number={3},
+  pages={JCMC10314},
+  year={2005},
+  publisher={Oxford University Press Oxford, UK}
+}
+
+@misc{lastlecture,
+  title = {{``Last Lecture: Achieving Your Childhood Dreams'' by Randy Pausch}},
+  howpublished = {\url{https://www.youtube.com/watch?v=ji5_MqicxSo}},
+  note = {Accessed: 2019-07-09}
+}
+
+@article{legg2012ratemyprofessors,
+  title={RateMyProfessors. com offers biased evaluations},
+  author={Legg, Angela M and Wilson, Janie H},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={37},
+  number={1},
+  pages={89--97},
+  year={2012},
+  publisher={Taylor \& Francis}
+}
+
+@article{mau2012comparing,
+  title={Comparing ratings: In-class (paper) vs. out of class (online) student evaluations},
+  author={Mau, Ronald R and Opengart, Rose},
+  journal={Higher Education Studies},
+  volume={2},
+  number={3},
+  pages={55},
+  year={2012},
+  publisher={Canadian Center of Science and Education}
+}
+@misc{montell06art,
+  title = {{The Art of the Bogus Rating}},
+  howpublished = {\url{https://www.chronicle.com/article/The-Art-of-the-Bogus-Rating/46887}},
+  note = {Accessed: 2019-07-10}
+}
+
+@article{nasser2002faculty,
+  title={Faculty views of student evaluation of college teaching},
+  author={Nasser, Fadia and Fresko, Barbara},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={27},
+  number={2},
+  pages={187--198},
+  year={2002},
+  publisher={Taylor \& Francis Group}
+}
+
+@article{newport1996rating,
+  title={Rating teaching in the USA: Probing the qualifications of student raters and novice teachers},
+  author={Newport, John F},
+  journal={Assessment and Evaluation in Higher Education},
+  volume={21},
+  number={1},
+  pages={17--21},
+  year={1996},
+  publisher={Taylor \& Francis}
+}
+
+@misc{pattern,
+  title = {{Pattern: Module for Computational Linguistics \& Psycholinguistics for English}},
+  howpublished = {\url{https://www.clips.uantwerpen.be/pages/pattern-en}},
+  note = {Accessed: 2019-07-22}
+}
+@misc{piazza,
+  title = {{Piazza: Free Q\&A Web Service}},
+  howpublished = {\url{https://piazza.com/}},
+  note = {Accessed: 2019-07-18}
+}
+
+@inproceedings{porter2013retaining,
+  title={Retaining nearly one-third more majors with a trio of instructional best practices in CS1},
+  author={Porter, Leo and Simon, Beth},
+  booktitle={Proceeding of the 44th ACM technical symposium on Computer science education},
+  pages={165--170},
+  year={2013},
+  organization={ACM}
+}
+
+@misc{randypausch,
+  title = {{Wikipedia entry for late Prof. Randy Pausch}},
+  howpublished = {\url{https://en.wikipedia.org/wiki/Randy_Pausch}},
+  note = {Accessed: 2019-07-09}
+}
+
+
+@article{remmers1927experimental,
+  title={Experimental data on the Purdue rating scale for instructors},
+  author={Remmers, Herman H and Brandenburg, GC},
+  journal={Educational Administration and Supervision},
+  volume={13},
+  number={6},
+  pages={399--406},
+  year={1927}
+}
+
+@article{seldin93use,
+  title={The use and abuse of student ratings of instruction},
+  author={Seldin, Peter},
+  journal={The Chronicle of Higher Education},
+  volume={21},
+  pages={40},
+  year={1993}
+}
+
+@misc{seleniumwebdriver,
+  title = {Selenium WebDriver},
+  howpublished = {\url{https://www.seleniumhq.org/projects/webdriver/}},
+  note = {Accessed: 2019-06-29}
+}
+
+@article{sonntag2009empirical,
+  title={An empirical test of the validity of student evaluations of teaching made on RateMyProfessors. com},
+  author={Sonntag, Michael E and Bassett, Jonathan F and Snyder, Timothy},
+  journal={Assessment \& Evaluation in Higher Education},
+  volume={34},
+  number={5},
+  pages={499--504},
+  year={2009},
+  publisher={Routledge}
+}
+
+@misc{textblob,
+  title = {{TextBlob:} Python Text Processing},
+  howpublished = {\url{https://textblob.readthedocs.io/en/dev/}},
+  note = {Accessed: 2019-06-29}
+}
+
+@misc{top20cscanada,
+  title = {Top {Canadian} Universities for Computer Science in 2018},
+  howpublished = {\url{https://www.usnews.com/education/best-global-universities/search?country=canada&subject=computer-science&name=}},
+  note = {Accessed: 2019-06-29}
+}
+
+@misc{top20csus,
+  title = {Top {US} Universities for Computer Science in 2018},
+  howpublished = {\url{https://www.usnews.com/education/best-global-universities/search?country=united-states&subject=computer-science&name=}},
+  note = {Accessed: 2019-06-29}
+}
+
+@inproceedings{tuzun2018computer,
+  title={Are computer science and engineering graduates ready for the software industry?: experiences from an industrial student training program},
+  author={Tuzun, Eray and Erdogmus, Hakan and Ozbilgin, Izzet Gokhan},
+  booktitle={Proceedings of the 40th International Conference on Software Engineering: Software Engineering Education and Training},
+  pages={68--77},
+  year={2018},
+  organization={ACM}
+}
+
+@misc{wikipediarmp,
+  title = {{Wikipedia entry for the RateMyProfessor.com}},
+  howpublished = {\url{https://en.wikipedia.org/wiki/RateMyProfessors.com}},
+  note = {Accessed: 2019-07-10}
+}
+

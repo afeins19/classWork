@@ -1,0 +1,12 @@
+Queues:
+
+First in First out data structure. (items added to end and removed from front)
+
+methods:
+    - Queue(): instantiates data structure
+    - enqueue(item): appends new item to rear of queue
+    - dequeue(): removes the front item of the queue
+    - isEmpty(): returns boolean val for state of list
+    - size(): returns length of queue
+
+-----------------------------------------------------------------------------------------------------------

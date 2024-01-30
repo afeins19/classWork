@@ -1,0 +1,32 @@
+INSERT INTO AuthorTable(AuthorID, FirstName, LastName) 
+VALUES(1, 'Rohld', 'Dahl'); 
+
+INSERT INTO AuthorTable(AuthorID, FirstName, LastName) 
+VALUES(2, 'Yuval', 'Harari'); 
+
+INSERT INTO AuthorTable(AuthorID, FirstName, LastName) 
+VALUES(3, 'Baris', 'Manco'); 
+
+
+
+
+
+
+
+INSERT INTO BookTable(ISBN, Title, AuthorID)        -- command to insert into book table
+VALUES(123, 'BFG', 1);                              -- inserting 'bfg' into book table 
+
+INSERT INTO BookTable(ISBN, Title, AuthorID)        -- command to insert into book table
+VALUES(132, 'Sapiens', 2);                          -- inserting 'sapiens' into book table 
+
+INSERT INTO BookTable(ISBN, Title, AuthorID)        -- command to insert into book table
+VALUES(131, 'Java 101', 3);                         -- inserting 'java 101' into book table
+
+
+
+INSERT INTO BookTable(ISBN, Title, AuthorID)        -- command to insert into book table 
+VALUES(123, 'Sapiens', 2);                          -- trying to add sapiens again into book table 
+
+INSERT INTO BookTable(ISBN, Title, AuthorID)        -- command to insert into book table 
+VALUES(123, 'The Fabric of the Cosmos', 4);         -- adding a book with an author which is not in the author table 
+

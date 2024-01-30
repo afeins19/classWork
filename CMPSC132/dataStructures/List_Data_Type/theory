@@ -1,0 +1,14 @@
+Linked List implementation:
+
+It is important to note that the location of the first item of the list must be explicitly specified.
+Once we know where the first item is, the first item can tell us where the second is, and so on.
+The external reference is often referred to as the head of the list. Similarly,
+the last item needs to know that there is no next item.
+
+Nodes:
+
+The basic building block for the linked list implementation is the node.
+Each node object must hold at least two pieces of information.
+First, the node must contain the list item itself.
+
+
