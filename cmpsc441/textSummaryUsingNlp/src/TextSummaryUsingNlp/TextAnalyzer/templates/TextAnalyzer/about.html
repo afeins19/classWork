@@ -1,0 +1,50 @@
+<!-- TextAnalyzer/templates/TextAnalyzer/about.html -->
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="center-container">
+    <div class="about-content">
+        <h2>About the Project</h2>
+        <br>
+
+        <h3>Project Overview</h3>
+        <p>
+            The Text Analyzer project is a web application designed to analyze and summarize textual content.
+            It incorporates natural language processing (NLP) techniques to perform sentiment analysis, emotion detection, and text summarization.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>Sentiment Analysis:</strong> Determines the sentiment (positive, negative, neutral) of the provided text.</li>
+            <li><strong>Emotion Detection:</strong> Identifies and categorizes emotions present in the text using NLP.</li>
+            <li><strong>Text Summarization:</strong> Utilizes transformers to generate concise summaries of input text.</li>
+        </ul>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li><strong>Django:</strong> Web framework used to build the project, providing a structured and scalable architecture.</li>
+            <li><strong>NLTK:</strong> Natural Language Toolkit for sentiment analysis and language processing tasks.</li>
+            <li><strong>transformers:</strong> Library for state-of-the-art natural language processing using pre-trained models.</li>
+            <li><strong>NRCLex:</strong> Python library for emotion analysis based on the NRC Emotion Lexicon.</li>
+            <li><strong>conda:</strong> Environment management tool for specifying and creating project environments.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>
+            The Text Analyzer project seamlessly integrates web development with advanced NLP techniques, offering users a powerful tool for text analysis.
+            With a user-friendly interface and a robust backend, the application provides valuable insights into sentiment, emotion, and content summarization.
+        </p>
+
+        <h3>Developers</h3>
+        <ul>
+            <li>Tyler Thompson</li>
+            <li>Love Divine</li>
+            <li>Aaron Feinberg</li>
+            <li>Joseph Porrino</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
