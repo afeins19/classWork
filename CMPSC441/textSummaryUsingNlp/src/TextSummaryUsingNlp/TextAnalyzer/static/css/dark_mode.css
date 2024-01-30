@@ -1,0 +1,19 @@
+body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.center-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    text-align: center;
+}
+
+.result-content {
+    text-align: center;
+}
