@@ -1,0 +1,112 @@
+Codes for my 2cond fav albion:
+
+
+Question 42: (Array Shuffle)
+
+/*
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
+package code2;
+import java.util.Random;
+
+/**
+*
+* @author aaronfeinberg
+*/
+public class ArrayShuffle {
+public ArrayShuffle(){
+
+}
+
+/**
+* @param args the command line arguments
+*/
+public static void main(String[] args) {
+
+int[] nums = {1,5,6,7,10};
+printArray(nums);
+
+nums = shuffle(nums);
+
+printArray(nums);
+
+}
+public static int[] shuffle(int[] nums)
+{
+Random rand = new Random();
+for(int i=0; i<nums.length;i++){
+int r = rand.nextInt(nums.length);
+int temp = nums[i];
+nums[i]=nums[r];
+nums[r]=temp;
+
+}
+return nums;
+}
+
+public static void printArray(int[] a){
+
+for(int i : a){
+System.out.print(i+",");
+}
+System.out.println("\n");
+
+}
+}
+
+
+
+
+
+
+Question 43: (Brick) 
+
+
+/*
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
+package code3;
+
+/**
+*
+* @author aaronfeinberg
+*/
+public class Brick {
+public Brick(){
+
+}
+
+/**
+* @param args the command line arguments
+*/
+public static void main(String[] args) {
+// TODO code application logic here
+makeBrick(3, 1, 8);
+makeBrick(3,1,9);
+makeBrick(3,2,10);
+makeBrick(3,2,8);
+makeBrick(3,2,9);
+}
+
+public static boolean makeBrick(int small, int big, int goal){
+if((big*5)+(small)>=goal)
+{
+if(goal%5<=small){
+System.out.println("We can make "+goal+" inches long bricks with "+small
++" small and "+big+" large bricks");
+return true;
+}
+}
+
+System.out.println("We can't make "+goal+" inches long bricks with "+small
++" small and "+big+" large bricks");
+return false;
+}
+
+
+
+}
