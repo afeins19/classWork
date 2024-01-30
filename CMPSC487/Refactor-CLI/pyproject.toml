@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "refactor-cli"
+version = "0.1.0"
+description = "this will test the linked list assignment"
+authors = ["afeins19 <afeinberg35@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flake8 = "^6.1.0"
+pytest = "^7.4.3"
+coverage = "^7.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

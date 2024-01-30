@@ -1,0 +1,30 @@
+#lang plait
+
+#|Problem 3
+return an association list from a list of symbols and a list of numbers
+define a type to allow for the output of a list of associations
+?_t is to be replaced with your appropriately named type   |#
+(define-type Pair
+  (symnum   [s : Symbol]
+            [n : Number]
+  )
+)
+
+(define (make-assoc [names : (Listof Symbol)] [values : (Listof Number)]): (Listof Pair)
+  (cond
+    [(and (= (length names) 1) (= (length values) 1))
+     (symnum (first names) (first values))
+    ]
+  )
+  
+
+  
+  )
+
+;;   (append (list (symnum (first names) (first (values)))) (make-assoc (rest names) (rest values))) 
+
+
+(test (make-assoc '(a b c d) '(1 2 3 4))
+      '((Pair 'a 1) (Pair 'b 2) s(Pair 'c 3) (Pair 'd 4)))
+(test (make-assoc '(t a c o tuesday) '(0 1 34 1729 42))
+      '((?_t 't 0) (?_t 'a 1) (?_t 'c 34) (?_t 'o 1729) (?_t 'tuesday 42)))

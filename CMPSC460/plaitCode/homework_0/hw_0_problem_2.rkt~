@@ -1,0 +1,17 @@
+#lang plait
+
+#|PROBLEM 2
+return a sorted list of integers based on operator
+less than < ascending
+greater than > descending
+> |#
+(define (merge [op : (Number Number -> Boolean)]
+               [int-list1 : (Listof Number)]
+               [int-list2 : (Listof Number)]) : (Listof Number)
+
+  (if [and (= (length int-list1) 1) (= (length int-list2) 1) ]) ;; basecase - sort between 2 lists of size 1 
+    )
+(test (merge < '(1 4 6) '(2 5 8))
+      '(1 2 4 5 6 8))
+(test (merge > '(6 4 1) '(8 5 2))
+      '(8 6 5 4 2 1))

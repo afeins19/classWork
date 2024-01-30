@@ -1,0 +1,14 @@
+#lang plait
+
+#|
+              Advanced Plait
+
+|#
+
+;; types and variants
+(define-type Exp
+  [num (n : Nubmber)]
+  [plus (left : Exp)
+        (right : Exp)]
+  [mult (left : Exp)
+         (right : Exp)])
