@@ -9,7 +9,9 @@
   (condE [tst : Exp]
         [thn : Exp]
         [els : Exp])
-  (boolE [b : Boolean]))
+  (boolE [b : Boolean])
+  ;;letE ;;takes in a binding ([<var> <value>]) <var> 
+  )
 
 (define-type Value
   [numV [a-number : Number]]
