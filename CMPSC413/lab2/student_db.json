@@ -1,0 +1,135 @@
+[
+    {
+        "id": 3767695919,
+        "f_name": "sakura",
+        "l_name": "lebedev",
+        "email": "sal0083@psu.edu",
+        "major": "mechanical engineering"
+    },
+    {
+        "id": 7155223959,
+        "f_name": "marta",
+        "l_name": "moreau",
+        "email": "mam5506@psu.edu",
+        "major": "history"
+    },
+    {
+        "id": 7354543612,
+        "f_name": "emeka",
+        "l_name": "nguyen",
+        "email": "emn7558@psu.edu",
+        "major": "philosophy"
+    },
+    {
+        "id": 5643143935,
+        "f_name": "aarav",
+        "l_name": "chen",
+        "email": "aac3335@psu.edu",
+        "major": "business administration"
+    },
+    {
+        "id": 4535395278,
+        "f_name": "sakura",
+        "l_name": "kov\u00e1\u010d",
+        "email": "sak5095@psu.edu",
+        "major": "environmental science"
+    },
+    {
+        "id": 5498749671,
+        "f_name": "nia",
+        "l_name": "sato",
+        "email": "nis5768@psu.edu",
+        "major": "english literature"
+    },
+    {
+        "id": 4988972698,
+        "f_name": "ingrid",
+        "l_name": "khan",
+        "email": "ink8717@psu.edu",
+        "major": "nursing"
+    },
+    {
+        "id": 6694742932,
+        "f_name": "anya",
+        "l_name": "rossi",
+        "email": "anr7159@psu.edu",
+        "major": "environmental science"
+    },
+    {
+        "id": 7288371543,
+        "f_name": "nia",
+        "l_name": "wong",
+        "email": "niw8051@psu.edu",
+        "major": "nursing"
+    },
+    {
+        "id": 2161677932,
+        "f_name": "jin",
+        "l_name": "novak",
+        "email": "jin8141@psu.edu",
+        "major": "art history"
+    },
+    {
+        "id": 2258525273,
+        "f_name": "yelena",
+        "l_name": "kov\u00e1\u010d",
+        "email": "yek9198@psu.edu",
+        "major": "music"
+    },
+    {
+        "id": 7593534835,
+        "f_name": "aarav",
+        "l_name": "ibrahim",
+        "email": "aai3201@psu.edu",
+        "major": "sociology"
+    },
+    {
+        "id": 3746581562,
+        "f_name": "hiroshi",
+        "l_name": "johansson",
+        "email": "hij4675@psu.edu",
+        "major": "environmental science"
+    },
+    {
+        "id": 8191492817,
+        "f_name": "anya",
+        "l_name": "khan",
+        "email": "ank7215@psu.edu",
+        "major": "music"
+    },
+    {
+        "id": 3995642185,
+        "f_name": "yelena",
+        "l_name": "sato",
+        "email": "yes3757@psu.edu",
+        "major": "english literature"
+    },
+    {
+        "id": 3219534777,
+        "f_name": "emeka",
+        "l_name": "wong",
+        "email": "emw6920@psu.edu",
+        "major": "mathematics"
+    },
+    {
+        "id": 6158876259,
+        "f_name": "chen",
+        "l_name": "moreau",
+        "email": "chm3942@psu.edu",
+        "major": "biology"
+    },
+    {
+        "id": 1162537529,
+        "f_name": "yusuf",
+        "l_name": "chen",
+        "email": "yuc9632@psu.edu",
+        "major": "art history"
+    },
+    {
+        "id": 5958594648,
+        "f_name": "aarav",
+        "l_name": "okeke",
+        "email": "aao4473@psu.edu",
+        "major": "nursing"
+    }
+]
