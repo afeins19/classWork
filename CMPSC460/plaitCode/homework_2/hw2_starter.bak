@@ -8,11 +8,7 @@
   (multE [l : Exp]
          [r : Exp])
   (appE [s : Symbol]
-        [arg : Exp])
-
-  ;; defining max expression [takes 2 expressions] 
-  (maxE [l : Exp]
-        [r : Exp]))
+        [arg : Exp]))
 
 (define-type Func-Defn
   (fd [name : Symbol] 
@@ -46,8 +42,6 @@
     [(s-exp-match? `{SYMBOL ANY} s)
      (appE (s-exp->symbol (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
-
-    
     [else (error 'parse "invalid input")]))
 
 (define (parse-fundef [s : S-Exp]) : Func-Defn
@@ -96,12 +90,7 @@
                     (interp (subst (numE (interp arg defs))
                                    (fd-arg fd)
                                    (fd-body fd))
-                            defs))]
-    ;; max interpreting
-    [(maxE l r) (cond
-                  [(> (interp l defs) (interp r defs)) ;; if l evaluates to greater than r return l
-                      (interp l defs)]  
-                  [else (interp r defs)])]))
+                            defs))]))
 
 (module+ test
   (test (interp (parse `2) empty)
@@ -154,10 +143,7 @@
                         (subst what for r))]
     [(multE l r) (multE (subst what for l)
                         (subst what for r))]
-    [(appE s arg) (appE s (subst what for arg))]
-    [(maxE l r) (maxE (subst what for l)
-                      (subst what for r))]
-    )) 
+    [(appE s arg) (appE s (subst what for arg))]))
 
 (module+ test
   (test (subst (parse `8) 'x (parse `9))
