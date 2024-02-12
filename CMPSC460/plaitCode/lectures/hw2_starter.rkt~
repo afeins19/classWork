@@ -8,7 +8,9 @@
   (multE [l : Exp]
          [r : Exp])
   (appE [s : Symbol]
-        [arg : Exp]))
+        [arg : Exp])
+  (maxE [l : Exp]    ;; max operator 
+        [r : Exp])) 
 
 (define-type Func-Defn
   (fd [name : Symbol] 
@@ -28,7 +30,7 @@
 ;; A FUNC-DEFN is
 ;; - `{define {SYMBOL SYMBOL} EXP}
 
-;; parse ----------------------------------------
+;; parse ---------------------------------------- 
 (define (parse [s : S-Exp]) : Exp
   (cond
     [(s-exp-match? `NUMBER s) (numE (s-exp->number s))]
@@ -42,7 +44,10 @@
     [(s-exp-match? `{SYMBOL ANY} s)
      (appE (s-exp->symbol (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
-    [else (error 'parse "invalid input")]))
+    [(s-exp-match? `{max ANY ANY} s)
+     (maxE (parse (second (s-exp->list s)))
+           (parse (third (s-exp->list s))))]
+    [else (error 'parse "invalid input")]))  
 
 (define (parse-fundef [s : S-Exp]) : Func-Defn
   (cond
@@ -78,6 +83,7 @@
     (parse-fundef `{define {double x} {+ x x}}))
   (define quadruple-def
     (parse-fundef `{define {quadruple x} {double {double x}}})))
+  
 
 ;; interp ----------------------------------------
 (define (interp [a : Exp] [defs : (Listof Func-Defn)]) : Number
@@ -89,9 +95,13 @@
     [(appE s arg) (local [(define fd (get-fundef s defs))]
                     (interp (subst (numE (interp arg defs))
                                    (fd-arg fd)
-                                   (fd-body fd))
-                            defs))]))
+                                   (fd-body fd)) defs))]
+    [(maxE l r) (cond
+                  [(> (interp l defs) (interp r defs))  (interp l defs)] ;; l > r return l 
+                  [else  (interp r defs)])] ;; return r otherwise 
+    ))
 
+  
 (module+ test
   (test (interp (parse `2) empty)
         2)
@@ -110,7 +120,13 @@
         16)
   (test (interp (parse `{quadruple 8})
                 (list double-def quadruple-def))
-        32))
+        32)
+  
+  ;; Testing interp with maxE
+  (test (interp (parse `{max 1 2}) (list)) 2)
+
+  )  
+
 
 ;; get-fundef ----------------------------------------
 (define (get-fundef [s : Symbol] [defs : (Listof Func-Defn)]) : Func-Defn
@@ -143,7 +159,15 @@
                         (subst what for r))]
     [(multE l r) (multE (subst what for l)
                         (subst what for r))]
-    [(appE s arg) (appE s (subst what for arg))]))
+    [(appE s arg) (appE s (subst what for arg))]
+    [(maxE l r) (maxE (subst what for l)
+                        (subst what for r))]  
+    )) 
+
+ 
+;; DONT FORGET !!!!!!!!!!!!!!!
+;; (require "hw2_starter.rkt")
+
 
 (module+ test
   (test (subst (parse `8) 'x (parse `9))

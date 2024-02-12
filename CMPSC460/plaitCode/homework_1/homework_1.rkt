@@ -156,5 +156,5 @@ attempt 1
   (type-case Tree tr
     [(node v l r) (flatten l (cons v (flatten r nums)))]
     [(leaf v) (cons v nums)]
-  ))
+  )) 
 

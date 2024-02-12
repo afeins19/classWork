@@ -8,17 +8,17 @@
   (multE [l : Exp]
          [r : Exp])
   (appE [s : Symbol]
-        [arg : Exp])
+        [args : (Listof Exp)]) ;; appE can now take a list of expresssions
 
   ;; defining max expression [takes 2 expressions] 
   (maxE [l : Exp]
-        [r : Exp]))
+        [r : Exp])) 
 
 (define-type Func-Defn
   (fd [name : Symbol] 
-      [arg : Symbol] 
+      [args : (Listof Symbol)] ;; funcs can accept 0 to n args 
       [body : Exp]))
-
+ 
 (module+ test
   (print-only-errors #t))
 
@@ -43,47 +43,66 @@
     [(s-exp-match? `{* ANY ANY} s)
      (multE (parse (second (s-exp->list s)))
             (parse (third (s-exp->list s))))]
-    [(s-exp-match? `{SYMBOL ANY} s)
+    [(s-exp-match? `{SYMBOL ANY ...} s)
      (appE (s-exp->symbol (first (s-exp->list s)))
-           (parse (second (s-exp->list s))))]
+           ;; now maps function arguments to any of the expressions 
+           (map parse (rest (s-exp->list s))))]
 
-    
+    ;; max keyword now makes a maxE expression
+    [(s-exp-match? `{max ANY ANY} s)
+     (maxE (parse (second (s-exp->list s)))
+           (parse (third (s-exp->list s))))]
+
+    ;; if an argument or symbol doesnt match any of these...
     [else (error 'parse "invalid input")]))
 
 (define (parse-fundef [s : S-Exp]) : Func-Defn
   (cond
-    [(s-exp-match? `{define {SYMBOL SYMBOL} ANY} s)
-     (fd (s-exp->symbol (first (s-exp->list (second (s-exp->list s)))))
-         (s-exp->symbol (second (s-exp->list (second (s-exp->list s)))))
-         (parse (third (s-exp->list s))))]
+    [(s-exp-match? `{define {SYMBOL SYMBOL ...} ANY} s)
+     (fd (s-exp->symbol (first (s-exp->list (second (s-exp->list s))))) ;; function name 
+         ;; now converts each of the arguments in the list into a symbol 
+         (map  s-exp->symbol (rest (s-exp->list (second (s-exp->list s)))))
+         (parse (third (s-exp->list s))))] ;; function body
     [else (error 'parse-fundef "invalid input")]))
+
 
 (module+ test
   (test (parse `2) 
         (numE 2))
   (test (parse `x)
         (idE 'x))
-  (test (parse `{+ 2 1})
+  (test (parse `{+ 2 1}) 
         (plusE (numE 2) (numE 1)))
   (test (parse `{* 3 4})
         (multE (numE 3) (numE 4)))
   (test (parse `{+ {* 3 4} 8})
-        (plusE (multE (numE 3) (numE 4))
-               (numE 8)))
+        (plusE (multE (numE 3) (numE 4)) (numE 8)))
+  
+
+     
+      ;; testing appE
+  
+  ;; accepting multiple expressions 
   (test (parse `{double 9})
-        (appE 'double (numE 9)))
+        (appE 'double (list (numE 9))))
+  
+  ;; accepting a function call with zero arguments - should return empty list 
+  (test (parse `{double}) 
+        (appE 'double '()))
+  
   (test/exn (parse `{{+ 1 2}})
-            "invalid input")
+            "invalid input") ;; invalid since we need some args 
 
   (test (parse-fundef `{define {double x} {+ x x}})
-        (fd 'double 'x (plusE (idE 'x) (idE 'x))))
+        (fd 'double '(x) (plusE (idE 'x) (idE 'x))))
   (test/exn (parse-fundef `{def {f x} x})
-            "invalid input")
+            "invalid input") 
 
   (define double-def
     (parse-fundef `{define {double x} {+ x x}}))
   (define quadruple-def
-    (parse-fundef `{define {quadruple x} {double {double x}}})))
+    (parse-fundef `{define {quadruple x} {double {double x}}}))) 
+
 
 ;; interp ----------------------------------------
 (define (interp [a : Exp] [defs : (Listof Func-Defn)]) : Number
@@ -92,16 +111,20 @@
     [(idE s) (error 'interp "free variable")]
     [(plusE l r) (+ (interp l defs) (interp r defs))]
     [(multE l r) (* (interp l defs) (interp r defs))]
-    [(appE s arg) (local [(define fd (get-fundef s defs))]
-                    (interp (subst (numE (interp arg defs))
-                                   (fd-arg fd)
+
+    ;; handles interping on nested functions
+    [(appE s args) (local [(define fd (get-fundef s defs))]
+                    (interp (subst-multi (map (λ(arg) (numE (interp arg defs))) args) ;; now subbst-multi handles interactions with substs
+                                   (fd-args fd)
                                    (fd-body fd))
-                            defs))]
+                            defs))] 
     ;; max interpreting
     [(maxE l r) (cond
                   [(> (interp l defs) (interp r defs)) ;; if l evaluates to greater than r return l
-                      (interp l defs)]  
-                  [else (interp r defs)])]))
+                      (interp l defs)] 
+                  [else (interp r defs)])]) ;; otherwise return r 
+
+  )
 
 (module+ test
   (test (interp (parse `2) empty)
@@ -121,7 +144,8 @@
         16)
   (test (interp (parse `{quadruple 8})
                 (list double-def quadruple-def))
-        32))
+        32)
+  )
 
 ;; get-fundef ----------------------------------------
 (define (get-fundef [s : Symbol] [defs : (Listof Func-Defn)]) : Func-Defn
@@ -154,11 +178,36 @@
                         (subst what for r))]
     [(multE l r) (multE (subst what for l)
                         (subst what for r))]
-    [(appE s arg) (appE s (subst what for arg))]
+    
+    ;; handling multiple substitutions for a function with 0 or more args
+    [(appE s args) (appE s (map (λ(arg) (subst what for arg)) args))]
+    
     [(maxE l r) (maxE (subst what for l)
-                      (subst what for r))]
-    )) 
+                      (subst what for r))] 
+    ))
 
+;; doing multiple arguments 
+(define (subst-multi [whats : (Listof Exp)] [fors : (Listof Symbol)] [fd-body : Exp])
+  (cond
+    [(and (empty? whats) (empty? fors)) fd-body] ;; base case - empty list of args so just return body 
+    [(not (= (length whats) (length fors))) (error 'subst "wrong # arguments")] ;; error - number of args doesnt match number of vals passed in 
+
+        ;; recursive case - not empty or wrong num vals so perform subst 
+    ;; allows subst to handle expression calls as substs in other expressions?
+    [else (subst-multi (rest whats) (rest fors) (subst (first whats) (first fors) fd-body))] 
+
+    ) 
+)
+
+;; testing subst-multi
+#|
+(module+ test
+  (test (subst-multi '(8 9) '(`x) (`double `x)) 
+       (error 'subst "wrong # arguments"))
+)
+|#
+   
+;;  testing subst itself
 (module+ test
   (test (subst (parse `8) 'x (parse `9))
         (numE 9))
@@ -171,4 +220,6 @@
   (test (subst (parse `8) 'x (parse `{* y x}))
         (parse `{* y 8}))
   (test (subst (parse `8) 'x (parse `{double x}))
-        (parse `{double 8})))
+        (parse `{double 8}))
+)
+
