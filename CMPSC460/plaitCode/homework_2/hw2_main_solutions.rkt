@@ -298,14 +298,9 @@ dupe check:
         (fd 'five (list) (numE 5)))
 
   ;;--- bonus test ---
-<<<<<<< HEAD
-  ;;(test/exn (parse-fundef `{define {f x x} x})
-            ;;"bad syntax")
-=======
   (test/exn (parse-fundef `{define {f x x} x})
             "bad syntax")
 
->>>>>>> ff7f14cc369b06bda894dc6eb09810ca4341a3e9
   
   (test/exn (parse-fundef `{def {f x} x})
             "invalid input")
