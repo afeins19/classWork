@@ -62,44 +62,16 @@
   (cond
     [(s-exp-match? `{define {SYMBOL SYMBOL ...} ANY} s)
      (fd (s-exp->symbol (first (s-exp->list (second (s-exp->list s))))) ;; function name 
-         ;; now converts each of the arguments in the list into a symbol
-
-         ;; --- checking for duplicates ---
-
-         ;; depe-check needs a hashTable during recursion so i call with empty one at first 
-         (cond 
-           [(equal? (dupe-check (map  s-exp->symbol (rest (s-exp->list (second (s-exp->list s)))))(make-hash '()))  #t)
-            (error 'parse-fundef "bad syntax")];; dupes found return error 
-           [else(map  s-exp->symbol (rest (s-exp->list (second (s-exp->list s)))))])
-
+         ;; now converts each of the arguments in the list into a symbol 
+         (map  s-exp->symbol (rest (s-exp->list (second (s-exp->list s)))))
          (parse (third (s-exp->list s))))] ;; function body
-    [else (error 'parse-fundef "invalid input")])) 
-
-
+    [else (error 'parse-fundef "invalid input")]))
 
 #|
-dupe check:
+(define (dupcheck arg accum)
 
-1. base case -> empty args list so no dupes
-2. recursive case -> non empty args list
-3. is current arg in hash table? yes -> dupe found return true, no -> recurse again
-4. recurse again with arg thats been checked removed from argsList and its hash added to hashTable 
+  )
 |#
-
-(define (dupe-check argList hashTable)
-  (cond
-    [(empty? argList) #f]  ;; base case -> empty arguments so we checked em all
-    [else 
-     (let ([arg (first argList)])  ;; arg is the current one being checked
-       (cond
-         [(equal? (hash-ref hashTable arg) (none))  ;; recursive case -> if hash of arg is none, arg hasnt been seen yet 
-           (begin ;; lets us sequence operations
-             (hash-set! hashTable arg (some #t)) ;; first add the arg to the hash table
-             (dupe-check (rest argList) hashTable)
-             )]
-         [else #t]))]))  ;; otherwise, we found a dupe  
-
-
 
 (module+ test
   (test (parse `2) 
@@ -298,14 +270,9 @@ dupe check:
         (fd 'five (list) (numE 5)))
 
   ;;--- bonus test ---
-<<<<<<< HEAD
   ;;(test/exn (parse-fundef `{define {f x x} x})
             ;;"bad syntax")
-=======
-  (test/exn (parse-fundef `{define {f x x} x})
-            "bad syntax")
 
->>>>>>> ff7f14cc369b06bda894dc6eb09810ca4341a3e9
   
   (test/exn (parse-fundef `{def {f x} x})
             "invalid input")
