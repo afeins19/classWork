@@ -1,0 +1,15 @@
+#lang plait
+
+
+;; --- unlet function ---
+(define (remove n alst)
+  (type-case (Listof Number) alst
+    [(cons frst rst) (if (= frst n) 
+                    (remove n rst) ;; recurse if we match to without cons-ing removing the item from the list 
+                    (cons frst (remove n rst)))] ;; recurse
+    [else empty] 
+))
+
+(test (remove 4 '(1 2 3 4 5 4 1 2))
+      '(1 2 3 5 1 2)
+      )

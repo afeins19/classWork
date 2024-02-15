@@ -92,14 +92,14 @@
     [(multE l r) (num* (interp l env) (interp r env))]
     [(letE n rhs body) (interp body
                                (extend-env
-                                (bind n (interp rhs env))
+                                (bind n (interp rhs env)) ;; bind rhs to the symbol and use that eval whats in the body 
                                 env))]
     [(lamE n body) (closV n body env)]
     [(appE fun arg) (type-case Value (interp fun env)
                       [(closV n body c-env)
                        (interp body
                                (extend-env
-                                (bind n
+                                (bind n 
                                       (interp arg env))
                                 c-env))]
                       [else (error 'interp "not a function")])]))

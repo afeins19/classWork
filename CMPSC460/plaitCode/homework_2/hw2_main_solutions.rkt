@@ -272,7 +272,6 @@
   ;;--- bonus test ---
   ;;(test/exn (parse-fundef `{define {f x x} x})
             ;;"bad syntax")
-
   
   (test/exn (parse-fundef `{def {f x} x})
             "invalid input")

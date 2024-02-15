@@ -1,35 +1,66 @@
-def kmp_match(text, pat):
-    # convert text to list
-    text = list(text)
+"""KMP Pattern Matching Algorithm"""
 
-    # define an lps table
-    lps = [0 for i in len(text)]
+def lps_generator(pattern: str) -> []:
+    pattern = list(pattern) # converts the string into a list for traversal
 
-    cur_pat = 0 # iterator to hold the start of the next match search
+    lps = [0] # create a list to hold our lps table
+    pattern_length = 0 # length of the current pattern
+    idx = 1 # initial search position
 
-    for i in range(len(text)):
-        cur = text[i]
+    # search through the entire pattern
+    while idx < len(pattern):
 
-        while pat[cur_pat] == text[i] and i < len(text):
-            lps[i] = cur_pat + 1
-            cur_pat+=1
-            i+=1
+        # match
+        if pattern[idx] == pattern[pattern_length]:
+            lps.append(pattern_length+1) # add length+1 to position lps[idx]
+            idx+=1 # increment index
+            pattern_length+=1 # increment length
 
-def make_lps(lps, pat, pat_len):
-    lps_len = 0 # length of the (lps) longest prefix suffix
-
-    lps[0] = 0
-    i = 1
-
-    while i < pat_len:
-        if pat[i] == pat[pat_len]:
-            pat_len+=1
-            lps[i] = pat_len
-            i+=1
-
+        # charecters don't match
         else:
-            if pat_len != 0:
-                pat_len = lps[pat_len-1]
+            if pattern_length!=0:
+                pattern_length=lps[pattern_length-1] # return len back to the last matching char
+            lps.append(0) # start over again with pattern search
+            idx+=1
+
+    return lps
+
+def kmp_string_search(text, pattern, lps=None):
+    if not lps:
+        lps = lps_generator(pattern)  # generate lps
+
+    # printing data
+    print("\n---- KMP Search -----")
+    print(f"Text=[{text}]")
+    print(f"Patt=[{pattern}]")
+    print(f"\nLPS={list(pattern)}\n\t{[str(i) for i in lps]}\n")
+
+    # declare tracking variables
+    text_index, pattern_index = 0, 0
+    match_idx = []  # list to store the start indices of matches
+
+    while text_index < len(text):
+        # chars match -> advance
+        if text[text_index] == pattern[pattern_index]:
+            pattern_index += 1
+            text_index += 1
+
+            # check for a full match of the pattern
+            if pattern_index == len(pattern):
+                match_idx.append(text_index - pattern_index)  # append the start index of the match
+                pattern_index = lps[pattern_index - 1]  # reset pattern_index using the LPS
+
+        # mismatch
+        else:
+            # if pattern_index is not 0 -> reset it using LPS to skip comparisons
+            if pattern_index != 0:
+                pattern_index = lps[pattern_index - 1]
+            # advance if pattern index is 0
             else:
-                lps[i] = 0
-                i += 1
+                text_index += 1
+
+    print(f"Match Indicies: {match_idx}")
+    return match_idx
+
+test_pattern = 'ababa'
+kmp_string_search('abababbababa', test_pattern)
