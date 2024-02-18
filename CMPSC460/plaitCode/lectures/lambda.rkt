@@ -2,17 +2,26 @@
 
 (define-type Value
   (numV [n : Number])
+  (boolV [b : Boolean])
   (closV [arg : Symbol]
          [body : Exp]
-         [env : Env]))
+         [env : Env])
+  )
 
 (define-type Exp
   (numE [n : Number])
+  (boolE [b : Boolean])
   (idE [s : Symbol])
   (plusE [l : Exp] 
          [r : Exp])
   (multE [l : Exp]
          [r : Exp])
+
+  ;; equality expression 
+  (eqE  [l : Exp]
+        [r : Exp])
+
+
   (letE [n : Symbol] 
         [rhs : Exp]
         [body : Exp])
@@ -37,6 +46,10 @@
 (define (parse [s : S-Exp]) : Exp
   (cond
     [(s-exp-match? `NUMBER s) (numE (s-exp->number s))]
+
+    ;; Boolean Expressions
+    [(s-exp-match? `BOOLEAN s) (boolE (s-exp->boolean s))]
+    
     [(s-exp-match? `SYMBOL s) (idE (s-exp->symbol s))]
     [(s-exp-match? `{+ ANY ANY} s)
      (plusE (parse (second (s-exp->list s)))
@@ -84,9 +97,18 @@
             "invalid input"))
 
 ;; interp ----------------------------------------
+#|
+    
+    num+ & num*
+interp only ingests expressions and the env and does not actually apply any operator to the values
+so interp calls num+ and num* to actually perform the evaluation. These then return a numV of representing
+the sum. 
+ 
+|#
 (define (interp [a : Exp] [env : Env]) : Value
   (type-case Exp a
     [(numE n) (numV n)]
+    [(boolE b) (boolV b)]
     [(idE s) (lookup s env)]
     [(plusE l r) (num+ (interp l env) (interp r env))]
     [(multE l r) (num* (interp l env) (interp r env))]
@@ -103,7 +125,7 @@
                                       (interp arg env))
                                 c-env))]
                       [else (error 'interp "not a function")])]))
-
+ 
 (module+ test
   (test (interp (parse `2) mt-env)
         (numV 2))

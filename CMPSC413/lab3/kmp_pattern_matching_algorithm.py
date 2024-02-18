@@ -1,4 +1,14 @@
-"""KMP Pattern Matching Algorithm"""
+"""KMP Pattern Matching Algorithm
+
+lps_generator:
+    makes the lps table for the pattern. This is then passed
+    to the kmp_string_search() function to be used to make the
+    search more efficient.
+
+kmp_string_search:
+    uses the lps table to traverse the text
+    and avoid making unecessary comparisons.
+"""
 
 def lps_generator(pattern: str) -> []:
     pattern = list(pattern) # converts the string into a list for traversal

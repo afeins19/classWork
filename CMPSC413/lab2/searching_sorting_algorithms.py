@@ -77,7 +77,6 @@ def insertion_sort(data=[]):
         # putting the data in the right spot
         data[comp_idx + 1] = key
 
-
     return data
 
 def bubble_sort(data=[]):
