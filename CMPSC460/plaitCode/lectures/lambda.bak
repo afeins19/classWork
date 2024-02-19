@@ -2,7 +2,7 @@
 
 (define-type Value
   (numV [n : Number])
-  (boolV [b : Symbol])
+  (boolV [b : Boolean])
   (closV [arg : Symbol]
          [body : Exp]
          [env : Env])
@@ -10,7 +10,7 @@
 
 (define-type Exp
   (numE [n : Number])
-  (boolE [b : Symbol])
+  (boolE [b : Boolean])
   (idE [s : Symbol])
   (plusE [l : Exp] 
          [r : Exp])
@@ -47,21 +47,8 @@
   (cond
     [(s-exp-match? `NUMBER s) (numE (s-exp->number s))]
 
-    ;; Custom Boolean Expressions
-    ;; booleans are just a type so no complex behavior 
-    [(or(s-exp-match? `true s) (s-exp-match? `false s)) (boolE (s-exp->symbol s))]
-
-
-    ;; Equality Operator
-    [(s-exp-match? `{= ANY ANY})
-     ;; checking for comparison of numbers only 
-     (cond
-       [(and (s-exp-match? `NUMBER (parse (second s))) (s-exp-match? `NUMBER (parse (third s)))) ;; case - comparing 2 numbers -> return boolean
-        (cond
-          [(= (second s) (third s)) 'true] ;; if 2 numbers are equal -> return true
-          [else 'false])] ;; otherwise -> return false 
-       [else (error 'parse "not a boolean")])]
-       
+    ;; Boolean Expressions
+    [(s-exp-match? `BOOLEAN s) (boolE (s-exp->boolean s))]
     
     [(s-exp-match? `SYMBOL s) (idE (s-exp->symbol s))]
     [(s-exp-match? `{+ ANY ANY} s)
@@ -115,11 +102,11 @@
     num+ & num*
 interp only ingests expressions and the env and does not actually apply any operator to the values
 so interp calls num+ and num* to actually perform the evaluation. These then return a numV of representing
-the sum.  
+the sum. 
  
 |#
 (define (interp [a : Exp] [env : Env]) : Value
-  (type-case Exp a     
+  (type-case Exp a
     [(numE n) (numV n)]
     [(boolE b) (boolV b)]
     [(idE s) (lookup s env)]
