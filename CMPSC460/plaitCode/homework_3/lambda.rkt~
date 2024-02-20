@@ -2,7 +2,7 @@
 
 (define-type Value
   (numV [n : Number])
-  (boolV [b : Boolean]) 
+  (boolV [b : Symbol])
   (closV [arg : Symbol]
          [body : Exp]
          [env : Env])
@@ -10,12 +10,7 @@
 
 (define-type Exp
   (numE [n : Number])
-  
-  (trueE) ;; a true boolean exp
-  (falseE) ;; a false boolean exp
-
-  ;; (boolE [b : Boolean])
-  
+  (boolE [b : Symbol])
   (idE [s : Symbol])
   (plusE [l : Exp] 
          [r : Exp])
@@ -26,20 +21,10 @@
   (eqE  [l : Exp]
         [r : Exp])
 
-  ;; if expression
-  (ifE [cnd : Exp] ;; condition 
-       [thn : Exp] ;; then (do this if true)
-       [els : Exp]) ;; else 
 
-  (letE [n : Symbol] ;; variable
-        [rhs : Exp] ;; binding 
-        [body : Exp]) ;; expression to execute 
-
-  ;; defining unlet
-  (unletE [s : Symbol] ;; unlet this symbol 
-          [body : Exp]) ;; expression to evaluate 
-
-  
+  (letE [n : Symbol] 
+        [rhs : Exp]
+        [body : Exp])
   (lamE [n : Symbol]
         [body : Exp])
   (appE [fun : Exp]
@@ -57,7 +42,16 @@
 (module+ test
   (print-only-errors #t))
 
-#|
+;; parse ----------------------------------------
+(define (parse [s : S-Exp]) : Exp
+  (cond
+    [(s-exp-match? `NUMBER s) (numE (s-exp->number s))]
+
+    ;; Custom Boolean Expressions
+    ;; booleans are just a type so no complex behavior 
+    [(or(s-exp-match? `true s) (s-exp-match? `false s)) (boolE (s-exp->symbol s))]
+
+
     ;; Equality Operator
     [(s-exp-match? `{= ANY ANY})
      ;; checking for comparison of numbers only 
@@ -67,40 +61,7 @@
           [(= (second s) (third s)) 'true] ;; if 2 numbers are equal -> return true
           [else 'false])] ;; otherwise -> return false 
        [else (error 'parse "not a boolean")])]
-|#
-
-;; parse ----------------------------------------
-
-#|
-
-letE
-  
-  (letE [n : Symbol] 
-        [rhs : Exp]
-        [body : Exp])
-
-|#
-(define (parse [s : S-Exp]) : Exp
-  (cond
-    [(s-exp-match? `NUMBER s) (numE (s-exp->number s))]
-
-    ;; returns a default true or false evaluation of the expression 
-    [(s-exp-match? `true s) (trueE)]
-    [(s-exp-match? `false s) (falseE)]
-
-    ;; boolE
-    ;;[(s-exp-match? `true s) (boolV #t)]
-    ;;[(s-exp-match? `false s) (boolV #f)] 
-
-    ;; equality parsing 
-    [(s-exp-match? `{= ANY ANY} s)
-     (eqE (parse (second (s-exp->list s))) (parse (third (s-exp->list s)))) ;; recurses into expressions 
-     ]
-
-    ;; if statement parsing 
-    [(s-exp-match? `{if ANY ANY ANY} s)
-     (ifE (parse (second (s-exp->list s))) (parse (third (s-exp->list s))) (parse (fourth (s-exp->list s))))
-    ]
+       
     
     [(s-exp-match? `SYMBOL s) (idE (s-exp->symbol s))]
     [(s-exp-match? `{+ ANY ANY} s)
@@ -109,21 +70,13 @@ letE
     [(s-exp-match? `{* ANY ANY} s)
      (multE (parse (second (s-exp->list s)))
             (parse (third (s-exp->list s))))]
-
-    ;; parsing letE
     [(s-exp-match? `{let {[SYMBOL ANY]} ANY} s)
-
-    ;; extracting the symbol and giving it a generic name -> bs 
-     (let ([bs (s-exp->list (first 
+     (let ([bs (s-exp->list (first
                              (s-exp->list (second
                                            (s-exp->list s)))))])
-
-       ;; linking the symbol to a new letE with the body given by whats passed in 
        (letE (s-exp->symbol (first bs))
              (parse (second bs))
              (parse (third (s-exp->list s)))))]
-
-    
     [(s-exp-match? `{lambda {SYMBOL} ANY} s)
      (lamE (s-exp->symbol (first (s-exp->list 
                                   (second (s-exp->list s)))))
@@ -131,7 +84,7 @@ letE
     [(s-exp-match? `{ANY ANY} s)
      (appE (parse (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
-    [else (error 'parse "invalid input")])) 
+    [else (error 'parse "invalid input")]))
 
 (module+ test
   (test (parse `2)
@@ -168,33 +121,14 @@ the sum.
 (define (interp [a : Exp] [env : Env]) : Value
   (type-case Exp a     
     [(numE n) (numV n)]
-
-    ;; evaluating booleans to represent actual bool vals  
-    [(trueE) (boolV #t)] 
-    [(falseE) (boolV #f)] 
-
-    ;; eqE expressions 
-    [(eqE l r) (num= (interp l env) (interp r env))]
-
-    ;; ifE expressions 
-    [(ifE cnd thn els)
-     (if (cnd-check (interp cnd env)) ;; if condition is a boolV
-         (interp thn env) ;; interp the task
-         (interp els env)) ;; otherwise, interp the else 
-     ]
-    
+    [(boolE b) (boolV b)]
     [(idE s) (lookup s env)]
     [(plusE l r) (num+ (interp l env) (interp r env))]
     [(multE l r) (num* (interp l env) (interp r env))]
-
-
-    
     [(letE n rhs body) (interp body
                                (extend-env
                                 (bind n (interp rhs env)) ;; bind rhs to the symbol and use that eval whats in the body 
                                 env))]
-
-    
     [(lamE n body) (closV n body env)]
     [(appE fun arg) (type-case Value (interp fun env)
                       [(closV n body c-env)
@@ -204,15 +138,6 @@ the sum.
                                       (interp arg env))
                                 c-env))]
                       [else (error 'interp "not a function")])]))
-
-
-;; checks if the condition for our if statement is a boolV expression 
-(define (cnd-check [cnd : Value])
-  (type-case Value cnd
-    [(boolV cnd) cnd]
-    [else (error 'interp "not a boolean")] 
-  )
-)
  
 (module+ test
   (test (interp (parse `2) mt-env)
@@ -229,7 +154,6 @@ the sum.
   (test (interp (parse `{+ {* 2 3} {+ 5 8}})
                 mt-env)
         (numV 19))
-
   (test (interp (parse `{lambda {x} {+ x x}})
                 mt-env)
         (closV 'x (plusE (idE 'x) (idE 'x)) mt-env))
@@ -248,7 +172,7 @@ the sum.
                 mt-env)
         (numV 5))
   (test (interp (parse `{{lambda {x} {+ x x}} 8})
-                mt-env) 
+                mt-env)
         (numV 16))
 
   (test/exn (interp (parse `{1 2}) mt-env)
@@ -270,46 +194,17 @@ the sum.
                                   {x65536 1}}}}}})
                 mt-env)))
 
-
- ;; testing booleans
-
-(module+ test
-  (test (interp (parse `{if {= 2 {+ 1 1}} 7 8})
-                mt-env)
-        (interp (parse `7)
-                mt-env))
-  (test (interp (parse `{if false {+ 1 {lambda {x} x}} 9})
-                mt-env)
-        (interp (parse `9)
-                mt-env))
-  (test (interp (parse `{if true 10 {+ 1 {lambda {x} x}}})
-                mt-env)
-        (interp (parse `10)
-                mt-env))
-  (test/exn (interp (parse `{if 1 2 3})
-                    mt-env)
-            "not a boolean")
-  )
-
 ;; num+ and num* ----------------------------------------
-;; '_a -> unknown type
-;; checks to make sure operations are being done on numbers only 
-(define (num-op [op : (Number Number -> '_a)] [l : Value] [r : Value]) : '_a
+(define (num-op [op : (Number Number -> Number)] [l : Value] [r : Value]) : Value
   (cond
    [(and (numV? l) (numV? r))
-    (op (numV-n l) (numV-n r))]
+    (numV (op (numV-n l) (numV-n r)))]
    [else
     (error 'interp "not a number")]))
-
-
 (define (num+ [l : Value] [r : Value]) : Value
-  (numV (num-op + l r)))
+  (num-op + l r))
 (define (num* [l : Value] [r : Value]) : Value
-  (numV (num-op * l r)))
-
-;;num= operator for comparing numbers
-(define (num= [l : Value] [r : Value]) : Value 
-   (boolV (num-op = l r))) ;; replaces op in the cond with the equals sign 
+  (num-op * l r))
 
 (module+ test
   (test (num+ (numV 1) (numV 2))
@@ -338,4 +233,4 @@ the sum.
   (test (lookup 'y (extend-env
                     (bind 'x (numV 9))
                     (extend-env (bind 'y (numV 8)) mt-env)))
-        (numV 8))) 
+        (numV 8)))
