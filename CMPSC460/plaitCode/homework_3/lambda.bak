@@ -109,7 +109,7 @@ letE
     [(s-exp-match? `{* ANY ANY} s)
      (multE (parse (second (s-exp->list s)))
             (parse (third (s-exp->list s))))]
-    
+
     ;; parsing letE
     [(s-exp-match? `{let {[SYMBOL ANY]} ANY} s)
 
@@ -182,7 +182,7 @@ the sum.
          (interp thn env) ;; interp the task
          (interp els env)) ;; otherwise, interp the else 
      ]
-     
+    
     [(idE s) (lookup s env)]
     [(plusE l r) (num+ (interp l env) (interp r env))]
     [(multE l r) (num* (interp l env) (interp r env))]
