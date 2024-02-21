@@ -37,7 +37,7 @@
 
   ;; defining unlet
   (unletE [s : Symbol] ;; unlet this symbol 
-          [body : Exp]) ;; expression to evaluate 
+          [body : Exp]) ;; expression to evaluate with local env 
 
   
   (lamE [n : Symbol]
@@ -126,8 +126,12 @@ letE
     ;; parsing unlet
     ;; 1. unbind last occurance of symbol from the env (unlet function?) 
     ;; 2. parse expression
-    ;; want to return the 
-    [(s-exp-match? `{unlet SYMBOL {ANY}} s) (DO STUFF)]
+    ;; want to return the                              
+    [(s-exp-match? `{unlet SYMBOL {ANY}} s)
+     ;; make the var being unbound into an id
+     ;; parse the expression in the scope of the given unletE 
+     (unletE (idE (s-exp->symbol (second (s-exp->list s)))) (parse (third (s-exp->list s))))
+     ]
 
     
     [(s-exp-match? `{lambda {SYMBOL} ANY} s)
@@ -137,7 +141,13 @@ letE
     [(s-exp-match? `{ANY ANY} s)
      (appE (parse (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
-    [else (error 'parse "invalid input")])) 
+    [else (error 'parse "invalid input")]))
+
+(define (unbind [var : Symbol] [env : (Listof Binding)])
+  (if (equal? (first (first (s-exp->list env)) var)) ;; if we found the binding 
+      (extend-env (mt-env) (rest env)) ;; return the env with that binding removed 
+      (unbind var (rest env)))) ;; otherwise recurse with the rest of the list and keep looking 
+
 
 (module+ test
   (test (parse `2)
@@ -173,7 +183,7 @@ the sum.
 |#
 (define (interp [a : Exp] [env : Env]) : Value
   (type-case Exp a     
-    [(numE n) (numV n)]
+    [(numE n) (numV n)] 
 
     ;; evaluating booleans to represent actual bool vals  
     [(trueE) (boolV #t)] 
@@ -198,6 +208,10 @@ the sum.
                                (extend-env
                                 (bind n (interp rhs env)) ;; bind rhs to the symbol and use that eval whats in the body 
                                 env))]
+
+    ;; unletE expressions
+    [(unletE s) ;; --> FINISH THIS <--
+     ()]
 
     
     [(lamE n body) (closV n body env)]
