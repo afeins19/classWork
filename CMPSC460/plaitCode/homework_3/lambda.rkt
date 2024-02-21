@@ -123,6 +123,12 @@ letE
              (parse (second bs))
              (parse (third (s-exp->list s)))))]
 
+    ;; parsing unlet
+    ;; 1. unbind last occurance of symbol from the env (unlet function?) 
+    ;; 2. parse expression
+    ;; want to return the 
+    [(s-exp-match? `{unlet SYMBOL {ANY}} s) (DO STUFF)]
+
     
     [(s-exp-match? `{lambda {SYMBOL} ANY} s)
      (lamE (s-exp->symbol (first (s-exp->list 
@@ -186,7 +192,6 @@ the sum.
     [(idE s) (lookup s env)]
     [(plusE l r) (num+ (interp l env) (interp r env))]
     [(multE l r) (num* (interp l env) (interp r env))]
-
 
     
     [(letE n rhs body) (interp body
