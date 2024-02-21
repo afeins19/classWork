@@ -210,8 +210,10 @@ the sum.
                                 env))]
 
     ;; unletE expressions
-    [(unletE s) ;; --> FINISH THIS <--
-     ()]
+    ;; interp on the body of the unletE
+    ;; use the env thats just the scope of the unletE...
+    [(unletE s body) ;; --> FINISH THIS <--
+     (interp body (unbind s env))] 
 
     
     [(lamE n body) (closV n body env)]
