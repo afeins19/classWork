@@ -6,6 +6,9 @@
   (closV [arg : Symbol]
          [body : Exp]
          [env : Env])
+  
+  (thunkV [body : Exp]
+          [env : Env])
   )
 
 (define-type Exp
@@ -43,7 +46,12 @@
   (lamE [n : Symbol]
         [body : Exp])
   (appE [fun : Exp]
-        [arg : Exp]))
+        [arg : Exp])
+
+  ;; delay only takes the function code 
+  (delayE [body : Exp])
+  (forceE [body : Exp])
+  )
 
 (define-type Binding
   (bind [name : Symbol]
@@ -127,29 +135,55 @@ letE
     ;; 1. unbind last occurance of symbol from the env (unlet function?) 
     ;; 2. parse expression
     ;; want to return the                              
-    [(s-exp-match? `{unlet SYMBOL {ANY}} s)
+    [(s-exp-match? `{unlet SYMBOL ANY} s)
      ;; make the var being unbound into an id
      ;; parse the expression in the scope of the given unletE 
-     (unletE (idE (s-exp->symbol (second (s-exp->list s)))) (parse (third (s-exp->list s))))
-     ]
+     (unletE (s-exp->symbol (second (s-exp->list s))) (parse (third (s-exp->list s))))]
 
     
     [(s-exp-match? `{lambda {SYMBOL} ANY} s)
      (lamE (s-exp->symbol (first (s-exp->list 
                                   (second (s-exp->list s)))))
            (parse (third (s-exp->list s))))]
+    
+    [(s-exp-match? `{delay ANY} s) (delayE (parse (second (s-exp->list s))))]
+    [(s-exp-match? `{force ANY} s) (forceE (parse (second (s-exp->list s))))]
+
+    
     [(s-exp-match? `{ANY ANY} s)
      (appE (parse (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
     [else (error 'parse "invalid input")]))
 
+;; removes the unletted var from a given environment 
 (define (unbind [var : Symbol] [env : (Listof Binding)])
+  (type-case (Listof Binding) env
+    [(cons b rst-env) (if (symbol=? (bind-name b) var)
+                          rst-env
+                          (cons b (unbind var rst-env)))]
+    [empty empty]  
+    ))
+
+  #|
   (if (equal? (first (first (s-exp->list env)) var)) ;; if we found the binding 
       (extend-env (mt-env) (rest env)) ;; return the env with that binding removed 
-      (unbind var (rest env)))) ;; otherwise recurse with the rest of the list and keep looking 
+      (unbind var (rest env)))) ;; otherwise recurse with the rest of the list and keep looking
+  |#
+;; creating sample env's
+(define sampenv (list (bind 'f (numV 1)) (bind 'g (numV 2))))
+(define sampenv2 (list (bind 'f (numV 1)) (bind 'g (numV 2)) (bind 'f (numV 3))))
 
-
+;; testing unbind function
 (module+ test
+  ;; testing unbinding missing value (empty case) 
+  (test (unbind 'x sampenv) sampenv)
+
+  ;; testing some valid unbinds
+  (test (unbind 'f sampenv2) (list (bind 'g (numV 2)) (bind 'f (numV 3)))))
+
+
+
+(module+ test 
   (test (parse `2)
         (numE 2))
   (test (parse `x)
@@ -172,6 +206,39 @@ letE
   (test/exn (parse `{{+ 1 2}})
             "invalid input"))
 
+
+;; testing unlet 
+(module+ test
+  (test/exn (interp (parse `{let {[x 1]}
+                              {unlet x
+                                     x}})
+                    mt-env)
+            "free variable")
+  (test (interp (parse `{let {[x 1]}
+                          {+ x {unlet x 1}}})
+                mt-env)
+        (interp (parse `2) mt-env))
+  (test (interp (parse `{let {[x 1]}
+                          {let {[x 2]}
+                            {+ x {unlet x x}}}})
+                mt-env)
+        (interp (parse `3) mt-env))
+  (test (interp (parse `{let {[x 1]}
+                          {let {[x 2]}
+                            {let {[z 3]}
+                              {+ x {unlet x {+ x z}}}}}})
+                mt-env)
+        (interp (parse `6) mt-env))
+  (test (interp (parse `{let {[f {lambda {z}
+                                   {let {[z 8]}
+                                     {unlet z
+                                            z}}}]}
+                          {f 2}})
+                mt-env)
+(interp (parse `2) mt-env)) 
+
+  )
+
 ;; interp ----------------------------------------
 #|
     
@@ -189,7 +256,7 @@ the sum.
     [(trueE) (boolV #t)] 
     [(falseE) (boolV #f)] 
 
-    ;; eqE expressions 
+    ;; eqE expressions  
     [(eqE l r) (num= (interp l env) (interp r env))]
 
     ;; ifE expressions 
@@ -224,7 +291,30 @@ the sum.
                                 (bind n 
                                       (interp arg env))
                                 c-env))]
-                      [else (error 'interp "not a function")])]))
+                      [else (error 'interp "not a function")])]
+
+    [(delayE body) (thunkV body env)] ;; create a thunk (function with env but no parameters) 
+
+   
+    [(forceE body)
+     (type-case Value (interp body env) ;; compare value against all possible values 
+       [(thunkV body env) (interp body env)] ;; if its a thunk, actually run the function 
+       [else (error 'interp "not a thunk")]
+     )
+    ]
+
+    ))
+
+#|(define-type Value
+  (numV [n : Number])
+  (boolV [b : Boolean]) 
+  (closV [arg : Symbol]
+         [body : Exp]
+         [env : Env])
+  
+  (thunkV [body : Exp]
+          [env : Env])
+  )|#
 
 
 ;; checks if the condition for our if statement is a boolV expression 
@@ -233,6 +323,25 @@ the sum.
     [(boolV cnd) cnd]
     [else (error 'interp "not a boolean")] 
   )
+)
+
+(module+ test
+  (test/exn (interp (parse `{force 1})
+                    mt-env)
+            "not a thunk")
+  (test (interp (parse `{force {if {= 8 8} {delay 7} {delay 9}}})
+                mt-env)
+        (interp (parse `7)
+                mt-env))
+  (test (interp (parse `{let {[d {let {[y 8]}
+                                   {delay {+ y 7}}}]}
+                          {let {[y 9]}
+                            {force d}}})
+                mt-env)
+        (interp (parse `15)
+                mt-env))
+
+
 )
  
 (module+ test
