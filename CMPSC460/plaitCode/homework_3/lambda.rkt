@@ -279,7 +279,7 @@ the sum.
     ;; unletE expressions
     ;; interp on the body of the unletE
     ;; use the env thats just the scope of the unletE...
-    [(unletE s body) ;; --> FINISH THIS <--
+    [(unletE s body) 
      (interp body (unbind s env))] 
 
     
@@ -340,8 +340,6 @@ the sum.
                 mt-env)
         (interp (parse `15)
                 mt-env))
-
-
 )
  
 (module+ test
