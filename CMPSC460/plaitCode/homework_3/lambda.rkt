@@ -8,16 +8,13 @@
          [env : Env])
   
   (thunkV [body : Exp]
-          [env : Env])
-  )
+          [env : Env]))
 
 (define-type Exp
   (numE [n : Number])
   
   (trueE) ;; a true boolean exp
   (falseE) ;; a false boolean exp
-
-  ;; (boolE [b : Boolean])
   
   (idE [s : Symbol])
   (plusE [l : Exp] 
@@ -295,15 +292,10 @@ the sum.
 
     [(delayE body) (thunkV body env)] ;; create a thunk (function with env but no parameters) 
 
-   
     [(forceE body)
      (type-case Value (interp body env) ;; compare value against all possible values 
        [(thunkV body env) (interp body env)] ;; if its a thunk, actually run the function 
-       [else (error 'interp "not a thunk")]
-     )
-    ]
-
-    ))
+       [else (error 'interp "not a thunk")])]))
 
 #|(define-type Value
   (numV [n : Number])
