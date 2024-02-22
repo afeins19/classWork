@@ -61,5 +61,17 @@ Deliverables:
 
 """
 
+# will be an element in the priority queue, contains the value and the priority
+class priorityQueueElement():
+    def __init__(self, priority, value):
+        self.p = priority
+        self.v = value
+    def __repr__(self):
+        return f"[{self.p} , {self.v}]"
+
 class priorityQueueArray():
-    pass
+    def __init__(self):
+        self.pq = []
+
+    def insert(self, priority, value):
+        self.pq.append(priorityQueueElement(priority, value))
