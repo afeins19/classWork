@@ -69,7 +69,7 @@ class studentDb:
         self.test_majors = [i.lower() for i in self.test_majors]
 
     def make_students(self, count = 0):
-        for i in range(count-1):
+        for i in range(count):
             # make a student
             s = {}
 
@@ -306,3 +306,17 @@ print(f"Sorting Already Sorted Data: { sorted_student_dbs_by_param_times }")
 print(f"\nAlgorithm performance over sorts by parameter times { sorted_student_dbs_by_param_times }")
 #print(sort_times)
 
+    # Running Algorithms on the same student Data:
+same_student_times = {}
+
+test_same_student_data_db = studentDb()
+test_same_student_data_db.make_students(1) # creating a db with 1 student
+test_same_student_data_db.students = [test_same_student_data_db.students[0] for i in range(20)] # 20 of same student
+test_same_student_data_db.write_to_db() # overwriting db with 20 copies of same student
+
+print(test_same_student_data_db.students)
+
+for p in params:
+    # run and time each algo over the file of same students
+    same_student_times[p] = {f: get_run_times(sort_funcs[f], param=p) for f in sort_funcs.keys()}
+    print(f"\n{p}: {same_student_times[p]}")
