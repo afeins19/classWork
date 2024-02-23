@@ -145,7 +145,7 @@ letE
     
     [(s-exp-match? `{delay ANY} s) (delayE (parse (second (s-exp->list s))))]
     [(s-exp-match? `{force ANY} s) (forceE (parse (second (s-exp->list s))))]
-
+    
     
     [(s-exp-match? `{ANY ANY} s)
      (appE (parse (first (s-exp->list s)))
@@ -160,6 +160,17 @@ letE
                           (cons b (unbind var rst-env)))]
     [empty empty]  
     ))
+
+;; before: env = ((binding y 5) (binding g 4) (binding x 5) (binding x 239847))
+;; (unbind x env)
+#|
+   (1) (cons (binding y 5) cons( (binding g 4)  (binding x 239847) ))
+
+|#
+
+
+
+
 
   #|
   (if (equal? (first (first (s-exp->list env)) var)) ;; if we found the binding 
@@ -211,11 +222,13 @@ letE
                                      x}})
                     mt-env)
             "free variable")
-  (test (interp (parse `{let {[x 1]}
-                          {+ x {unlet x 1}}})
+  (test (interp (parse `{let {[x 1]} ;env: x=1
+                          {+ x {unlet x 1}}}) 
                 mt-env)
         (interp (parse `2) mt-env))
-  (test (interp (parse `{let {[x 1]}
+
+  
+  (test (interp (parse `{let {[x 1]} 
                           {let {[x 2]}
                             {+ x {unlet x x}}}})
                 mt-env)
@@ -292,7 +305,7 @@ the sum.
 
     [(delayE body) (thunkV body env)] ;; create a thunk (function with env but no parameters) 
 
-    [(forceE body)
+    [(forceE body)   
      (type-case Value (interp body env) ;; compare value against all possible values 
        [(thunkV body env) (interp body env)] ;; if its a thunk, actually run the function 
        [else (error 'interp "not a thunk")])]))
@@ -326,7 +339,7 @@ the sum.
         (interp (parse `7)
                 mt-env))
   (test (interp (parse `{let {[d {let {[y 8]}
-                                   {delay {+ y 7}}}]}
+                                   {delay {+ y 7}}}]} ;env: y=8
                           {let {[y 9]}
                             {force d}}})
                 mt-env)
