@@ -11,8 +11,6 @@ def decimal_to_binary(val):
         bin_val = [str(cur_bit)] + bin_val
         val = val // 2
 
-
-
     return ''.join(bin_val)
 
 print(decimal_to_binary(46))
