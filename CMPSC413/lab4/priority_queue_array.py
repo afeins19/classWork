@@ -15,21 +15,21 @@ changePriority(item, newPriority)
 Changes the priority of an item to a new priority value.
 
 Exercise-1:
-Write down the algorithm and implement a priority queue (both min and max) using an array of
-elements. Determine the runtime for each of the following:
-    1. In the worst case, describe the runtime to insert an item into the priority queue.
-    2. In the worst case, describe the runtime to remove the element with highest priority.
-    3. In the worst case, describe the runtime to change the priority of an element (find an element and
-    change the priority of the element).
-    Show an example for each.
+    Write down the algorithm and implement a priority queue (both min and max) using an array of
+    elements. Determine the runtime for each of the following:
+        1. In the worst case, describe the runtime to insert an item into the priority queue.
+        2. In the worst case, describe the runtime to remove the element with highest priority.
+        3. In the worst case, describe the runtime to change the priority of an element (find an element and
+        change the priority of the element).
+        Show an example for each.
 
 Exercise-2:
-Write down the algorithm and implement a priority queue (both min and max) using a linked list of
-elements. Determine the runtime for each of the following:
-    1. In the worst case, describe the runtime to insert an item into the priority queue.
-    2. In the worst case, describe the runtime to remove the element with highest priority.
-    3. In the worst case, describe the runtime to change the priority of an element.
-    Show an example for each.
+    Write down the algorithm and implement a priority queue (both min and max) using a linked list of
+    elements. Determine the runtime for each of the following:
+        1. In the worst case, describe the runtime to insert an item into the priority queue.
+        2. In the worst case, describe the runtime to remove the element with highest priority.
+        3. In the worst case, describe the runtime to change the priority of an element.
+        Show an example for each.
 
 
 Exercise-3:
