@@ -61,26 +61,9 @@ Deliverables:
  Recorded video of demonstration (~5 minutes)
 
 """
+from base_classes import comparator, priorityQueueElement
 
 
-
-# will be an element in the priority queue, contains the value and the priority
-class priorityQueueElement():
-    def __init__(self, priority, value):
-        self.p = priority
-        self.v = value
-    def __repr__(self):
-        return f"[{self.p} , {self.v}]"
-
-class comparator():
-    # returns a function to be used in lambda based on the ordering scheme of the priority queue
-    def __init__(self, is_min=True): # by default sorts by min priority first
-        self.is_min = is_min
-
-    def compare(self, a,b):
-        if self.is_min:
-            return a < b
-        return a > b
 class priorityQueueArray():
     def __init__(self):
         self.pq = []
@@ -116,6 +99,20 @@ class priorityQueueArray():
     def delete(self):
         if not self.is_empty():
             del self.pq[0]
+
+    def change_priority(self, new_priority, val):
+        # finds element, deletes it and creates a new one with the updated priority
+        element_idx = None
+
+        for i in range(len(self.pq)):
+            if sel.pq[i].val == val:
+                element = self.pq[i]
+                break
+
+        if element_idx:
+            del self.pq[element_idx]  # drop element from the list
+
+        self.insert(new_priority, val) # add it back as a new element with different priority
 
 
 a = priorityQueueArray()
