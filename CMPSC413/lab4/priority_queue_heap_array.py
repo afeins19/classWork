@@ -42,7 +42,7 @@ class PriorityQueueHeap():
         for i, element in enumerate(self.pq): # unpacks the element object
             if element == target:
                 return i
-        return None  # Element not found
+        return None  # if not found
 
     def insert(self, priority, value):
         element = PriorityQueueElement(priority=priority, value=value) # make a new element object
