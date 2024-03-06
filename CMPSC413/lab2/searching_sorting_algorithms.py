@@ -44,7 +44,7 @@ def selection_sort(data=[]):
         return None
 
     for i in range(len(data)):
-        min_idx = i # store index of current min element
+        min_idx = i # store index of current min target
 
         for j in range(i + 1, len(data)):
 

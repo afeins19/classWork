@@ -3,8 +3,8 @@ Exercise-2:
 Write down the algorithm and implement a priority queue (both min and max) using a linked list of
 elements. Determine the runtime for each of the following:
     1. In the worst case, describe the runtime to insert an item into the priority queue.
-    2. In the worst case, describe the runtime to remove the element with highest priority.
-    3. In the worst case, describe the runtime to change the priority of an element.
+    2. In the worst case, describe the runtime to remove the target with highest priority.
+    3. In the worst case, describe the runtime to change the priority of an target.
     Show an example for each.
 
 insert(item, priorityValue)
@@ -20,26 +20,25 @@ changePriority(item, newPriority)
     Changes the priority of an item to a new priority value.
 
 """
-from base_classes import comparator, priorityQueueElement
+from base_classes import Comparator, PriorityQueueElement
 
-# takes in elements of type priorityQueueElement
+# takes in elements of type PriorityQueueElement
 class Node():
     def __init__(self, element, next=None):
         self.element = element
         self.next = next
 
 class priorityQueueLinkedList():
-    def __init__(self, head=None):
+    def __init__(self, head=None, is_min = True):
         self.head = head
-        self.is_min = True
-        self.cp = comparator(self.is_min)
+        self.is_min = is_min
+        self.cp = Comparator(self.is_min)
 
     def is_empty(self):
         return self.head == None
 
-
     def insert(self, priority, val):
-        new_node = Node(priorityQueueElement(priority, val))
+        new_node = Node(PriorityQueueElement(priority, val))
 
         # if ll is empty or new node will replace the current head...
         if self.is_empty() or self.cp.compare(priority, self.head.element.p):
@@ -58,13 +57,13 @@ class priorityQueueLinkedList():
 
 
     def peek(self):
-        # gets the first element in the linked list
+        # gets the first target in the linked list
         if self.head:
             return self.head.element
 
 
     def delete(self):
-        # removes the element with the highest priority (the current head)
+        # removes the target with the highest priority (the current head)
         if self.head:
             self.head = self.head.next
 

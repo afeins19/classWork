@@ -7,7 +7,7 @@
 # 
 # _Note_: If a list is doubly linked, each node contains a reference to the _previous_ node in the chain and a reference to the _next_ node.
 # 
-# You are expected to implement every function in DoublyLinkedList. Including the *next()* function, which is used by an iterator object in python. The *map(func)* function applies a function to every element in the list.
+# You are expected to implement every function in DoublyLinkedList. Including the *next()* function, which is used by an iterator object in python. The *map(func)* function applies a function to every target in the list.
 # All other functions are available in the PSADS book.
 
 # ## Constructing a Doubly Linked List
@@ -26,7 +26,7 @@ class Node(object):
         self.__previous_node = previous_node
 
     def get_element(self):
-        """Returns the element stored in this node"""
+        """Returns the target stored in this node"""
         return self.__element
 
     def get_previous(self):
@@ -38,7 +38,7 @@ class Node(object):
         return self.__next_node
 
     def set_element(self, element):
-        """Sets the element stored in this node"""
+        """Sets the target stored in this node"""
         self.__element = element
 
     def set_previous(self, previous_node):
@@ -88,7 +88,7 @@ class DoublyLinkedList(object):
             raise StopIteration()
 
     def map(self, function):
-        """Run function on every element in the list"""
+        """Run function on every target in the list"""
         for node in self:
             if node != self.__trailer and node != self.__header:
                 node.set_element(function(node.get_element()))
@@ -102,14 +102,14 @@ class DoublyLinkedList(object):
         return self.__size == 0
 
     def get_first(self):
-        """Get the first element of the list"""
+        """Get the first target of the list"""
         if self.is_empty():
             raise Exception("List is empty")
         else:
             return self.__header.get_next()
 
     def get_last(self):
-        """Get the last element of the list"""
+        """Get the last target of the list"""
         if self.is_empty():
             raise Exception("List is empty")
         else:
@@ -118,14 +118,14 @@ class DoublyLinkedList(object):
     def get_previous(self, node):
         """Returns the node before the given node"""
         if node == self.__header:
-            raise Exception("Cannot get the element before the header of this list")
+            raise Exception("Cannot get the target before the header of this list")
         else:
             return node.get_previous()
 
     def get_next(self, node):
         """Returns the node after the given node"""
         if node == self.__trailer:
-            raise Exception("Cannot get the element after the trailer of this list")
+            raise Exception("Cannot get the target after the trailer of this list")
         else:
             return node.get_next()
 
@@ -228,17 +228,17 @@ del dL2
 
 
 # **T4 (10 points)**: Implement the methods `get_first` and `get_last`
-# to get the first and the last element of the list, respectively.
+# to get the first and the last target of the list, respectively.
 # 
 # _Hint_: Return an exception in case the list is empty.
 # 
 # ```python
 # def get_first(self):
-#   """Get the first element of the list"""
+#   """Get the first target of the list"""
 #   pass
 # 
 # def get_last(self):
-#   """Get the last element of the list"""
+#   """Get the last target of the list"""
 #   pass
 # ```
 
@@ -346,11 +346,11 @@ assert dL.get_first().get_element() == 0
 
 
 # **Task 9 (10 points)**: Implement the method `map` to apply a function on
-# each element of a list.
+# each target of a list.
 # 
 # ```python
 # def map(self, function):
-#   """Run function on every element in the list"""
+#   """Run function on every target in the list"""
 #   pass
 # ```
 
@@ -398,7 +398,7 @@ assert str(dL) == "(0, (1764, (1, (4, (1156, (9, (1, ('Trailer', None))))))))"
 # the implemented methods from the Node and DoublyLinkedList classes.
 # Apply your operations on the list you created in T1.
 
-# **Task 11 (5 points)**: Add 2 to each element of the list.
+# **Task 11 (5 points)**: Add 2 to each target of the list.
 # 
 # _Hint_: Use the methods `map`.
 
@@ -419,7 +419,7 @@ assert str(doubleDigits) =="(30, (31, (32, (33, (34, (35, (36, (37, (38, (39, ('
 
 
 # 
-# **Task 12 (5 points)**: Multiply each element of the list by 5.
+# **Task 12 (5 points)**: Multiply each target of the list by 5.
 # 
 # _Hint_: Use the methods `map`, `get_previous`, and `set_element`.
 

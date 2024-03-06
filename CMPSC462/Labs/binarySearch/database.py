@@ -48,15 +48,15 @@ class Database:
 
         """Selection sort:
             1. traverse array
-            2. find smallest element
-            3. swap element with the lowest position
+            2. find smallest target
+            3. swap target with the lowest position
             4. reduce the search size of the array from the left by 1 
             5. repeat until search range is 0
         """
         for sorted_line in range((len(data))):
             mindex = sorted_line
 
-            #this traverses the unsorted portion of the list and tries to find the index of the smallest element
+            #this traverses the unsorted portion of the list and tries to find the index of the smallest target
             for i in range(sorted_line, len(data)):
                 if data[i][attr] < data[mindex][attr]: #we are comparing the attribute of each dictionary object
                     mindex = i
@@ -75,7 +75,7 @@ class Database:
 
         """Insertion sort: 
             1. traverse array
-            2. if 2 elements being compared are not in order, swap the smaller element
+            2. if 2 elements being compared are not in order, swap the smaller target
             with those in the sorted part ot the list until its place is found
             3. expand the sorted line by 1
             4. continue until we have traversed the array

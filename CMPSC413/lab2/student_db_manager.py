@@ -160,7 +160,7 @@ class studentDb:
         data = self.read_from_db()
 
         for i in range(len(data)):
-            min_idx = i  # store index of current min element
+            min_idx = i  # store index of current min target
 
             for j in range(i + 1, len(data)): # sorted portion forms at start
                 # find the minimum of the unsorted portion

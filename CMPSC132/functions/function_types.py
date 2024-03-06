@@ -1,5 +1,5 @@
 #this program will all users to register thier pets into a registry
-#this registry stores pets in a list, with each element bein a dictionary
+#this registry stores pets in a list, with each target bein a dictionary
 #which itself has 3 elements (name, pet-type, age)
 
 #global registry

@@ -34,7 +34,7 @@ class SearchClass:
     def binary_search(self, vals, target):
 
         max_index = len(vals) - 1 # largest index in sorted vals
-        min_index = 0 # index of first adn smallest element in sorted vals
+        min_index = 0 # index of first adn smallest target in sorted vals
 
         while min_index <= max_index:
             mid = math.floor((min_index+max_index)/2)

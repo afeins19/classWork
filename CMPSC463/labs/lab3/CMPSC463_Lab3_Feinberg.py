@@ -23,7 +23,7 @@ def findKthLargest(nums: list[int], k: int) -> int:
     while l <= r:
         pivot_idx = partition(nums, l, r)
 
-        # pivot is our element -> return the element
+        # pivot is our target -> return the target
         if pivot_idx == n - k:
             return nums[pivot_idx]
 
@@ -39,7 +39,7 @@ def findKthLargest(nums: list[int], k: int) -> int:
 # testing
 nums = random.sample(range(100), 10)
 
-    # finding the kth largest element
+    # finding the kth largest target
 
 # selecting an index in nums
 k = random.randint(0, len(nums)-1)

@@ -18,17 +18,17 @@ Exercise-1:
     Write down the algorithm and implement a priority queue (both min and max) using an array of
     elements. Determine the runtime for each of the following:
         1. In the worst case, describe the runtime to insert an item into the priority queue.
-        2. In the worst case, describe the runtime to remove the element with highest priority.
-        3. In the worst case, describe the runtime to change the priority of an element (find an element and
-        change the priority of the element).
+        2. In the worst case, describe the runtime to remove the target with highest priority.
+        3. In the worst case, describe the runtime to change the priority of an target (find an target and
+        change the priority of the target).
         Show an example for each.
 
 Exercise-2:
     Write down the algorithm and implement a priority queue (both min and max) using a linked list of
     elements. Determine the runtime for each of the following:
         1. In the worst case, describe the runtime to insert an item into the priority queue.
-        2. In the worst case, describe the runtime to remove the element with highest priority.
-        3. In the worst case, describe the runtime to change the priority of an element.
+        2. In the worst case, describe the runtime to remove the target with highest priority.
+        3. In the worst case, describe the runtime to change the priority of an target.
         Show an example for each.
 
 
@@ -36,8 +36,8 @@ Exercise-3:
     Write down the algorithm and implement a priority queue (both min and max) using a heap tree-based
     data structure (both min and max). Determine the runtime for each of the following:
     1. In the worst case, describe the runtime to insert an item into the priority queue.
-    2. In the worst case, describe the runtime to remove the element with highest priority.
-    3. In the worst case, describe the runtime to change the priority of an element.
+    2. In the worst case, describe the runtime to remove the target with highest priority.
+    3. In the worst case, describe the runtime to change the priority of an target.
     Show an example for each.
 
 Exercise-4:
@@ -61,7 +61,7 @@ Deliverables:
  Recorded video of demonstration (~5 minutes)
 
 """
-from base_classes import comparator, priorityQueueElement
+from base_classes import Comparator, PriorityQueueElement
 
 
 class priorityQueueArray():
@@ -69,13 +69,13 @@ class priorityQueueArray():
         self.pq = []
         self.is_min = True
 
-        self.cp = comparator(self.is_min)
+        self.cp = Comparator(self.is_min)
 
     def is_empty(self):
         return True if self.pq is None else False
 
     def insert(self, priority, value):
-        new_element = priorityQueueElement(priority, value)
+        new_element = PriorityQueueElement(priority, value)
 
         if self.is_empty():
             self.pq.append(new_element)
@@ -101,7 +101,7 @@ class priorityQueueArray():
             del self.pq[0]
 
     def change_priority(self, new_priority, val):
-        # finds element, deletes it and creates a new one with the updated priority
+        # finds target, deletes it and creates a new one with the updated priority
         element_idx = None
 
         for i in range(len(self.pq)):
@@ -110,9 +110,9 @@ class priorityQueueArray():
                 break
 
         if element_idx:
-            del self.pq[element_idx]  # drop element from the list
+            del self.pq[element_idx]  # drop target from the list
 
-        self.insert(new_priority, val) # add it back as a new element with different priority
+        self.insert(new_priority, val) # add it back as a new target with different priority
 
 
 a = priorityQueueArray()

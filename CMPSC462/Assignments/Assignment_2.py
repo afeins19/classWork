@@ -9,11 +9,11 @@ string split() method to parse the line and then use the set() function to cover
 Demonstrate set theory for the two sets by displaying the two sets and their relationship to each
 other as subset, superset, union, intersection, and difference. 8 points
 
-2. How can the last element of a set be deleted? Justify your answer? 4 points
+2. How can the last target of a set be deleted? Justify your answer? 4 points
 
-3. Write a Python function to find whether a given array of integers contains any duplicate element?
+3. Write a Python function to find whether a given array of integers contains any duplicate target?
 Your function should return true if any value appears more than once and return false if every
-element is distinct. 7 points
+target is distinct. 7 points
 
 4. Write a Python function which takes two int arrays as inputs and returns an array containing
 common elements from those two arrays. 7 points

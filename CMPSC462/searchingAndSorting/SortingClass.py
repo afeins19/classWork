@@ -12,7 +12,7 @@ class SortingClass:
 
     def insertion_sort(self, data):
         for i in range(len(data)-1): # defines sorted list
-            if data[i+1] < data[i]:  # if the next element is smaller than current
+            if data[i+1] < data[i]:  # if the next target is smaller than current
                 temp = data[i+1] # hold for shifting
 
                 j=i
@@ -28,7 +28,7 @@ class SortingClass:
                     data[j], data[j+1] = data[j+1], data[j] # pefrom swap
         return data
     def merge_sort(self, data):
-        #half the data until lists contain 1 element, then merge
+        #half the data until lists contain 1 target, then merge
         if len(data) == 1:
             return data
         else:

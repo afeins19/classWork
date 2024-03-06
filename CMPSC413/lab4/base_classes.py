@@ -5,7 +5,7 @@ Comparater()
 
 """
 
-class comparator():
+class Comparator():
     # returns a function to be used in lambda based on the ordering scheme of the priority queue
     def __init__(self, is_min=True): # by default sorts by min priority first
         self.is_min = is_min
@@ -15,7 +15,7 @@ class comparator():
             return a < b
         return a > b
 
-class priorityQueueElement():
+class PriorityQueueElement():
     def __init__(self, priority, value):
         self.p = priority
         self.v = value

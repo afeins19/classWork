@@ -15,7 +15,7 @@ class QueueFromStack:
         for i in range(self.main_stack.size()):
             self.temp_stack.push(self.main_stack.pop())
 
-        # saves the first element to be popped
+        # saves the first target to be popped
         out = self.temp_stack.pop()
 
         # returns the elements back to the original stack to allow for safe enqueing

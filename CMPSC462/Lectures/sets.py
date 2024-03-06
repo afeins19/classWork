@@ -1,6 +1,6 @@
 """Sets
     - contain unique objects
-    - every element is unique and immutable (no lists or dictionaries)
+    - every target is unique and immutable (no lists or dictionaries)
     - same as math sets
     - union, intersectoin, symmetric difference
 """
@@ -39,9 +39,9 @@ set4.update(['a','b'], ('a','c')) #update takes elements out of their containers
 print(set4)
 print("\n")
 "removing elements from a set" \
-"- note that we must know the specific element we are accesing to remove it " \
+"- note that we must know the specific target we are accesing to remove it " \
 "- discard(): works like remove but does not throw an error if the item being removed is not in the set" \
-"- remove(): removes an element from a set but will throw an error if the element being removed doesnt exist"
+"- remove(): removes an target from a set but will throw an error if the target being removed doesnt exist"
 print("\n")
 set1 = {1, 3, 4, 5, 6}
 print(set1)
@@ -85,7 +85,7 @@ print(B.symmetric_difference(A))
 """More Useful builtin functions for sets"""
 C = A  #C is  a set now equal to A
 
-C.discard(1) #discarding an element from the set, if it doesnt exist, no  error is  thrown
+C.discard(1) #discarding an target from the set, if it doesnt exist, no  error is  thrown
 print(C.isdisjoint(A)) #returns true if intersection with this set is the null set
 print(C.issubset(A)) #if C is a subset of A, then this will return true
 print(A.issuperset(C)) #if  A contains C, then this will return true

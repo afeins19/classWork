@@ -19,7 +19,7 @@ For example, is_sorted([1,2,2]) should return True and is_sorted(['b','a']) shou
 def is_sorted(data: []):
     if data is None or len(data) == 0:  #empty argument handling
         return
-    if len(data) == 1:  #if data is a single element, it is sorted
+    if len(data) == 1:  #if data is a single target, it is sorted
         return True
     else:
         for i in range(len(data) - 1):
