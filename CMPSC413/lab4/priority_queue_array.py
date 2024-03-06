@@ -64,10 +64,10 @@ Deliverables:
 from base_classes import Comparator, PriorityQueueElement
 
 
-class priorityQueueArray():
-    def __init__(self):
+class PriorityQueueArray():
+    def __init__(self, is_min=True):
         self.pq = []
-        self.is_min = True
+        self.is_min = is_min
 
         self.cp = Comparator(self.is_min)
 
@@ -97,15 +97,17 @@ class priorityQueueArray():
             return self.pq[0]
 
     def delete(self):
+        out = self.pq[0]
         if not self.is_empty():
             del self.pq[0]
+        return out
 
     def change_priority(self, new_priority, val):
         # finds target, deletes it and creates a new one with the updated priority
         element_idx = None
 
         for i in range(len(self.pq)):
-            if sel.pq[i].val == val:
+            if self.pq[i].v == val:
                 element = self.pq[i]
                 break
 
@@ -115,10 +117,5 @@ class priorityQueueArray():
         self.insert(new_priority, val) # add it back as a new target with different priority
 
 
-a = priorityQueueArray()
-a.insert(2,2)
-a.insert(3,4)
-a.insert(1,2)
 
-print(a.peek())
 

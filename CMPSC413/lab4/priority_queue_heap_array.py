@@ -104,7 +104,7 @@ class PriorityQueueHeap():
 
         return root
 
-    def change_priority(self, element, new_priority):
+    def change_priority(self, new_priority, element):
         element_idx = self.get_element_idx(element) # finding the element in the pq
         self.pq[element_idx].p = new_priority # updating the priority in place
 
