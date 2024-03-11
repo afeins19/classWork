@@ -32,11 +32,11 @@ def heap_sort(arr=None, reverse=False):
 
     return sorted_array
 
-test = [(random.randint(0,50), 'element') for i in range(5)]
+#test = [(random.randint(0,50), 'element') for i in range(5)]
 
 
-print(heap_sort(test,reverse=False))
-print(heap_sort(test,reverse=True))
+#print(heap_sort(test,reverse=False))
+#print(heap_sort(test,reverse=True))
 
 
 

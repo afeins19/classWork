@@ -28,7 +28,7 @@ class Node():
         self.element = element
         self.next = next
 
-class priorityQueueLinkedList():
+class PriorityQueueLinkedList():
     def __init__(self, head=None, is_min = True):
         self.head = head
         self.is_min = is_min
@@ -45,7 +45,7 @@ class priorityQueueLinkedList():
             new_node.next = self.head
             self.head = new_node
 
-        # other wise, follow normal insertion procedure
+        # otherwise, follow normal insertion procedure
         else:
             cur = self.head # set cur to loop over ll starting from head
             while cur.next and not self.cp.compare(priority, cur.next.element.p): # find correct position
@@ -86,8 +86,8 @@ class priorityQueueLinkedList():
             #  insert the new node with updated priority
             self.insert(new_priority, val)
 
-test_ll = priorityQueueLinkedList()
-test_ll.insert(1,'a')
-test_ll.insert(2,'b')
-test_ll.delete()
-print(test_ll.peek())
+#test_ll = PriorityQueueLinkedList()
+#test_ll.insert(1,'a')
+#test_ll.insert(2,'b')
+#test_ll.delete()
+#print(test_ll.peek())
