@@ -1,11 +1,14 @@
-# this class will handle processes and their interactions
-import multiprocessing
+from multiprocessing import Process, Event, Array, Queue, Value
 import time
-from multiprocessing import Array, Process, Value, Queue
-import psutil
+import signal
+import os
+import threading
+from log_config import setup_logger
+from process_controller import ProcessControl
 
-# Value - shared variable
-# Queue - message passing
+
+
+lgr = setup_logger(__name__)
 
 class ProcessManager:
     def __init__(self):
@@ -13,6 +16,26 @@ class ProcessManager:
 
         # shared variable space for processes to share memory
         self.shared_memory_locations = []
+
+    def process_wrapper(self, target_function, pause_event, resume_event, stop_event, *args):
+        # allows for handling of process signals
+        try:
+            while not stop_event.is_set():
+                if not pause_event.is_set():
+                    target_function(*args)
+                else:
+                    resume_event.wait()
+
+                time.sleep(0.1)
+        except:
+            return
+
+    def get_process(self, pid):
+        pid = int(pid)
+        if pid in self.active_processes.keys():
+            return self.active_processes[pid]['process']
+        else:
+            return None
 
     def create_shared_array(self, dtype, size):
         shared_array = Array(dtype, size)
@@ -30,68 +53,50 @@ class ProcessManager:
         self.shared_memory_locations.append(shared_queue)
         return shared_queue
 
-    def start_process(self, name, function, *args):
-        process = Process(target=function, args=args)
-        print(f"Starting process '{ name }' | PID: { process.pid }")
+    def start_process(self, name, target_function, *args):
+        pause_event = Event()
+        resume_event = Event()
+        stop_event = Event()
 
-        process.start() # start the process
-        self.active_processes[process.pid] = (name, process) # save this to the list of active processes
+        process_control = ProcessControl(pause_event, resume_event, stop_event)
+        process = Process(name=name, target=target_function, args=(process_control, *args))
+        process.start()
+
+        # Save process data to dict
+        self.active_processes[process.pid] = {
+            'name': name,
+            'process': process,
+            'pause_event': pause_event,
+            'resume_event': resume_event,
+            'stop_event': stop_event
+        }
+        lgr.info(f"[[ Started process '{name}' | PID: {process.pid} ]]")
+        print(f"[[ Started process '{name}' | PID: {process.pid} ]]")
 
         return process.pid
 
-    def get_process(self, pid):
+    def kill_process(self, pid):
+        pid = int(pid)
         if pid in self.active_processes:
-            return self.active_processes[pid]
-        else:
-            return None
-
-    def get_process_threads(self, pid):
-        ps = psutil.Process(pid)
-        return ps.threads() # list of threads?
-
-    def process_stats(self, pid):
-        # returns a dict with statistics about the process
-        try:
-            ps = psutil.Process(pid)
-
-            stats = {
-                'PID' : ps.pid,
-                'Name' : ps.name(),
-                'Status' : ps.status(),
-                'Number of threads' : len(ps.threads())
-            }
-
-            return stats
-
-        except psutil.NoSuchProcess:
-            print(f"\t** Process [PID={pid}] Not Found **")
-
-        return None
-
-    def get_active_process_stats(self):
-        p_stats = []
-
-        for process in self.active_processes:
-            p_stats.append(process)
-
-        return p_stats
-
-    def kill_process(self, pid, force=False):
-        if pid in self.active_processes:
-            process = self.active_processes[pid][1] # retrieve process
-            process.terminate() # end the process
-
-            if not force:
-                print(f"\t** Terminating process [PID={ pid }]  ** ")
-                process.join()
-                return
-
-            else:
-                print(f"\t** Terminating process [PID={pid}] forcefully ** ")
-
+            self.active_processes[pid]['stop_event'].set()
+            self.active_processes[pid]['process'].join()
             del self.active_processes[pid]
-
+            lgr.info(f"Process with PID {pid} stopped.")
         else:
-            print(f"\t** Process [PID={ pid }] not found ** ")
+            print(f"[[ NO PROCESS WITH [PID={pid}] ]]")
+            lgr.info(f"[[ NO PROCESS WITH [PID={pid}] ]]")
+
+    def suspend_process(self, pid):
+        pid = int(pid)
+        if pid in self.active_processes:
+            self.active_processes[pid]['pause_event'].set()
+            print(f"[[ PROCESS [PID={ pid }] SUSPENDED ]]")
+            lgr.info(f"[[ PROCESS [PID={ pid }] SUSPENDED ]]")
+    def resume_process(self, pid):
+        pid = int(pid)
+        if pid in self.active_processes:
+            self.active_processes[pid]['pause_event'].clear()
+            print(f"[[ PROCESS [PID={pid}] RESUMED ]]")
+            lgr.info(f"[[ PROCESS [PID={pid}] RESUMED ]]")
 
 

@@ -1,0 +1,1913 @@
+2024-03-12 13:41:47,051 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:41:55,864 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:41:55,866 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:42:00,811 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:42:00,813 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:42:02,761 - INFO - main - USER_INPUT: os list
+2024-03-12 13:42:02,763 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:42:08,668 - INFO - main - USER_INPUT: process suspend 41104
+2024-03-12 13:42:08,669 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='suspend', pid='41104')
+2024-03-12 13:42:08,669 - INFO - process_manager - [[ PROCESS [PID=41104] SUSPENDED ]]
+2024-03-12 13:42:12,203 - INFO - main - USER_INPUT: os list
+2024-03-12 13:42:12,205 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:42:19,259 - INFO - main - USER_INPUT: process kill 41104
+2024-03-12 13:42:19,261 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='kill', pid='41104')
+2024-03-12 13:42:30,413 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:42:35,430 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:42:35,432 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:42:39,403 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:42:39,405 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:42:40,625 - INFO - main - USER_INPUT: os list
+2024-03-12 13:42:40,627 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:42:48,049 - INFO - main - USER_INPUT: process kill 41113
+2024-03-12 13:42:48,050 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='kill', pid='41113')
+2024-03-12 13:42:48,630 - INFO - process_manager - Process with PID 41113 stopped.
+2024-03-12 13:42:51,137 - INFO - main - USER_INPUT: os list
+2024-03-12 13:42:51,138 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:42:54,893 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:42:54,894 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:42:59,417 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-12 13:42:59,419 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-12 13:42:59,420 - INFO - thread_manager - Thread with [TID=123145448357888] has started
+2024-03-12 13:42:59,420 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:02,422 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:05,311 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-12 13:43:05,312 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-12 13:43:05,313 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:05,313 - INFO - thread_manager - Thread with [TID=123145465147392] has started
+2024-03-12 13:43:05,426 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:08,317 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:08,431 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:09,099 - INFO - main - USER_INPUT: os list
+2024-03-12 13:43:09,100 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:43:11,320 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:11,432 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:14,322 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:14,434 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:17,326 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:17,438 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:20,331 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:20,439 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:23,335 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:23,440 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:26,340 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:26,441 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:29,344 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:29,442 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:32,345 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:32,448 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:35,353 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:35,448 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:38,354 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:38,449 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:41,357 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:41,454 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:44,361 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:44,459 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:47,362 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:47,461 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:50,366 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:50,465 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:53,368 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:53,471 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:56,373 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:56,472 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:59,374 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:43:59,477 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:02,378 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:02,480 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:05,503 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:44:10,440 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:44:10,441 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:44:11,741 - INFO - main - USER_INPUT: os list
+2024-03-12 13:44:11,742 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:44:32,028 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:44:37,809 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:44:37,811 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:44:42,083 - INFO - main - USER_INPUT: thread start test
+2024-03-12 13:44:42,085 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test')
+2024-03-12 13:44:46,965 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-12 13:44:46,966 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-12 13:44:46,966 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:46,966 - INFO - thread_manager - Thread with [TID=123145485377536] has started
+2024-03-12 13:44:49,097 - INFO - main - USER_INPUT: os list
+2024-03-12 13:44:49,097 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:44:49,968 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:52,968 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:55,970 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:44:58,974 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:01,977 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:04,978 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:07,982 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:08,374 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:45:12,336 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:45:12,338 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:45:22,299 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-12 13:45:22,301 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-12 13:45:22,303 - INFO - thread_manager - Thread with [TID=123145511387136] has started
+2024-03-12 13:45:22,302 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:24,003 - INFO - main - USER_INPUT: os list
+2024-03-12 13:45:24,004 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:45:25,309 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:28,309 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:31,312 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:34,314 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:37,319 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:40,321 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:42,110 - INFO - main - USER_INPUT: process suspend 41156
+2024-03-12 13:45:42,111 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='suspend', pid='41156')
+2024-03-12 13:45:42,111 - INFO - process_manager - [[ PROCESS [PID=41156] SUSPENDED ]]
+2024-03-12 13:45:43,325 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:46,326 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:49,327 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:45:51,613 - INFO - main - USER_INPUT: thread suspend 123145511387136
+2024-03-12 13:45:51,613 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='suspend', tid='123145511387136')
+2024-03-12 13:45:52,329 - INFO - app_manager - [[ Thread paused ]]
+2024-03-12 13:45:54,109 - INFO - main - USER_INPUT: os list
+2024-03-12 13:45:54,110 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:48:49,808 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:48:51,653 - INFO - main - USER_INPUT: os list
+2024-03-12 13:48:51,653 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:49:15,525 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:49:17,656 - INFO - main - USER_INPUT: os list
+2024-03-12 13:49:17,657 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:49:23,162 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:49:23,162 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:49:24,701 - INFO - main - USER_INPUT: os list
+2024-03-12 13:49:24,705 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:52:16,779 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:52:18,586 - INFO - main - USER_INPUT: os list
+2024-03-12 13:52:18,587 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:52:22,218 - INFO - main - USER_INPUT: process statr test_process
+2024-03-12 13:52:22,221 - INFO - main - EXCEPTION: SystemExit
+2024-03-12 13:52:28,217 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:52:28,218 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:52:29,541 - INFO - main - USER_INPUT: os list
+2024-03-12 13:52:29,542 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:52:36,422 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:52:42,021 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:52:42,022 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:52:43,331 - INFO - main - USER_INPUT: os list
+2024-03-12 13:52:43,333 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:53:33,565 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:53:38,383 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:53:38,385 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:53:40,813 - INFO - main - USER_INPUT: os list
+2024-03-12 13:53:40,814 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:53:45,345 - INFO - main - USER_INPUT: process start test_process
+2024-03-12 13:53:45,346 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-12 13:53:48,761 - INFO - main - USER_INPUT: process start test
+2024-03-12 13:53:48,762 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test')
+2024-03-12 13:53:56,625 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-12 13:53:56,625 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-12 13:53:56,626 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:53:56,626 - INFO - thread_manager - Thread with [TID=123145412067328] has started
+2024-03-12 13:53:59,580 - INFO - main - USER_INPUT: os list
+2024-03-12 13:53:59,581 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-12 13:53:59,627 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:02,631 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:05,632 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:08,637 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:11,643 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:14,647 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:16,358 - INFO - main - USER_INPUT: exit
+2024-03-12 13:54:17,648 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:20,653 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:23,655 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:26,658 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:29,659 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:32,660 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:35,665 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:38,668 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:41,669 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:44,670 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:47,673 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:50,675 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:53,678 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:56,682 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:54:59,687 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:02,689 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:05,692 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:08,693 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:11,696 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:14,699 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:17,705 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:20,707 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:23,709 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:26,713 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:29,720 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:32,722 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:35,725 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:38,728 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:41,729 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:44,731 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:47,735 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:50,738 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:53,738 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:56,745 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:55:59,749 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-12 13:56:00,938 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:56:02,640 - INFO - main - USER_INPUT: exit
+2024-03-12 13:56:24,083 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:56:26,148 - INFO - main - USER_INPUT: exit
+2024-03-12 13:56:31,748 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-12 13:56:33,796 - INFO - main - USER_INPUT: exit
+2024-03-12 14:07:16,930 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:31:40,846 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:31:46,882 - INFO - main - USER_INPUT: process start count
+2024-03-13 11:31:46,883 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 11:31:46,906 - INFO - process_manager - [[ Started process 'count' | PID: 42564 ]]
+2024-03-13 11:31:47,057 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,064 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,069 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,074 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,079 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,095 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,104 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,112 - INFO - thread_manager - Thread with [TID=123145525698560] has started
+2024-03-13 11:31:47,129 - INFO - app_manager - Char Count: {'S': 115, 'H': 126, 'R': 141, 'E': 148, 'K': 89, '\n': 917, ' ': 20646, 'O': 123, 'n': 807, 'c': 241, 'e': 1457, 'u': 449, 'p': 161, 'o': 988, 'a': 977, 't': 1034, 'i': 691, 'm': 280, 'h': 752, 'r': 674, 'w': 223, 's': 697, 'l': 544, 'v': 102, 'y': 330, '.': 365, 'B': 39, 'd': 416, 'f': 228, 'b': 180, 'k': 227, "'": 153, 'g': 300, '-': 24, 'M': 51, ',': 163, '(': 65, ')': 65, 'L': 50, 'W': 60, 'A': 162, 'N': 116, 'I': 140, 'G': 71, 'T': 105, '1': 5, '?': 62, '2': 4, '!': 129, 'D': 165, '3': 6, 'Y': 69, 'q': 20, 'z': 5, 'j': 15, 'x': 12, '"': 4, 'F': 42, 'X': 1, 'P': 32, 'U': 52, 'C': 28, '0': 2, 'J': 2, 'Q': 21, '4': 1}
+2024-03-13 11:31:51,693 - INFO - main - USER_INPUT: os list
+2024-03-13 11:31:51,693 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:33:30,535 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:33:35,148 - INFO - main - USER_INPUT: process start count
+2024-03-13 11:33:35,149 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 11:33:35,179 - INFO - process_manager - [[ Started process 'count' | PID: 42593 ]]
+2024-03-13 11:33:35,324 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,330 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,336 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,341 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,348 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,362 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,370 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:35,378 - INFO - thread_manager - Thread with [TID=123145352941568] has started
+2024-03-13 11:33:42,086 - INFO - main - USER_INPUT: os list
+2024-03-13 11:33:42,088 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:33:55,567 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:33:59,322 - INFO - main - USER_INPUT: process start count
+2024-03-13 11:33:59,323 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 11:33:59,346 - INFO - process_manager - [[ Started process 'count' | PID: 42602 ]]
+2024-03-13 11:33:59,456 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:33:59,462 - INFO - thread_manager - Thread with [TID=123145353670656] has started
+2024-03-13 11:33:59,467 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:33:59,472 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:33:59,479 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:33:59,492 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:33:59,500 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:33:59,508 - INFO - thread_manager - Thread with [TID=123145320091648] has started
+2024-03-13 11:34:09,101 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:34:12,039 - INFO - main - USER_INPUT: prcoess start test
+2024-03-13 11:34:12,041 - INFO - main - EXCEPTION: SystemExit
+2024-03-13 11:34:17,152 - INFO - main - USER_INPUT: process start count
+2024-03-13 11:34:17,153 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 11:34:17,173 - INFO - process_manager - [[ Started process 'count' | PID: 42613 ]]
+2024-03-13 11:34:17,283 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,290 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,296 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,301 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,308 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,316 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,330 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:34:17,337 - INFO - thread_manager - Thread with [TID=123145487392768] has started
+2024-03-13 11:40:01,256 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:40:04,476 - INFO - main - USER_INPUT: os list
+2024-03-13 11:40:04,477 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:40:34,631 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:40:37,466 - INFO - main - USER_INPUT: os apps
+2024-03-13 11:40:37,469 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='apps')
+2024-03-13 11:40:46,539 - INFO - main - USER_INPUT: process start many_threads
+2024-03-13 11:40:46,541 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='many_threads')
+2024-03-13 11:40:46,568 - INFO - process_manager - [[ Started process 'many_threads' | PID: 42698 ]]
+2024-03-13 11:41:08,602 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:41:14,872 - INFO - main - USER_INPUT: process start many_threads
+2024-03-13 11:41:14,874 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='many_threads')
+2024-03-13 11:41:14,897 - INFO - process_manager - [[ Started process 'many_threads' | PID: 42710 ]]
+2024-03-13 11:41:15,018 - INFO - thread_manager - Thread with [TID=123145369874432] has started
+2024-03-13 11:41:15,018 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,019 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,019 - INFO - thread_manager - Thread with [TID=123145386663936] has started
+2024-03-13 11:41:15,019 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,019 - INFO - thread_manager - Thread with [TID=123145403453440] has started
+2024-03-13 11:41:15,019 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,019 - INFO - thread_manager - Thread with [TID=123145420242944] has started
+2024-03-13 11:41:15,020 - INFO - thread_manager - Thread with [TID=123145437032448] has started
+2024-03-13 11:41:15,020 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,020 - INFO - thread_manager - Thread with [TID=123145453821952] has started
+2024-03-13 11:41:15,020 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,021 - INFO - thread_manager - Thread with [TID=123145470611456] has started
+2024-03-13 11:41:15,020 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,021 - INFO - thread_manager - Thread with [TID=123145487400960] has started
+2024-03-13 11:41:15,021 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,021 - INFO - thread_manager - Thread with [TID=123145504190464] has started
+2024-03-13 11:41:15,021 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,022 - INFO - thread_manager - Thread with [TID=123145520979968] has started
+2024-03-13 11:41:15,022 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,022 - INFO - thread_manager - Thread with [TID=123145537769472] has started
+2024-03-13 11:41:15,022 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,022 - INFO - thread_manager - Thread with [TID=123145554558976] has started
+2024-03-13 11:41:15,022 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,022 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,022 - INFO - thread_manager - Thread with [TID=123145571348480] has started
+2024-03-13 11:41:15,023 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,023 - INFO - thread_manager - Thread with [TID=123145588137984] has started
+2024-03-13 11:41:15,023 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,023 - INFO - thread_manager - Thread with [TID=123145604927488] has started
+2024-03-13 11:41:15,023 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,023 - INFO - thread_manager - Thread with [TID=123145621716992] has started
+2024-03-13 11:41:15,023 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,023 - INFO - thread_manager - Thread with [TID=123145638506496] has started
+2024-03-13 11:41:15,024 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,024 - INFO - thread_manager - Thread with [TID=123145655296000] has started
+2024-03-13 11:41:15,024 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,024 - INFO - thread_manager - Thread with [TID=123145672085504] has started
+2024-03-13 11:41:15,024 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,024 - INFO - thread_manager - Thread with [TID=123145688875008] has started
+2024-03-13 11:41:15,024 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,024 - INFO - thread_manager - Thread with [TID=123145705664512] has started
+2024-03-13 11:41:15,025 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,025 - INFO - thread_manager - Thread with [TID=123145722454016] has started
+2024-03-13 11:41:15,025 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,025 - INFO - thread_manager - Thread with [TID=123145739243520] has started
+2024-03-13 11:41:15,025 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,025 - INFO - thread_manager - Thread with [TID=123145756033024] has started
+2024-03-13 11:41:15,026 - INFO - thread_manager - Thread with [TID=123145772822528] has started
+2024-03-13 11:41:15,026 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,026 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,026 - INFO - thread_manager - Thread with [TID=123145789612032] has started
+2024-03-13 11:41:15,026 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,026 - INFO - thread_manager - Thread with [TID=123145806401536] has started
+2024-03-13 11:41:15,026 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,026 - INFO - thread_manager - Thread with [TID=123145823191040] has started
+2024-03-13 11:41:15,026 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,027 - INFO - thread_manager - Thread with [TID=123145839980544] has started
+2024-03-13 11:41:15,027 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,027 - INFO - thread_manager - Thread with [TID=123145856770048] has started
+2024-03-13 11:41:15,027 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,027 - INFO - thread_manager - Thread with [TID=123145873559552] has started
+2024-03-13 11:41:15,027 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,027 - INFO - thread_manager - Thread with [TID=123145890349056] has started
+2024-03-13 11:41:15,028 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,028 - INFO - thread_manager - Thread with [TID=123145907138560] has started
+2024-03-13 11:41:15,028 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,028 - INFO - thread_manager - Thread with [TID=123145923928064] has started
+2024-03-13 11:41:15,028 - INFO - thread_manager - Thread with [TID=123145940717568] has started
+2024-03-13 11:41:15,028 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,028 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,028 - INFO - thread_manager - Thread with [TID=123145957507072] has started
+2024-03-13 11:41:15,029 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,029 - INFO - thread_manager - Thread with [TID=123145974296576] has started
+2024-03-13 11:41:15,029 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,029 - INFO - thread_manager - Thread with [TID=123145991086080] has started
+2024-03-13 11:41:15,029 - INFO - thread_manager - Thread with [TID=123146007875584] has started
+2024-03-13 11:41:15,029 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,030 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,030 - INFO - thread_manager - Thread with [TID=123146024665088] has started
+2024-03-13 11:41:15,030 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,030 - INFO - thread_manager - Thread with [TID=123146041454592] has started
+2024-03-13 11:41:15,030 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,030 - INFO - thread_manager - Thread with [TID=123146058244096] has started
+2024-03-13 11:41:15,030 - INFO - thread_manager - Thread with [TID=123146075033600] has started
+2024-03-13 11:41:15,030 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,031 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,031 - INFO - thread_manager - Thread with [TID=123146091823104] has started
+2024-03-13 11:41:15,031 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,031 - INFO - thread_manager - Thread with [TID=123146108612608] has started
+2024-03-13 11:41:15,031 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,031 - INFO - thread_manager - Thread with [TID=123146125402112] has started
+2024-03-13 11:41:15,032 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,032 - INFO - thread_manager - Thread with [TID=123146142191616] has started
+2024-03-13 11:41:15,032 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,032 - INFO - thread_manager - Thread with [TID=123146158981120] has started
+2024-03-13 11:41:15,032 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,032 - INFO - thread_manager - Thread with [TID=123146175770624] has started
+2024-03-13 11:41:15,032 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,032 - INFO - thread_manager - Thread with [TID=123146192560128] has started
+2024-03-13 11:41:15,033 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,033 - INFO - thread_manager - Thread with [TID=123146209349632] has started
+2024-03-13 11:41:15,033 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,033 - INFO - thread_manager - Thread with [TID=123146226139136] has started
+2024-03-13 11:41:15,033 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,033 - INFO - thread_manager - Thread with [TID=123146242928640] has started
+2024-03-13 11:41:15,033 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,033 - INFO - thread_manager - Thread with [TID=123146259718144] has started
+2024-03-13 11:41:15,034 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,034 - INFO - thread_manager - Thread with [TID=123146276507648] has started
+2024-03-13 11:41:15,034 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,034 - INFO - thread_manager - Thread with [TID=123146293297152] has started
+2024-03-13 11:41:15,034 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,034 - INFO - thread_manager - Thread with [TID=123146310086656] has started
+2024-03-13 11:41:15,034 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,034 - INFO - thread_manager - Thread with [TID=123146326876160] has started
+2024-03-13 11:41:15,035 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,035 - INFO - thread_manager - Thread with [TID=123146343665664] has started
+2024-03-13 11:41:15,035 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,035 - INFO - thread_manager - Thread with [TID=123146360455168] has started
+2024-03-13 11:41:15,035 - INFO - thread_manager - Thread with [TID=123146377244672] has started
+2024-03-13 11:41:15,035 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,036 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,036 - INFO - thread_manager - Thread with [TID=123146394034176] has started
+2024-03-13 11:41:15,036 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,036 - INFO - thread_manager - Thread with [TID=123146410823680] has started
+2024-03-13 11:41:15,036 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,036 - INFO - thread_manager - Thread with [TID=123146427613184] has started
+2024-03-13 11:41:15,037 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,037 - INFO - thread_manager - Thread with [TID=123146444402688] has started
+2024-03-13 11:41:15,037 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,037 - INFO - thread_manager - Thread with [TID=123146461192192] has started
+2024-03-13 11:41:15,037 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,037 - INFO - thread_manager - Thread with [TID=123146477981696] has started
+2024-03-13 11:41:15,037 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,037 - INFO - thread_manager - Thread with [TID=123146494771200] has started
+2024-03-13 11:41:15,038 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,038 - INFO - thread_manager - Thread with [TID=123146511560704] has started
+2024-03-13 11:41:15,038 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,038 - INFO - thread_manager - Thread with [TID=123146528350208] has started
+2024-03-13 11:41:15,038 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,038 - INFO - thread_manager - Thread with [TID=123146545139712] has started
+2024-03-13 11:41:15,038 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,038 - INFO - thread_manager - Thread with [TID=123146561929216] has started
+2024-03-13 11:41:15,039 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,039 - INFO - thread_manager - Thread with [TID=123146578718720] has started
+2024-03-13 11:41:15,039 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,039 - INFO - thread_manager - Thread with [TID=123146595508224] has started
+2024-03-13 11:41:15,040 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,040 - INFO - thread_manager - Thread with [TID=123146612297728] has started
+2024-03-13 11:41:15,040 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,040 - INFO - thread_manager - Thread with [TID=123146629087232] has started
+2024-03-13 11:41:15,040 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,040 - INFO - thread_manager - Thread with [TID=123146645876736] has started
+2024-03-13 11:41:15,041 - INFO - thread_manager - Thread with [TID=123146662666240] has started
+2024-03-13 11:41:15,041 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,041 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,041 - INFO - thread_manager - Thread with [TID=123146679455744] has started
+2024-03-13 11:41:15,041 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,041 - INFO - thread_manager - Thread with [TID=123146696245248] has started
+2024-03-13 11:41:15,042 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,042 - INFO - thread_manager - Thread with [TID=123146713034752] has started
+2024-03-13 11:41:15,042 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,043 - INFO - thread_manager - Thread with [TID=123146729824256] has started
+2024-03-13 11:41:15,043 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,043 - INFO - thread_manager - Thread with [TID=123146746613760] has started
+2024-03-13 11:41:15,043 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,043 - INFO - thread_manager - Thread with [TID=123146763403264] has started
+2024-03-13 11:41:15,043 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,044 - INFO - thread_manager - Thread with [TID=123146780192768] has started
+2024-03-13 11:41:15,044 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,044 - INFO - thread_manager - Thread with [TID=123146796982272] has started
+2024-03-13 11:41:15,044 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,044 - INFO - thread_manager - Thread with [TID=123146813771776] has started
+2024-03-13 11:41:15,044 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,045 - INFO - thread_manager - Thread with [TID=123146830561280] has started
+2024-03-13 11:41:15,045 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,045 - INFO - thread_manager - Thread with [TID=123146847350784] has started
+2024-03-13 11:41:15,045 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,045 - INFO - thread_manager - Thread with [TID=123146864140288] has started
+2024-03-13 11:41:15,045 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,046 - INFO - thread_manager - Thread with [TID=123146880929792] has started
+2024-03-13 11:41:15,046 - INFO - thread_manager - Thread with [TID=123146897719296] has started
+2024-03-13 11:41:15,046 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,046 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,046 - INFO - thread_manager - Thread with [TID=123146914508800] has started
+2024-03-13 11:41:15,046 - INFO - thread_manager - Thread with [TID=123146931298304] has started
+2024-03-13 11:41:15,046 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,047 - INFO - thread_manager - Thread with [TID=123146948087808] has started
+2024-03-13 11:41:15,047 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,047 - INFO - thread_manager - Thread with [TID=123146964877312] has started
+2024-03-13 11:41:15,047 - INFO - thread_manager - Thread with [TID=123146981666816] has started
+2024-03-13 11:41:15,047 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,048 - INFO - thread_manager - Thread with [TID=123146998456320] has started
+2024-03-13 11:41:15,047 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,048 - INFO - thread_manager - Thread with [TID=123147015245824] has started
+2024-03-13 11:41:15,048 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,048 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:15,048 - INFO - thread_manager - Thread with [TID=123147032035328] has started
+2024-03-13 11:41:15,048 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:41:22,593 - INFO - main - USER_INPUT: os list
+2024-03-13 11:41:22,594 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:44:05,179 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:44:10,612 - INFO - main - USER_INPUT: process start many_threads
+2024-03-13 11:44:10,614 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='many_threads')
+2024-03-13 11:44:10,642 - INFO - process_manager - [[ Started process 'many_threads' | PID: 42759 ]]
+2024-03-13 11:44:10,754 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,754 - INFO - thread_manager - Thread with [TID=123145567731712] has started
+2024-03-13 11:44:10,754 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,754 - INFO - thread_manager - Thread with [TID=123145584521216] has started
+2024-03-13 11:44:10,755 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,755 - INFO - thread_manager - Thread with [TID=123145601310720] has started
+2024-03-13 11:44:10,755 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,755 - INFO - thread_manager - Thread with [TID=123145618100224] has started
+2024-03-13 11:44:10,755 - INFO - thread_manager - Thread with [TID=123145634889728] has started
+2024-03-13 11:44:10,755 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,756 - INFO - thread_manager - Thread with [TID=123145651679232] has started
+2024-03-13 11:44:10,756 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,756 - INFO - thread_manager - Thread with [TID=123145668468736] has started
+2024-03-13 11:44:10,756 - INFO - thread_manager - Thread with [TID=123145685258240] has started
+2024-03-13 11:44:10,756 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,756 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,757 - INFO - thread_manager - Thread with [TID=123145702047744] has started
+2024-03-13 11:44:10,756 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,757 - INFO - thread_manager - Thread with [TID=123145718837248] has started
+2024-03-13 11:44:10,757 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,757 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,757 - INFO - thread_manager - Thread with [TID=123145735626752] has started
+2024-03-13 11:44:10,757 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,757 - INFO - thread_manager - Thread with [TID=123145752416256] has started
+2024-03-13 11:44:10,758 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,758 - INFO - thread_manager - Thread with [TID=123145769205760] has started
+2024-03-13 11:44:10,758 - INFO - thread_manager - Thread with [TID=123145785995264] has started
+2024-03-13 11:44:10,758 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,758 - INFO - thread_manager - Thread with [TID=123145802784768] has started
+2024-03-13 11:44:10,758 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,758 - INFO - thread_manager - Thread with [TID=123145819574272] has started
+2024-03-13 11:44:10,758 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,759 - INFO - thread_manager - Thread with [TID=123145836363776] has started
+2024-03-13 11:44:10,759 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,759 - INFO - thread_manager - Thread with [TID=123145853153280] has started
+2024-03-13 11:44:10,759 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,760 - INFO - thread_manager - Thread with [TID=123145869942784] has started
+2024-03-13 11:44:10,760 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,760 - INFO - thread_manager - Thread with [TID=123145886732288] has started
+2024-03-13 11:44:10,760 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,760 - INFO - thread_manager - Thread with [TID=123145903521792] has started
+2024-03-13 11:44:10,760 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,761 - INFO - thread_manager - Thread with [TID=123145920311296] has started
+2024-03-13 11:44:10,761 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,761 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,761 - INFO - thread_manager - Thread with [TID=123145937100800] has started
+2024-03-13 11:44:10,761 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,761 - INFO - thread_manager - Thread with [TID=123145953890304] has started
+2024-03-13 11:44:10,762 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,762 - INFO - thread_manager - Thread with [TID=123145970679808] has started
+2024-03-13 11:44:10,762 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,762 - INFO - thread_manager - Thread with [TID=123145987469312] has started
+2024-03-13 11:44:10,762 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,762 - INFO - thread_manager - Thread with [TID=123146004258816] has started
+2024-03-13 11:44:10,762 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,762 - INFO - thread_manager - Thread with [TID=123146021048320] has started
+2024-03-13 11:44:10,763 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,763 - INFO - thread_manager - Thread with [TID=123146037837824] has started
+2024-03-13 11:44:10,763 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,763 - INFO - thread_manager - Thread with [TID=123146054627328] has started
+2024-03-13 11:44:10,763 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,763 - INFO - thread_manager - Thread with [TID=123146071416832] has started
+2024-03-13 11:44:10,763 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,763 - INFO - thread_manager - Thread with [TID=123146088206336] has started
+2024-03-13 11:44:10,764 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,764 - INFO - thread_manager - Thread with [TID=123146104995840] has started
+2024-03-13 11:44:10,764 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,764 - INFO - thread_manager - Thread with [TID=123146121785344] has started
+2024-03-13 11:44:10,764 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,764 - INFO - thread_manager - Thread with [TID=123146138574848] has started
+2024-03-13 11:44:10,764 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,764 - INFO - thread_manager - Thread with [TID=123146155364352] has started
+2024-03-13 11:44:10,765 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,765 - INFO - thread_manager - Thread with [TID=123146172153856] has started
+2024-03-13 11:44:10,765 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,765 - INFO - thread_manager - Thread with [TID=123146188943360] has started
+2024-03-13 11:44:10,765 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,765 - INFO - thread_manager - Thread with [TID=123146205732864] has started
+2024-03-13 11:44:10,765 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,765 - INFO - thread_manager - Thread with [TID=123146222522368] has started
+2024-03-13 11:44:10,766 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,766 - INFO - thread_manager - Thread with [TID=123146239311872] has started
+2024-03-13 11:44:10,766 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,766 - INFO - thread_manager - Thread with [TID=123146256101376] has started
+2024-03-13 11:44:10,766 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,766 - INFO - thread_manager - Thread with [TID=123146272890880] has started
+2024-03-13 11:44:10,766 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,766 - INFO - thread_manager - Thread with [TID=123146289680384] has started
+2024-03-13 11:44:10,767 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,767 - INFO - thread_manager - Thread with [TID=123146306469888] has started
+2024-03-13 11:44:10,768 - INFO - thread_manager - Thread with [TID=123146323259392] has started
+2024-03-13 11:44:10,767 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,768 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,769 - INFO - thread_manager - Thread with [TID=123146340048896] has started
+2024-03-13 11:44:10,769 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,769 - INFO - thread_manager - Thread with [TID=123146356838400] has started
+2024-03-13 11:44:10,769 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,769 - INFO - thread_manager - Thread with [TID=123146373627904] has started
+2024-03-13 11:44:10,769 - INFO - thread_manager - Thread with [TID=123146390417408] has started
+2024-03-13 11:44:10,769 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,770 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,770 - INFO - thread_manager - Thread with [TID=123146407206912] has started
+2024-03-13 11:44:10,770 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,770 - INFO - thread_manager - Thread with [TID=123146423996416] has started
+2024-03-13 11:44:10,770 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,770 - INFO - thread_manager - Thread with [TID=123146440785920] has started
+2024-03-13 11:44:10,770 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,770 - INFO - thread_manager - Thread with [TID=123146457575424] has started
+2024-03-13 11:44:10,771 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,771 - INFO - thread_manager - Thread with [TID=123146474364928] has started
+2024-03-13 11:44:10,771 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,771 - INFO - thread_manager - Thread with [TID=123146491154432] has started
+2024-03-13 11:44:10,771 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,771 - INFO - thread_manager - Thread with [TID=123146507943936] has started
+2024-03-13 11:44:10,771 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,771 - INFO - thread_manager - Thread with [TID=123146524733440] has started
+2024-03-13 11:44:10,772 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,772 - INFO - thread_manager - Thread with [TID=123146541522944] has started
+2024-03-13 11:44:10,772 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,772 - INFO - thread_manager - Thread with [TID=123146558312448] has started
+2024-03-13 11:44:10,772 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,772 - INFO - thread_manager - Thread with [TID=123146575101952] has started
+2024-03-13 11:44:10,772 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,772 - INFO - thread_manager - Thread with [TID=123146591891456] has started
+2024-03-13 11:44:10,773 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,773 - INFO - thread_manager - Thread with [TID=123146608680960] has started
+2024-03-13 11:44:10,773 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,773 - INFO - thread_manager - Thread with [TID=123146625470464] has started
+2024-03-13 11:44:10,773 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,773 - INFO - thread_manager - Thread with [TID=123146642259968] has started
+2024-03-13 11:44:10,773 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,773 - INFO - thread_manager - Thread with [TID=123146659049472] has started
+2024-03-13 11:44:10,774 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,774 - INFO - thread_manager - Thread with [TID=123146675838976] has started
+2024-03-13 11:44:10,774 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,774 - INFO - thread_manager - Thread with [TID=123146692628480] has started
+2024-03-13 11:44:10,774 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,774 - INFO - thread_manager - Thread with [TID=123146709417984] has started
+2024-03-13 11:44:10,774 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,774 - INFO - thread_manager - Thread with [TID=123146726207488] has started
+2024-03-13 11:44:10,775 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,775 - INFO - thread_manager - Thread with [TID=123146742996992] has started
+2024-03-13 11:44:10,775 - INFO - thread_manager - Thread with [TID=123146759786496] has started
+2024-03-13 11:44:10,775 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,775 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,775 - INFO - thread_manager - Thread with [TID=123146776576000] has started
+2024-03-13 11:44:10,776 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,776 - INFO - thread_manager - Thread with [TID=123146793365504] has started
+2024-03-13 11:44:10,776 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,776 - INFO - thread_manager - Thread with [TID=123146810155008] has started
+2024-03-13 11:44:10,777 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,777 - INFO - thread_manager - Thread with [TID=123146826944512] has started
+2024-03-13 11:44:10,777 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,777 - INFO - thread_manager - Thread with [TID=123146843734016] has started
+2024-03-13 11:44:10,777 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,777 - INFO - thread_manager - Thread with [TID=123146860523520] has started
+2024-03-13 11:44:10,777 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,777 - INFO - thread_manager - Thread with [TID=123146877313024] has started
+2024-03-13 11:44:10,778 - INFO - thread_manager - Thread with [TID=123146894102528] has started
+2024-03-13 11:44:10,778 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,778 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,778 - INFO - thread_manager - Thread with [TID=123146910892032] has started
+2024-03-13 11:44:10,778 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,778 - INFO - thread_manager - Thread with [TID=123146927681536] has started
+2024-03-13 11:44:10,778 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,778 - INFO - thread_manager - Thread with [TID=123146944471040] has started
+2024-03-13 11:44:10,779 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,779 - INFO - thread_manager - Thread with [TID=123146961260544] has started
+2024-03-13 11:44:10,779 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,779 - INFO - thread_manager - Thread with [TID=123146978050048] has started
+2024-03-13 11:44:10,779 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,779 - INFO - thread_manager - Thread with [TID=123146994839552] has started
+2024-03-13 11:44:10,779 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,779 - INFO - thread_manager - Thread with [TID=123147011629056] has started
+2024-03-13 11:44:10,780 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,780 - INFO - thread_manager - Thread with [TID=123147028418560] has started
+2024-03-13 11:44:10,780 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,780 - INFO - thread_manager - Thread with [TID=123147045208064] has started
+2024-03-13 11:44:10,780 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,780 - INFO - thread_manager - Thread with [TID=123147061997568] has started
+2024-03-13 11:44:10,781 - INFO - thread_manager - Thread with [TID=123147078787072] has started
+2024-03-13 11:44:10,780 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,781 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,781 - INFO - thread_manager - Thread with [TID=123147095576576] has started
+2024-03-13 11:44:10,781 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,781 - INFO - thread_manager - Thread with [TID=123147112366080] has started
+2024-03-13 11:44:10,781 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,781 - INFO - thread_manager - Thread with [TID=123147129155584] has started
+2024-03-13 11:44:10,782 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,782 - INFO - thread_manager - Thread with [TID=123147145945088] has started
+2024-03-13 11:44:10,782 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,782 - INFO - thread_manager - Thread with [TID=123147162734592] has started
+2024-03-13 11:44:10,782 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,782 - INFO - thread_manager - Thread with [TID=123147179524096] has started
+2024-03-13 11:44:10,782 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,782 - INFO - thread_manager - Thread with [TID=123147196313600] has started
+2024-03-13 11:44:10,783 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,783 - INFO - thread_manager - Thread with [TID=123147213103104] has started
+2024-03-13 11:44:10,783 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:10,783 - INFO - thread_manager - Thread with [TID=123147229892608] has started
+2024-03-13 11:44:29,411 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:44:33,720 - INFO - main - USER_INPUT: process start many_threads
+2024-03-13 11:44:33,721 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='many_threads')
+2024-03-13 11:44:33,739 - INFO - process_manager - [[ Started process 'many_threads' | PID: 42767 ]]
+2024-03-13 11:44:33,860 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,861 - INFO - thread_manager - Thread with [TID=123145377505280] has started
+2024-03-13 11:44:33,861 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,861 - INFO - thread_manager - Thread with [TID=123145394294784] has started
+2024-03-13 11:44:33,861 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,862 - INFO - thread_manager - Thread with [TID=123145411084288] has started
+2024-03-13 11:44:33,862 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,863 - INFO - thread_manager - Thread with [TID=123145427873792] has started
+2024-03-13 11:44:33,863 - INFO - thread_manager - Thread with [TID=123145444663296] has started
+2024-03-13 11:44:33,864 - INFO - thread_manager - Thread with [TID=123145461452800] has started
+2024-03-13 11:44:33,863 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,864 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,864 - INFO - thread_manager - Thread with [TID=123145478242304] has started
+2024-03-13 11:44:33,864 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,865 - INFO - thread_manager - Thread with [TID=123145495031808] has started
+2024-03-13 11:44:33,864 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,865 - INFO - thread_manager - Thread with [TID=123145511821312] has started
+2024-03-13 11:44:33,865 - INFO - thread_manager - Thread with [TID=123145528610816] has started
+2024-03-13 11:44:33,865 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,865 - INFO - thread_manager - Thread with [TID=123145545400320] has started
+2024-03-13 11:44:33,865 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,866 - INFO - thread_manager - Thread with [TID=123145562189824] has started
+2024-03-13 11:44:33,865 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,866 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,866 - INFO - thread_manager - Thread with [TID=123145578979328] has started
+2024-03-13 11:44:33,866 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,866 - INFO - thread_manager - Thread with [TID=123145595768832] has started
+2024-03-13 11:44:33,866 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,867 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,867 - INFO - thread_manager - Thread with [TID=123145612558336] has started
+2024-03-13 11:44:33,867 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,867 - INFO - thread_manager - Thread with [TID=123145629347840] has started
+2024-03-13 11:44:33,867 - INFO - thread_manager - Thread with [TID=123145646137344] has started
+2024-03-13 11:44:33,867 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,868 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,868 - INFO - thread_manager - Thread with [TID=123145662926848] has started
+2024-03-13 11:44:33,868 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,868 - INFO - thread_manager - Thread with [TID=123145679716352] has started
+2024-03-13 11:44:33,868 - INFO - thread_manager - Thread with [TID=123145696505856] has started
+2024-03-13 11:44:33,868 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,868 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,868 - INFO - thread_manager - Thread with [TID=123145713295360] has started
+2024-03-13 11:44:33,869 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,869 - INFO - thread_manager - Thread with [TID=123145730084864] has started
+2024-03-13 11:44:33,869 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,869 - INFO - thread_manager - Thread with [TID=123145746874368] has started
+2024-03-13 11:44:33,869 - INFO - thread_manager - Thread with [TID=123145763663872] has started
+2024-03-13 11:44:33,869 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,870 - INFO - thread_manager - Thread with [TID=123145780453376] has started
+2024-03-13 11:44:33,870 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,870 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,870 - INFO - thread_manager - Thread with [TID=123145797242880] has started
+2024-03-13 11:44:33,870 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,870 - INFO - thread_manager - Thread with [TID=123145814032384] has started
+2024-03-13 11:44:33,871 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,871 - INFO - thread_manager - Thread with [TID=123145830821888] has started
+2024-03-13 11:44:33,871 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,871 - INFO - thread_manager - Thread with [TID=123145847611392] has started
+2024-03-13 11:44:33,871 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,872 - INFO - thread_manager - Thread with [TID=123145864400896] has started
+2024-03-13 11:44:33,872 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,872 - INFO - thread_manager - Thread with [TID=123145881190400] has started
+2024-03-13 11:44:33,872 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,872 - INFO - thread_manager - Thread with [TID=123145897979904] has started
+2024-03-13 11:44:33,872 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,872 - INFO - thread_manager - Thread with [TID=123145914769408] has started
+2024-03-13 11:44:33,872 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,873 - INFO - thread_manager - Thread with [TID=123145931558912] has started
+2024-03-13 11:44:33,873 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,873 - INFO - thread_manager - Thread with [TID=123145948348416] has started
+2024-03-13 11:44:33,873 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,873 - INFO - thread_manager - Thread with [TID=123145965137920] has started
+2024-03-13 11:44:33,874 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,874 - INFO - thread_manager - Thread with [TID=123145981927424] has started
+2024-03-13 11:44:33,874 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,874 - INFO - thread_manager - Thread with [TID=123145998716928] has started
+2024-03-13 11:44:33,874 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,874 - INFO - thread_manager - Thread with [TID=123146015506432] has started
+2024-03-13 11:44:33,874 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,874 - INFO - thread_manager - Thread with [TID=123146032295936] has started
+2024-03-13 11:44:33,875 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,875 - INFO - thread_manager - Thread with [TID=123146049085440] has started
+2024-03-13 11:44:33,875 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,875 - INFO - thread_manager - Thread with [TID=123146065874944] has started
+2024-03-13 11:44:33,876 - INFO - thread_manager - Thread with [TID=123146082664448] has started
+2024-03-13 11:44:33,876 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,876 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,876 - INFO - thread_manager - Thread with [TID=123146099453952] has started
+2024-03-13 11:44:33,876 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,876 - INFO - thread_manager - Thread with [TID=123146116243456] has started
+2024-03-13 11:44:33,877 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,877 - INFO - thread_manager - Thread with [TID=123146133032960] has started
+2024-03-13 11:44:33,877 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,877 - INFO - thread_manager - Thread with [TID=123146149822464] has started
+2024-03-13 11:44:33,877 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,877 - INFO - thread_manager - Thread with [TID=123146166611968] has started
+2024-03-13 11:44:33,878 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,878 - INFO - thread_manager - Thread with [TID=123146183401472] has started
+2024-03-13 11:44:33,878 - INFO - thread_manager - Thread with [TID=123146200190976] has started
+2024-03-13 11:44:33,878 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,880 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,880 - INFO - thread_manager - Thread with [TID=123146216980480] has started
+2024-03-13 11:44:33,880 - INFO - thread_manager - Thread with [TID=123146233769984] has started
+2024-03-13 11:44:33,880 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,881 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,881 - INFO - thread_manager - Thread with [TID=123146250559488] has started
+2024-03-13 11:44:33,881 - INFO - thread_manager - Thread with [TID=123146267348992] has started
+2024-03-13 11:44:33,881 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,881 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,881 - INFO - thread_manager - Thread with [TID=123146284138496] has started
+2024-03-13 11:44:33,882 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,882 - INFO - thread_manager - Thread with [TID=123146300928000] has started
+2024-03-13 11:44:33,882 - INFO - thread_manager - Thread with [TID=123146317717504] has started
+2024-03-13 11:44:33,882 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,882 - INFO - thread_manager - Thread with [TID=123146334507008] has started
+2024-03-13 11:44:33,882 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,883 - INFO - thread_manager - Thread with [TID=123146351296512] has started
+2024-03-13 11:44:33,883 - INFO - thread_manager - Thread with [TID=123146368086016] has started
+2024-03-13 11:44:33,882 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,883 - INFO - thread_manager - Thread with [TID=123146384875520] has started
+2024-03-13 11:44:33,883 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,883 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,883 - INFO - thread_manager - Thread with [TID=123146401665024] has started
+2024-03-13 11:44:33,883 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,884 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,884 - INFO - thread_manager - Thread with [TID=123146418454528] has started
+2024-03-13 11:44:33,884 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,884 - INFO - thread_manager - Thread with [TID=123146435244032] has started
+2024-03-13 11:44:33,884 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,884 - INFO - thread_manager - Thread with [TID=123146452033536] has started
+2024-03-13 11:44:33,885 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,885 - INFO - thread_manager - Thread with [TID=123146468823040] has started
+2024-03-13 11:44:33,885 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,885 - INFO - thread_manager - Thread with [TID=123146485612544] has started
+2024-03-13 11:44:33,885 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,885 - INFO - thread_manager - Thread with [TID=123146502402048] has started
+2024-03-13 11:44:33,885 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,885 - INFO - thread_manager - Thread with [TID=123146519191552] has started
+2024-03-13 11:44:33,886 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,886 - INFO - thread_manager - Thread with [TID=123146535981056] has started
+2024-03-13 11:44:33,886 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,886 - INFO - thread_manager - Thread with [TID=123146552770560] has started
+2024-03-13 11:44:33,886 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,886 - INFO - thread_manager - Thread with [TID=123146569560064] has started
+2024-03-13 11:44:33,887 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,887 - INFO - thread_manager - Thread with [TID=123146586349568] has started
+2024-03-13 11:44:33,887 - INFO - thread_manager - Thread with [TID=123146603139072] has started
+2024-03-13 11:44:33,887 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,888 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,888 - INFO - thread_manager - Thread with [TID=123146619928576] has started
+2024-03-13 11:44:33,888 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,888 - INFO - thread_manager - Thread with [TID=123146636718080] has started
+2024-03-13 11:44:33,888 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,888 - INFO - thread_manager - Thread with [TID=123146653507584] has started
+2024-03-13 11:44:33,889 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,889 - INFO - thread_manager - Thread with [TID=123146670297088] has started
+2024-03-13 11:44:33,889 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,889 - INFO - thread_manager - Thread with [TID=123146687086592] has started
+2024-03-13 11:44:33,889 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,889 - INFO - thread_manager - Thread with [TID=123146703876096] has started
+2024-03-13 11:44:33,889 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,889 - INFO - thread_manager - Thread with [TID=123146720665600] has started
+2024-03-13 11:44:33,890 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,890 - INFO - thread_manager - Thread with [TID=123146737455104] has started
+2024-03-13 11:44:33,890 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,890 - INFO - thread_manager - Thread with [TID=123146754244608] has started
+2024-03-13 11:44:33,890 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,890 - INFO - thread_manager - Thread with [TID=123146771034112] has started
+2024-03-13 11:44:33,890 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,890 - INFO - thread_manager - Thread with [TID=123146787823616] has started
+2024-03-13 11:44:33,891 - INFO - thread_manager - Thread with [TID=123146804613120] has started
+2024-03-13 11:44:33,891 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,891 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,891 - INFO - thread_manager - Thread with [TID=123146821402624] has started
+2024-03-13 11:44:33,891 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,891 - INFO - thread_manager - Thread with [TID=123146838192128] has started
+2024-03-13 11:44:33,891 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,891 - INFO - thread_manager - Thread with [TID=123146854981632] has started
+2024-03-13 11:44:33,892 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,892 - INFO - thread_manager - Thread with [TID=123146871771136] has started
+2024-03-13 11:44:33,892 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,892 - INFO - thread_manager - Thread with [TID=123146888560640] has started
+2024-03-13 11:44:33,892 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,892 - INFO - thread_manager - Thread with [TID=123146905350144] has started
+2024-03-13 11:44:33,892 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,893 - INFO - thread_manager - Thread with [TID=123146922139648] has started
+2024-03-13 11:44:33,893 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,893 - INFO - thread_manager - Thread with [TID=123146938929152] has started
+2024-03-13 11:44:33,893 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,893 - INFO - thread_manager - Thread with [TID=123146955718656] has started
+2024-03-13 11:44:33,893 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,893 - INFO - thread_manager - Thread with [TID=123146972508160] has started
+2024-03-13 11:44:33,893 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,894 - INFO - thread_manager - Thread with [TID=123146989297664] has started
+2024-03-13 11:44:33,894 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,894 - INFO - thread_manager - Thread with [TID=123147006087168] has started
+2024-03-13 11:44:33,894 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,894 - INFO - thread_manager - Thread with [TID=123147022876672] has started
+2024-03-13 11:44:33,894 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:44:33,894 - INFO - thread_manager - Thread with [TID=123147039666176] has started
+2024-03-13 11:44:39,122 - INFO - main - USER_INPUT: os list
+2024-03-13 11:44:39,123 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:46:22,603 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:46:27,475 - INFO - main - USER_INPUT: process start many_threads
+2024-03-13 11:46:27,476 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='many_threads')
+2024-03-13 11:46:27,503 - INFO - process_manager - [[ Started process 'many_threads' | PID: 42797 ]]
+2024-03-13 11:46:27,616 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,616 - INFO - thread_manager - Thread with [TID=123145479933952] has started
+2024-03-13 11:46:27,617 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,617 - INFO - thread_manager - Thread with [TID=123145496723456] has started
+2024-03-13 11:46:27,617 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,617 - INFO - thread_manager - Thread with [TID=123145513512960] has started
+2024-03-13 11:46:27,617 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,617 - INFO - thread_manager - Thread with [TID=123145530302464] has started
+2024-03-13 11:46:27,618 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,618 - INFO - thread_manager - Thread with [TID=123145547091968] has started
+2024-03-13 11:46:27,618 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,618 - INFO - thread_manager - Thread with [TID=123145563881472] has started
+2024-03-13 11:46:27,618 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,618 - INFO - thread_manager - Thread with [TID=123145580670976] has started
+2024-03-13 11:46:27,618 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,619 - INFO - thread_manager - Thread with [TID=123145597460480] has started
+2024-03-13 11:46:27,619 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,619 - INFO - thread_manager - Thread with [TID=123145614249984] has started
+2024-03-13 11:46:27,619 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,619 - INFO - thread_manager - Thread with [TID=123145631039488] has started
+2024-03-13 11:46:27,619 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,620 - INFO - thread_manager - Thread with [TID=123145647828992] has started
+2024-03-13 11:46:27,621 - INFO - thread_manager - Thread with [TID=123145664618496] has started
+2024-03-13 11:46:27,621 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,621 - INFO - thread_manager - Thread with [TID=123145681408000] has started
+2024-03-13 11:46:27,622 - INFO - thread_manager - Thread with [TID=123145698197504] has started
+2024-03-13 11:46:27,621 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,622 - INFO - thread_manager - Thread with [TID=123145714987008] has started
+2024-03-13 11:46:27,622 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,622 - INFO - thread_manager - Thread with [TID=123145731776512] has started
+2024-03-13 11:46:27,622 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,623 - INFO - thread_manager - Thread with [TID=123145748566016] has started
+2024-03-13 11:46:27,622 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,622 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,623 - INFO - thread_manager - Thread with [TID=123145765355520] has started
+2024-03-13 11:46:27,623 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,623 - INFO - thread_manager - Thread with [TID=123145782145024] has started
+2024-03-13 11:46:27,623 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,623 - INFO - thread_manager - Thread with [TID=123145798934528] has started
+2024-03-13 11:46:27,623 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,624 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,624 - INFO - thread_manager - Thread with [TID=123145815724032] has started
+2024-03-13 11:46:27,624 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,624 - INFO - thread_manager - Thread with [TID=123145832513536] has started
+2024-03-13 11:46:27,624 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,624 - INFO - thread_manager - Thread with [TID=123145849303040] has started
+2024-03-13 11:46:27,624 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,625 - INFO - thread_manager - Thread with [TID=123145866092544] has started
+2024-03-13 11:46:27,625 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,625 - INFO - thread_manager - Thread with [TID=123145882882048] has started
+2024-03-13 11:46:27,625 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,625 - INFO - thread_manager - Thread with [TID=123145899671552] has started
+2024-03-13 11:46:27,625 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,625 - INFO - thread_manager - Thread with [TID=123145916461056] has started
+2024-03-13 11:46:27,626 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,626 - INFO - thread_manager - Thread with [TID=123145933250560] has started
+2024-03-13 11:46:27,626 - INFO - thread_manager - Thread with [TID=123145950040064] has started
+2024-03-13 11:46:27,626 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,626 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,626 - INFO - thread_manager - Thread with [TID=123145966829568] has started
+2024-03-13 11:46:27,626 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,626 - INFO - thread_manager - Thread with [TID=123145983619072] has started
+2024-03-13 11:46:27,627 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,627 - INFO - thread_manager - Thread with [TID=123146000408576] has started
+2024-03-13 11:46:27,627 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,627 - INFO - thread_manager - Thread with [TID=123146017198080] has started
+2024-03-13 11:46:27,627 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,627 - INFO - thread_manager - Thread with [TID=123146033987584] has started
+2024-03-13 11:46:27,627 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,628 - INFO - thread_manager - Thread with [TID=123146050777088] has started
+2024-03-13 11:46:27,628 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,628 - INFO - thread_manager - Thread with [TID=123146067566592] has started
+2024-03-13 11:46:27,628 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,628 - INFO - thread_manager - Thread with [TID=123146084356096] has started
+2024-03-13 11:46:27,628 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,629 - INFO - thread_manager - Thread with [TID=123146101145600] has started
+2024-03-13 11:46:27,629 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,629 - INFO - thread_manager - Thread with [TID=123146117935104] has started
+2024-03-13 11:46:27,629 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,629 - INFO - thread_manager - Thread with [TID=123146134724608] has started
+2024-03-13 11:46:27,630 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,630 - INFO - thread_manager - Thread with [TID=123146151514112] has started
+2024-03-13 11:46:27,630 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,630 - INFO - thread_manager - Thread with [TID=123146168303616] has started
+2024-03-13 11:46:27,630 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,630 - INFO - thread_manager - Thread with [TID=123146185093120] has started
+2024-03-13 11:46:27,630 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,630 - INFO - thread_manager - Thread with [TID=123146201882624] has started
+2024-03-13 11:46:27,631 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,631 - INFO - thread_manager - Thread with [TID=123146218672128] has started
+2024-03-13 11:46:27,631 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,631 - INFO - thread_manager - Thread with [TID=123146235461632] has started
+2024-03-13 11:46:27,631 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,631 - INFO - thread_manager - Thread with [TID=123146252251136] has started
+2024-03-13 11:46:27,631 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,631 - INFO - thread_manager - Thread with [TID=123146269040640] has started
+2024-03-13 11:46:27,632 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,632 - INFO - thread_manager - Thread with [TID=123146285830144] has started
+2024-03-13 11:46:27,632 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,632 - INFO - thread_manager - Thread with [TID=123146302619648] has started
+2024-03-13 11:46:27,632 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,632 - INFO - thread_manager - Thread with [TID=123146319409152] has started
+2024-03-13 11:46:27,632 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,632 - INFO - thread_manager - Thread with [TID=123146336198656] has started
+2024-03-13 11:46:27,633 - INFO - thread_manager - Thread with [TID=123146352988160] has started
+2024-03-13 11:46:27,633 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,633 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,633 - INFO - thread_manager - Thread with [TID=123146369777664] has started
+2024-03-13 11:46:27,633 - INFO - thread_manager - Thread with [TID=123146386567168] has started
+2024-03-13 11:46:27,633 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,633 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,634 - INFO - thread_manager - Thread with [TID=123146403356672] has started
+2024-03-13 11:46:27,634 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,634 - INFO - thread_manager - Thread with [TID=123146420146176] has started
+2024-03-13 11:46:27,634 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,634 - INFO - thread_manager - Thread with [TID=123146436935680] has started
+2024-03-13 11:46:27,634 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,634 - INFO - thread_manager - Thread with [TID=123146453725184] has started
+2024-03-13 11:46:27,634 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,634 - INFO - thread_manager - Thread with [TID=123146470514688] has started
+2024-03-13 11:46:27,635 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,635 - INFO - thread_manager - Thread with [TID=123146487304192] has started
+2024-03-13 11:46:27,635 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,635 - INFO - thread_manager - Thread with [TID=123146504093696] has started
+2024-03-13 11:46:27,635 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,635 - INFO - thread_manager - Thread with [TID=123146520883200] has started
+2024-03-13 11:46:27,635 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,635 - INFO - thread_manager - Thread with [TID=123146537672704] has started
+2024-03-13 11:46:27,636 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,636 - INFO - thread_manager - Thread with [TID=123146554462208] has started
+2024-03-13 11:46:27,636 - INFO - thread_manager - Thread with [TID=123146571251712] has started
+2024-03-13 11:46:27,636 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,637 - INFO - thread_manager - Thread with [TID=123146588041216] has started
+2024-03-13 11:46:27,637 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,638 - INFO - thread_manager - Thread with [TID=123146604830720] has started
+2024-03-13 11:46:27,638 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,638 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,638 - INFO - thread_manager - Thread with [TID=123146621620224] has started
+2024-03-13 11:46:27,639 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,639 - INFO - thread_manager - Thread with [TID=123146638409728] has started
+2024-03-13 11:46:27,639 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,639 - INFO - thread_manager - Thread with [TID=123146655199232] has started
+2024-03-13 11:46:27,639 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,639 - INFO - thread_manager - Thread with [TID=123146671988736] has started
+2024-03-13 11:46:27,639 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,639 - INFO - thread_manager - Thread with [TID=123146688778240] has started
+2024-03-13 11:46:27,640 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,640 - INFO - thread_manager - Thread with [TID=123146705567744] has started
+2024-03-13 11:46:27,640 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,640 - INFO - thread_manager - Thread with [TID=123146722357248] has started
+2024-03-13 11:46:27,640 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,640 - INFO - thread_manager - Thread with [TID=123146739146752] has started
+2024-03-13 11:46:27,640 - INFO - thread_manager - Thread with [TID=123146755936256] has started
+2024-03-13 11:46:27,640 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,641 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,641 - INFO - thread_manager - Thread with [TID=123146772725760] has started
+2024-03-13 11:46:27,641 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,641 - INFO - thread_manager - Thread with [TID=123146789515264] has started
+2024-03-13 11:46:27,641 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,641 - INFO - thread_manager - Thread with [TID=123146806304768] has started
+2024-03-13 11:46:27,641 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,641 - INFO - thread_manager - Thread with [TID=123146823094272] has started
+2024-03-13 11:46:27,642 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,642 - INFO - thread_manager - Thread with [TID=123146839883776] has started
+2024-03-13 11:46:27,642 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,642 - INFO - thread_manager - Thread with [TID=123146856673280] has started
+2024-03-13 11:46:27,642 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,642 - INFO - thread_manager - Thread with [TID=123146873462784] has started
+2024-03-13 11:46:27,642 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,642 - INFO - thread_manager - Thread with [TID=123146890252288] has started
+2024-03-13 11:46:27,643 - INFO - thread_manager - Thread with [TID=123146907041792] has started
+2024-03-13 11:46:27,643 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,643 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,643 - INFO - thread_manager - Thread with [TID=123146923831296] has started
+2024-03-13 11:46:27,643 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,643 - INFO - thread_manager - Thread with [TID=123146940620800] has started
+2024-03-13 11:46:27,644 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,644 - INFO - thread_manager - Thread with [TID=123146957410304] has started
+2024-03-13 11:46:27,644 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,644 - INFO - thread_manager - Thread with [TID=123146974199808] has started
+2024-03-13 11:46:27,644 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,644 - INFO - thread_manager - Thread with [TID=123146990989312] has started
+2024-03-13 11:46:27,645 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,645 - INFO - thread_manager - Thread with [TID=123147007778816] has started
+2024-03-13 11:46:27,645 - INFO - thread_manager - Thread with [TID=123147024568320] has started
+2024-03-13 11:46:27,645 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,645 - INFO - thread_manager - Thread with [TID=123147041357824] has started
+2024-03-13 11:46:27,645 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,646 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,646 - INFO - thread_manager - Thread with [TID=123147058147328] has started
+2024-03-13 11:46:27,646 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,646 - INFO - thread_manager - Thread with [TID=123147074936832] has started
+2024-03-13 11:46:27,646 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,647 - INFO - thread_manager - Thread with [TID=123147091726336] has started
+2024-03-13 11:46:27,647 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,647 - INFO - thread_manager - Thread with [TID=123147108515840] has started
+2024-03-13 11:46:27,647 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,647 - INFO - thread_manager - Thread with [TID=123147125305344] has started
+2024-03-13 11:46:27,647 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:27,647 - INFO - thread_manager - Thread with [TID=123147142094848] has started
+2024-03-13 11:46:28,844 - INFO - main - USER_INPUT: st
+2024-03-13 11:46:28,847 - INFO - main - EXCEPTION: SystemExit
+2024-03-13 11:46:30,881 - INFO - main - USER_INPUT: os list
+2024-03-13 11:46:30,882 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:46:39,526 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:46:43,917 - INFO - main - USER_INPUT: process start many_threads
+2024-03-13 11:46:43,919 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='many_threads')
+2024-03-13 11:46:43,946 - INFO - process_manager - [[ Started process 'many_threads' | PID: 42804 ]]
+2024-03-13 11:46:44,064 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,064 - INFO - thread_manager - Thread with [TID=123145383247872] has started
+2024-03-13 11:46:44,064 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,064 - INFO - thread_manager - Thread with [TID=123145400037376] has started
+2024-03-13 11:46:44,064 - INFO - thread_manager - Thread with [TID=123145416826880] has started
+2024-03-13 11:46:44,064 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,065 - INFO - thread_manager - Thread with [TID=123145433616384] has started
+2024-03-13 11:46:44,065 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,065 - INFO - thread_manager - Thread with [TID=123145450405888] has started
+2024-03-13 11:46:44,066 - INFO - thread_manager - Thread with [TID=123145467195392] has started
+2024-03-13 11:46:44,065 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,066 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,066 - INFO - thread_manager - Thread with [TID=123145483984896] has started
+2024-03-13 11:46:44,066 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,066 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,067 - INFO - thread_manager - Thread with [TID=123145500774400] has started
+2024-03-13 11:46:44,067 - INFO - thread_manager - Thread with [TID=123145517563904] has started
+2024-03-13 11:46:44,067 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,068 - INFO - thread_manager - Thread with [TID=123145534353408] has started
+2024-03-13 11:46:44,068 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,068 - INFO - thread_manager - Thread with [TID=123145551142912] has started
+2024-03-13 11:46:44,068 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,068 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,068 - INFO - thread_manager - Thread with [TID=123145567932416] has started
+2024-03-13 11:46:44,069 - INFO - thread_manager - Thread with [TID=123145584721920] has started
+2024-03-13 11:46:44,069 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,069 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,069 - INFO - thread_manager - Thread with [TID=123145601511424] has started
+2024-03-13 11:46:44,070 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,070 - INFO - thread_manager - Thread with [TID=123145618300928] has started
+2024-03-13 11:46:44,070 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,070 - INFO - thread_manager - Thread with [TID=123145635090432] has started
+2024-03-13 11:46:44,070 - INFO - thread_manager - Thread with [TID=123145651879936] has started
+2024-03-13 11:46:44,070 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,071 - INFO - thread_manager - Thread with [TID=123145668669440] has started
+2024-03-13 11:46:44,071 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,071 - INFO - thread_manager - Thread with [TID=123145685458944] has started
+2024-03-13 11:46:44,071 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,072 - INFO - thread_manager - Thread with [TID=123145702248448] has started
+2024-03-13 11:46:44,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,072 - INFO - thread_manager - Thread with [TID=123145719037952] has started
+2024-03-13 11:46:44,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,072 - INFO - thread_manager - Thread with [TID=123145735827456] has started
+2024-03-13 11:46:44,073 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,073 - INFO - thread_manager - Thread with [TID=123145752616960] has started
+2024-03-13 11:46:44,073 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,073 - INFO - thread_manager - Thread with [TID=123145769406464] has started
+2024-03-13 11:46:44,073 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,073 - INFO - thread_manager - Thread with [TID=123145786195968] has started
+2024-03-13 11:46:44,074 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,074 - INFO - thread_manager - Thread with [TID=123145802985472] has started
+2024-03-13 11:46:44,074 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,074 - INFO - thread_manager - Thread with [TID=123145819774976] has started
+2024-03-13 11:46:44,074 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,075 - INFO - thread_manager - Thread with [TID=123145836564480] has started
+2024-03-13 11:46:44,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,075 - INFO - thread_manager - Thread with [TID=123145853353984] has started
+2024-03-13 11:46:44,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,076 - INFO - thread_manager - Thread with [TID=123145870143488] has started
+2024-03-13 11:46:44,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,076 - INFO - thread_manager - Thread with [TID=123145886932992] has started
+2024-03-13 11:46:44,077 - INFO - thread_manager - Thread with [TID=123145903722496] has started
+2024-03-13 11:46:44,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,077 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,077 - INFO - thread_manager - Thread with [TID=123145920512000] has started
+2024-03-13 11:46:44,077 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,077 - INFO - thread_manager - Thread with [TID=123145937301504] has started
+2024-03-13 11:46:44,077 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,077 - INFO - thread_manager - Thread with [TID=123145954091008] has started
+2024-03-13 11:46:44,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,078 - INFO - thread_manager - Thread with [TID=123145970880512] has started
+2024-03-13 11:46:44,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,078 - INFO - thread_manager - Thread with [TID=123145987670016] has started
+2024-03-13 11:46:44,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,078 - INFO - thread_manager - Thread with [TID=123146004459520] has started
+2024-03-13 11:46:44,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,079 - INFO - thread_manager - Thread with [TID=123146021249024] has started
+2024-03-13 11:46:44,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,079 - INFO - thread_manager - Thread with [TID=123146038038528] has started
+2024-03-13 11:46:44,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,079 - INFO - thread_manager - Thread with [TID=123146054828032] has started
+2024-03-13 11:46:44,080 - INFO - thread_manager - Thread with [TID=123146071617536] has started
+2024-03-13 11:46:44,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,080 - INFO - thread_manager - Thread with [TID=123146088407040] has started
+2024-03-13 11:46:44,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,080 - INFO - thread_manager - Thread with [TID=123146105196544] has started
+2024-03-13 11:46:44,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,081 - INFO - thread_manager - Thread with [TID=123146121986048] has started
+2024-03-13 11:46:44,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,081 - INFO - thread_manager - Thread with [TID=123146138775552] has started
+2024-03-13 11:46:44,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,081 - INFO - thread_manager - Thread with [TID=123146155565056] has started
+2024-03-13 11:46:44,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,082 - INFO - thread_manager - Thread with [TID=123146172354560] has started
+2024-03-13 11:46:44,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,082 - INFO - thread_manager - Thread with [TID=123146189144064] has started
+2024-03-13 11:46:44,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,083 - INFO - thread_manager - Thread with [TID=123146205933568] has started
+2024-03-13 11:46:44,083 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,083 - INFO - thread_manager - Thread with [TID=123146222723072] has started
+2024-03-13 11:46:44,083 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,083 - INFO - thread_manager - Thread with [TID=123146239512576] has started
+2024-03-13 11:46:44,084 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,084 - INFO - thread_manager - Thread with [TID=123146256302080] has started
+2024-03-13 11:46:44,084 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,084 - INFO - thread_manager - Thread with [TID=123146273091584] has started
+2024-03-13 11:46:44,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,085 - INFO - thread_manager - Thread with [TID=123146289881088] has started
+2024-03-13 11:46:44,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,085 - INFO - thread_manager - Thread with [TID=123146306670592] has started
+2024-03-13 11:46:44,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,085 - INFO - thread_manager - Thread with [TID=123146323460096] has started
+2024-03-13 11:46:44,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,086 - INFO - thread_manager - Thread with [TID=123146340249600] has started
+2024-03-13 11:46:44,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,086 - INFO - thread_manager - Thread with [TID=123146357039104] has started
+2024-03-13 11:46:44,086 - INFO - thread_manager - Thread with [TID=123146373828608] has started
+2024-03-13 11:46:44,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,087 - INFO - thread_manager - Thread with [TID=123146390618112] has started
+2024-03-13 11:46:44,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,087 - INFO - thread_manager - Thread with [TID=123146407407616] has started
+2024-03-13 11:46:44,088 - INFO - thread_manager - Thread with [TID=123146424197120] has started
+2024-03-13 11:46:44,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,088 - INFO - thread_manager - Thread with [TID=123146440986624] has started
+2024-03-13 11:46:44,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,088 - INFO - thread_manager - Thread with [TID=123146457776128] has started
+2024-03-13 11:46:44,089 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,089 - INFO - thread_manager - Thread with [TID=123146474565632] has started
+2024-03-13 11:46:44,089 - INFO - thread_manager - Thread with [TID=123146491355136] has started
+2024-03-13 11:46:44,089 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,089 - INFO - thread_manager - Thread with [TID=123146508144640] has started
+2024-03-13 11:46:44,089 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,090 - INFO - thread_manager - Thread with [TID=123146524934144] has started
+2024-03-13 11:46:44,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,090 - INFO - thread_manager - Thread with [TID=123146541723648] has started
+2024-03-13 11:46:44,090 - INFO - thread_manager - Thread with [TID=123146558513152] has started
+2024-03-13 11:46:44,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,091 - INFO - thread_manager - Thread with [TID=123146575302656] has started
+2024-03-13 11:46:44,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,091 - INFO - thread_manager - Thread with [TID=123146592092160] has started
+2024-03-13 11:46:44,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,092 - INFO - thread_manager - Thread with [TID=123146608881664] has started
+2024-03-13 11:46:44,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,093 - INFO - thread_manager - Thread with [TID=123146625671168] has started
+2024-03-13 11:46:44,093 - INFO - thread_manager - Thread with [TID=123146642460672] has started
+2024-03-13 11:46:44,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,093 - INFO - thread_manager - Thread with [TID=123146659250176] has started
+2024-03-13 11:46:44,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,094 - INFO - thread_manager - Thread with [TID=123146676039680] has started
+2024-03-13 11:46:44,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,094 - INFO - thread_manager - Thread with [TID=123146692829184] has started
+2024-03-13 11:46:44,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,094 - INFO - thread_manager - Thread with [TID=123146709618688] has started
+2024-03-13 11:46:44,095 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,095 - INFO - thread_manager - Thread with [TID=123146726408192] has started
+2024-03-13 11:46:44,095 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,095 - INFO - thread_manager - Thread with [TID=123146743197696] has started
+2024-03-13 11:46:44,095 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,095 - INFO - thread_manager - Thread with [TID=123146759987200] has started
+2024-03-13 11:46:44,096 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,096 - INFO - thread_manager - Thread with [TID=123146776776704] has started
+2024-03-13 11:46:44,096 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,096 - INFO - thread_manager - Thread with [TID=123146793566208] has started
+2024-03-13 11:46:44,096 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,096 - INFO - thread_manager - Thread with [TID=123146810355712] has started
+2024-03-13 11:46:44,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,097 - INFO - thread_manager - Thread with [TID=123146827145216] has started
+2024-03-13 11:46:44,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,097 - INFO - thread_manager - Thread with [TID=123146843934720] has started
+2024-03-13 11:46:44,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,097 - INFO - thread_manager - Thread with [TID=123146860724224] has started
+2024-03-13 11:46:44,098 - INFO - thread_manager - Thread with [TID=123146877513728] has started
+2024-03-13 11:46:44,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,098 - INFO - thread_manager - Thread with [TID=123146894303232] has started
+2024-03-13 11:46:44,099 - INFO - thread_manager - Thread with [TID=123146911092736] has started
+2024-03-13 11:46:44,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,099 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,099 - INFO - thread_manager - Thread with [TID=123146927882240] has started
+2024-03-13 11:46:44,099 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,099 - INFO - thread_manager - Thread with [TID=123146944671744] has started
+2024-03-13 11:46:44,100 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,100 - INFO - thread_manager - Thread with [TID=123146961461248] has started
+2024-03-13 11:46:44,100 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,100 - INFO - thread_manager - Thread with [TID=123146978250752] has started
+2024-03-13 11:46:44,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,101 - INFO - thread_manager - Thread with [TID=123146995040256] has started
+2024-03-13 11:46:44,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,101 - INFO - thread_manager - Thread with [TID=123147011829760] has started
+2024-03-13 11:46:44,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,101 - INFO - thread_manager - Thread with [TID=123147028619264] has started
+2024-03-13 11:46:44,102 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:44,102 - INFO - thread_manager - Thread with [TID=123147045408768] has started
+2024-03-13 11:46:45,193 - INFO - main - USER_INPUT: os list
+2024-03-13 11:46:45,193 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:46:47,067 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,067 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,067 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,070 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,070 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,070 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,071 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,071 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,077 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,077 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,078 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,080 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,084 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,095 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,095 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,095 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,102 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,102 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,102 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,106 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,107 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:47,107 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,072 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,074 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,075 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,079 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,084 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,084 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,084 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,091 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,093 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,094 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,098 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,099 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,099 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,099 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,104 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,108 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,108 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:50,108 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,076 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,077 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,081 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,082 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,085 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,086 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,087 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,088 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,089 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,089 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,090 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,092 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,097 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,102 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,103 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,101 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,105 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,108 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,108 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,109 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,112 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,112 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,112 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:46:53,114 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:47:17,291 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 11:47:25,071 - INFO - main - USER_INPUT: process start test_thread
+2024-03-13 11:47:25,073 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_thread')
+2024-03-13 11:47:25,098 - INFO - process_manager - [[ Started process 'test_thread' | PID: 42821 ]]
+2024-03-13 11:47:31,109 - INFO - main - USER_INPUT: process start test_process
+2024-03-13 11:47:31,109 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='test_process')
+2024-03-13 11:47:31,114 - INFO - process_manager - [[ Started process 'test_process' | PID: 42834 ]]
+2024-03-13 11:47:37,859 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-13 11:47:37,860 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-13 11:47:37,861 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:47:37,861 - INFO - thread_manager - Thread with [TID=123145415716864] has started
+2024-03-13 11:47:39,853 - INFO - main - USER_INPUT: os list
+2024-03-13 11:47:39,854 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:47:40,862 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 11:47:41,237 - INFO - main - USER_INPUT: os list
+2024-03-13 11:47:41,238 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 11:47:43,865 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 15:51:55,016 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 15:51:59,777 - INFO - main - USER_INPUT: os apps
+2024-03-13 15:51:59,778 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='apps')
+2024-03-13 15:52:04,799 - INFO - main - USER_INPUT: process start count
+2024-03-13 15:52:04,802 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 15:52:04,832 - INFO - process_manager - [[ Started process 'count' | PID: 44066 ]]
+2024-03-13 15:52:05,017 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,022 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,027 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,032 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,039 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,058 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,072 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,083 - INFO - thread_manager - Thread with [TID=123145364135936] has started
+2024-03-13 15:52:05,088 - INFO - app_manager - Char Count: {'S': 115, 'H': 126, 'R': 141, 'E': 148, 'K': 89, '\n': 917, ' ': 20646, 'O': 123, 'n': 807, 'c': 241, 'e': 1457, 'u': 449, 'p': 161, 'o': 988, 'a': 977, 't': 1034, 'i': 691, 'm': 280, 'h': 752, 'r': 674, 'w': 223, 's': 697, 'l': 544, 'v': 102, 'y': 330, '.': 365, 'B': 39, 'd': 416, 'f': 228, 'b': 180, 'k': 227, "'": 153, 'g': 300, '-': 24, 'M': 51, ',': 163, '(': 65, ')': 65, 'L': 50, 'W': 60, 'A': 162, 'N': 116, 'I': 140, 'G': 71, 'T': 105, '1': 5, '?': 62, '2': 4, '!': 129, 'D': 165, '3': 6, 'Y': 69, 'q': 20, 'z': 5, 'j': 15, 'x': 12, '"': 4, 'F': 42, 'X': 1, 'P': 32, 'U': 52, 'C': 28, '0': 2, 'J': 2, 'Q': 21, '4': 1}
+2024-03-13 15:52:33,215 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 15:53:35,573 - INFO - main - USER_INPUT: os apps
+2024-03-13 15:53:35,575 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='apps')
+2024-03-13 15:53:46,009 - INFO - main - USER_INPUT: thread test test_thread
+2024-03-13 15:53:46,011 - INFO - main - EXCEPTION: SystemExit
+2024-03-13 15:53:50,975 - INFO - main - USER_INPUT: thread start test_thread
+2024-03-13 15:53:50,975 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='start', thread_name='test_thread')
+2024-03-13 15:53:50,976 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 15:53:50,976 - INFO - thread_manager - Thread with [TID=123145549295616] has started
+2024-03-13 15:53:52,785 - INFO - main - USER_INPUT: os list
+2024-03-13 15:53:52,786 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 15:53:53,981 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 15:53:56,986 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 15:53:59,992 - INFO - app_manager - [[ Thread Running... ]]
+2024-03-13 15:54:01,411 - INFO - main - USER_INPUT: thread kill 123145549295616
+2024-03-13 15:54:01,412 - INFO - main - [[ USER INPUT : Namespace(command='thread', thread_command='kill', tid='123145549295616')
+2024-03-13 15:54:01,414 - INFO - thread_manager - Thread 123145549295616 has been stopped
+2024-03-13 15:54:03,260 - INFO - main - USER_INPUT: os list
+2024-03-13 15:54:03,260 - INFO - main - [[ USER INPUT : Namespace(command='os', os_command='list')
+2024-03-13 16:05:17,684 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 16:05:22,117 - INFO - main - USER_INPUT: processs start count
+2024-03-13 16:05:22,119 - INFO - main - EXCEPTION: SystemExit
+2024-03-13 16:05:25,095 - INFO - main - USER_INPUT: process start count
+2024-03-13 16:05:25,096 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 16:05:25,127 - INFO - process_manager - [[ Started process 'count' | PID: 44263 ]]
+2024-03-13 16:05:25,300 - INFO - thread_manager - Thread with [TID=123145356644352] has started
+2024-03-13 16:05:25,336 - INFO - thread_manager - Thread with [TID=123145373433856] has started
+2024-03-13 16:05:25,374 - INFO - thread_manager - Thread with [TID=123145356644352] has started
+2024-03-13 16:05:25,404 - INFO - thread_manager - Thread with [TID=123145373433856] has started
+2024-03-13 16:05:25,443 - INFO - thread_manager - Thread with [TID=123145356644352] has started
+2024-03-13 16:05:25,497 - INFO - thread_manager - Thread with [TID=123145373433856] has started
+2024-03-13 16:05:25,528 - INFO - thread_manager - Thread with [TID=123145407012864] has started
+2024-03-13 16:05:25,687 - INFO - thread_manager - Thread with [TID=123145356644352] has started
+2024-03-13 16:05:25,786 - INFO - app_manager - Char Count: {'T': 532, 'h': 10954, 'e': 20909, ' ': 41095, 'P': 103, 'r': 9142, 'o': 12997, 'j': 118, 'c': 3620, 't': 15294, 'G': 75, 'u': 4642, 'n': 11420, 'b': 2284, 'g': 3487, 'B': 133, 'k': 1577, 'f': 3627, 'D': 105, 'a': 13671, 'l': 6821, '\n': 3962, 'i': 9646, 's': 10283, 'y': 3430, 'w': 4486, 'U': 31, 'd': 7489, 'S': 211, 'm': 4421, 'p': 2326, 'v': 1450, '.': 2053, 'Y': 57, ',': 3092, '-': 894, 'L': 175, 'I': 1646, ':': 108, 'A': 282, 'R': 119, 'O': 97, '1': 54, '9': 15, '5': 14, '[': 3, '#': 1, '3': 20, '4': 13, ']': 3, 'M': 214, 'N': 78, '2': 30, '0': 17, 'E': 133, 'C': 222, '*': 316, 'F': 48, 'H': 310, 'J': 109, 'K': 22, '_': 284, 'W': 222, '&': 9, '8': 15, '7': 16, '’': 371, 'V': 28, '—': 1, '“': 249, '”': 201, 'X': 28, 'q': 137, 'x': 207, '(': 14, ')': 14, 'z': 81, ';': 331, '6': 8, '?': 86, '!': 148, 'è': 8, '‘': 13, 'Q': 6, 'æ': 5, 'á': 1, 'ë': 1, 'â': 1, 'ö': 1, '£': 3}
+2024-03-13 16:09:31,889 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 16:09:37,071 - INFO - main - USER_INPUT: process start count
+2024-03-13 16:09:37,074 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 16:09:37,103 - INFO - process_manager - [[ Started process 'count' | PID: 44286 ]]
+2024-03-13 16:09:37,240 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,242 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,244 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,246 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,248 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,250 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,251 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,253 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,256 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,257 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,259 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,260 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,262 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,264 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,265 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,266 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,268 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,269 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,272 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,274 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,275 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,276 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,278 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,280 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,282 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,283 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,285 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,286 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,288 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,289 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,291 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,292 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,294 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,295 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,297 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,298 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,300 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,301 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,302 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,304 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,306 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,307 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,309 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,310 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,312 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,315 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,318 - INFO - thread_manager - Thread with [TID=123145372725248] has started
+2024-03-13 16:09:37,320 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,323 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,325 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,326 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,329 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,330 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,332 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,334 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,337 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,339 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,341 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,343 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,346 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,349 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,353 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,355 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,358 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,359 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,362 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,364 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,366 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,370 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,372 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,374 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,376 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,379 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,382 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,384 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,386 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,388 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,390 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,392 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,394 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,395 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,397 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,399 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,400 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,402 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,404 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,406 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,407 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,409 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,411 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,413 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,415 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,416 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,418 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,420 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,422 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,424 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,425 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,427 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,429 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,431 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,433 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,437 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,440 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,442 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,445 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,447 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,450 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,452 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,455 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,457 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,459 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,462 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,464 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,467 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,470 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,472 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,475 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,478 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,480 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,483 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,485 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,488 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,490 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,493 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,496 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,498 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,500 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,503 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,505 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,507 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,509 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,511 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,513 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,515 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,517 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,520 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,524 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,527 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,530 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,533 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,535 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,538 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,540 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,543 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,546 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,549 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,551 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,553 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,556 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,558 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,562 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,565 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,566 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,570 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,573 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,576 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,582 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,585 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,589 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,591 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,594 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,598 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,603 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,607 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,610 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,615 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,618 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,621 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,624 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,626 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,629 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,632 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,634 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,637 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,640 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,642 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,645 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,647 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,650 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,652 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,654 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,657 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,659 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,661 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,664 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,666 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,669 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,671 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,674 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,676 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,678 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,681 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,683 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,685 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,688 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,691 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,692 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,694 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,698 - INFO - thread_manager - Thread with [TID=123145339146240] has started
+2024-03-13 16:09:37,698 - INFO - app_manager - Char Count: {'T': 56, 'h': 176, 'e': 373, ' ': 1183, 'P': 39, 'r': 261, 'o': 242, 'j': 3, 'c': 67, 't': 305, 'G': 9, 'u': 93, 'n': 235, 'b': 37, 'g': 59, 'B': 14, 'k': 37, 'f': 63, 'D': 40, 'a': 323, 'l': 122, '\n': 158, 'i': 196, 's': 191, 'y': 76, 'w': 70, 'U': 11, 'd': 122, 'S': 29, 'm': 77, 'p': 50, 'v': 30, '.': 70, 'Y': 7, ',': 46, '-': 7, 'L': 13, 'I': 66, ':': 10, 'A': 50, 'R': 47, 'O': 14, '1': 5, '9': 3, '5': 3, '[': 3, '#': 1, '3': 4, '4': 2, ']': 3, 'M': 25, 'N': 15, '2': 3, '0': 1, 'E': 51, 'C': 44, '*': 6, 'F': 3, 'H': 48, 'J': 23, 'K': 5, '_': 12, 'W': 6, '&': 1, '8': 3, '7': 1, '’': 27, 'V': 16, '—': 1, '“': 2, '”': 2, 'X': 28, 'q': 1, 'x': 6, '(': 2, ')': 2, 'z': 3, ';': 7, '6': 2}
+2024-03-13 16:10:27,409 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 16:10:38,523 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 16:10:42,112 - INFO - main - USER_INPUT: process start count
+2024-03-13 16:10:42,115 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 16:10:42,147 - INFO - process_manager - [[ Started process 'count' | PID: 44305 ]]
+2024-03-13 16:10:42,302 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,314 - INFO - thread_manager - Thread with [TID=123145353850880] has started
+2024-03-13 16:10:42,327 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,345 - INFO - thread_manager - Thread with [TID=123145353850880] has started
+2024-03-13 16:10:42,351 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,364 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,378 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,393 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,408 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,422 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,434 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,475 - INFO - thread_manager - Thread with [TID=123145370640384] has started
+2024-03-13 16:10:42,487 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,515 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,536 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,555 - INFO - thread_manager - Thread with [TID=123145370640384] has started
+2024-03-13 16:10:42,576 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,599 - INFO - thread_manager - Thread with [TID=123145370640384] has started
+2024-03-13 16:10:42,624 - INFO - thread_manager - Thread with [TID=123145320271872] has started
+2024-03-13 16:10:42,648 - INFO - thread_manager - Thread with [TID=123145370640384] has started
+2024-03-13 16:10:42,672 - INFO - app_manager - Char Count: {'T': 242, 'h': 4426, 'e': 8621, ' ': 16346, 'P': 59, 'r': 3897, 'o': 5407, 'j': 46, 'c': 1487, 't': 6292, 'G': 32, 'u': 1894, 'n': 4741, 'b': 878, 'g': 1478, 'B': 62, 'k': 668, 'f': 1524, 'D': 65, 'a': 5569, 'l': 2779, '\n': 1585, 'i': 3952, 's': 4228, 'y': 1366, 'w': 1818, 'U': 16, 'd': 3059, 'S': 79, 'm': 1797, 'p': 962, 'v': 618, '.': 711, 'Y': 23, ',': 1259, '-': 327, 'L': 54, 'I': 708, ':': 58, 'A': 120, 'R': 59, 'O': 45, '1': 9, '9': 3, '5': 6, '[': 3, '#': 1, '3': 6, '4': 3, ']': 3, 'M': 65, 'N': 34, '2': 4, '0': 5, 'E': 81, 'C': 124, '*': 46, 'F': 18, 'H': 149, 'J': 33, 'K': 10, '_': 52, 'W': 84, '&': 3, '8': 4, '7': 4, '’': 74, 'V': 18, '—': 1, '“': 107, '”': 104, 'X': 28, 'q': 56, 'x': 103, '(': 8, ')': 8, 'z': 37, ';': 137, '6': 3, '?': 35, '!': 50, 'è': 7, '‘': 3, 'Q': 1, 'æ': 1, 'á': 1}
+2024-03-13 16:11:40,253 - INFO - main - [[ STARTUP SUCCESFUL ]]
+2024-03-13 16:11:45,076 - INFO - main - USER_INPUT: process start count
+2024-03-13 16:11:45,077 - INFO - main - [[ USER INPUT : Namespace(command='process', process_command='start', process_name='count')
+2024-03-13 16:11:45,097 - INFO - process_manager - [[ Started process 'count' | PID: 44322 ]]
+2024-03-13 16:11:45,232 - INFO - thread_manager - Thread with [TID=123145473896448] has started
+2024-03-13 16:11:45,273 - INFO - thread_manager - Thread with [TID=123145490685952] has started
+2024-03-13 16:11:45,885 - INFO - app_manager - Char Count: {'T': 1841, 'h': 42406, 'e': 81286, ' ': 156391, 'P': 546, 'r': 36121, 'o': 51613, 'j': 493, 'c': 13650, 't': 58252, 'G': 542, 'u': 18479, 'n': 44551, 'b': 8831, 'g': 12633, 'B': 491, 'k': 6309, 'f': 14206, 'D': 579, 'a': 52551, 'l': 26080, '\n': 15851, 'i': 38338, 's': 39619, 'y': 12808, 'w': 17432, 'U': 158, 'd': 28667, 'S': 980, 'm': 17171, 'p': 9158, 'v': 5628, '.': 8534, 'Y': 344, ',': 11394, '-': 3856, 'L': 749, 'I': 5735, ':': 649, 'A': 1225, 'R': 388, 'O': 425, '1': 160, '9': 35, '5': 46, '[': 3, '#': 1, '3': 65, '4': 43, ']': 3, 'M': 1010, 'N': 389, '2': 98, '0': 61, 'E': 454, 'C': 587, '*': 662, 'F': 263, 'H': 1681, 'J': 433, 'K': 74, '_': 995, 'W': 1045, '&': 21, '8': 34, '7': 37, '’': 1553, 'V': 431, '—': 3, '“': 1553, '”': 1399, 'X': 59, 'q': 546, 'x': 813, '(': 48, ')': 48, 'z': 277, ';': 1683, '6': 28, '?': 492, '!': 752, 'è': 10, '‘': 93, 'Q': 95, 'æ': 9, 'á': 1, 'ë': 3, 'â': 2, 'ö': 9, '£': 3, '{': 3, '}': 3, 'Z': 5, 'é': 3, 'ô': 1, 'ï': 2, 'à': 1, '™': 57, '/': 6, '•': 4, '%': 1, '$': 2}
