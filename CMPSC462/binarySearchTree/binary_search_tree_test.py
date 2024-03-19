@@ -1,4 +1,4 @@
-from binary_search_tree_Redo import BinarySearchTreeNode, build_tree, is_binary_search_tree, merge_trees
+from binary_search_tree_v2 import BinarySearchTreeNode, build_tree, is_binary_search_tree, merge_trees
 import random
 
 # Testing binary search tree functions
