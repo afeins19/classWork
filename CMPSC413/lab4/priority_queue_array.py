@@ -63,7 +63,6 @@ Deliverables:
 """
 from base_classes import Comparator, PriorityQueueElement
 
-
 class PriorityQueueArray():
     def __init__(self, is_min=True):
         self.pq = []
