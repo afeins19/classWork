@@ -20,6 +20,9 @@ class PriorityQueueHeap():
     def is_empty(self):
         return len(self.pq) == 0
 
+    def get_size(self):
+        return len(self.pq)
+
     def get_r_child_idx(self, parent_idx):
         r_child_idx = (2 * parent_idx) + 2
 

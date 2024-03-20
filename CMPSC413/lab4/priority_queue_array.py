@@ -71,7 +71,7 @@ class PriorityQueueArray():
         self.cp = Comparator(self.is_min)
 
     def is_empty(self):
-        return True if self.pq is None else False
+        return True if len(self.pq) == 0 else False
 
     def insert(self, priority, value):
         new_element = PriorityQueueElement(priority, value)
@@ -108,6 +108,7 @@ class PriorityQueueArray():
         for i in range(len(self.pq)):
             if self.pq[i].v == val:
                 element = self.pq[i]
+                element_idx = i
                 break
 
         if element_idx:

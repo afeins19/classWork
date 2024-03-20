@@ -5,7 +5,7 @@ class HuffmanTreeNode():
         self.data = data
         self.l_child = l_child
         self.r_child = r_child
-        self.position = position
+        self.position = position # if its 0 or 1 with respect to its parent
 
-
-
+    def __str__(self):
+        return f"{self.data}"
