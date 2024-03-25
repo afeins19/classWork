@@ -1,8 +1,6 @@
 # this file will hold the user programs that the os will execute
-import multiprocessing
 import time
 import logging as lg
-
 from log_config import setup_logger
 from multiprocessing import Queue, Value, Array, Process
 from threading import Thread
@@ -17,9 +15,9 @@ class AppManager:
         self.name_table = {
             'test_process' : AppManager.test_process,
             'test_thread' : AppManager.test_thread, # args = stop_event that we have to pass in
-            'many_threads' : AppManager.process_with_many_threads,
             'count' : AppManager.process_file
         } # maps names to the actual functions for users
+
 
     def get_app(self, app_name):
         if app_name in self.name_table.keys():
@@ -59,32 +57,13 @@ class AppManager:
             lgr.info("[[ Thread Running... ]]")
             time.sleep(3)
 
-    @staticmethod
-    def process_with_many_threads(process_control):
-        tm = ThreadManager()
-
-        tids = []
-
-        # start a bunch of threads
-        for i in range(100):
-            tids.append(tm.start_thread(target=AppManager.test_thread, args=None))
-
-        print("[[ Threads all started ]]")
-        time.sleep(1)
-        print("[[ ending all threads ]]")
-
-        # signal a kill to all the threads
-        for tid in tids:
-            stop_event = tm.get_thread(tid)[2] # stop event idx in tuple
-            stop_event.set()
-
 
     # -- STRING HANDLING FUNCTIONS --
 
     @staticmethod
     def process_file(process_control):
-        num_threads = 1
-        file_name = "dracula.txt"
+        num_threads = 4
+        file_name = "shrek.txt"
 
         # read the entire file and split into lines
         with open(file_name, 'r') as file:

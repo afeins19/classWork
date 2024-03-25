@@ -3,11 +3,11 @@ import heapq
 # this class will represent the huffman tree node
 class HuffmanTree:
     def __init__(self, priority, char, l_child=None, r_child=None):
-        self.priority = priority
-        self.char = char
+        self.priority = priority # priority in the pq
+        self.char = char # char if the node is not internal
         self.l_child = l_child
         self.r_child =r_child
-        self.position = ''
+        self.position = '' # position relative to parent
 
 
     # heapq uses this to measure the priority
@@ -27,6 +27,7 @@ def make_huffman_tree(char_count) -> []: # [(char, freq), ...]
         node = HuffmanTree(priority=freq, char=char)
         heapq.heappush(min_heap, node)
 
+    # makes internal nodes and orders the leaves by their frequency
     while len(min_heap) > 1:
         l_child = heapq.heappop(min_heap)
         r_child = heapq.heappop(min_heap)

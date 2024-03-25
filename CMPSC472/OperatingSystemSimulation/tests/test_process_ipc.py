@@ -2,7 +2,6 @@
 import unittest
 import sys
 sys.path.append(r'/Users/aaronfeinberg/Projects/classWork/CMPSC472/OperatingSystemSimulation')
-
 from process_manager import ProcessManager
 import time
 from multiprocessing import Value, Queue

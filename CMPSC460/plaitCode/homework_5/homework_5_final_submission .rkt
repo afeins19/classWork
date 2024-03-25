@@ -59,7 +59,8 @@
            (parse (second (s-exp->list s))))]
 
     ; Parse Level Definition for LetRec -------------------------------------
-
+    ; local keeps id,val,body invisible to the outside 
+    
     [(s-exp-match? `(letrec {[SYMBOL ANY]} ANY) s)
      (local [(define bs (s-exp->list (first (s-exp->list (second
                                                           (s-exp->list s))))))
@@ -98,7 +99,7 @@
   (test/exn (parse `{{+ 1 2}})
             "invalid input"))
 
-;; interp ---------------------------------------- YOU DONT NEED TO CHANGE INTERP IN PART 1~
+;; interp ---------------------------------------- ~ YOU DONT NEED TO CHANGE INTERP IN PART 1 ~
 (define (interp [a : Exp] [env : Env]) : Value
   (type-case Exp a
     [(numE n) (numV n)]
