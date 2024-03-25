@@ -61,14 +61,17 @@
     ; Parse Level Definition for LetRec -------------------------------------
     ; local keeps id,val,body invisible to the outside 
     
-    [(s-exp-match? `{letrec {[SYMBOL ANY]} ANY} s)
-     (local [(define bs (s-exp->list
-                         (first (s-exp->list
-                                 (second (s-exp->list s))))))
-             (define id (first bs))              (define val (second bs))
+    [(s-exp-match? `(letrec {[SYMBOL ANY]} ANY) s)
+     (local [(define bs (s-exp->list (first (s-exp->list (second
+                                                          (s-exp->list s))))))
+             (define id (first bs))
+             (define val (second bs))
              (define body (third (s-exp->list s)))]
-       (parse `(let {[,id {,mk-rec-fun {lambda {,id} ,val}}]} ,body)))]
+           
+ 
+     ;; do this if the s-exp matches 
      
+     (parse `{let {[,id ,val]} ,body}))]
     ; -----------------------------------------------------------------------
     
     [else (error 'parse "invalid input")]))
@@ -120,18 +123,20 @@
 
 ; Recursion with Y-combinator ------------------------------------------------
 (define mk-rec-fun
-`{lambda {body-proc} ;; arg in the makerec?
+`{lambda {body-proc}
    {let {[fX {lambda {fX}
                {let {[f {lambda {x}
                           {{fX fX} x}}]}
                  {body-proc f}}}]}
      {fX fX}}})
+
 ; Testing Y-combinator ------------------------------------------------
 (module+ test
           (test (interp (parse `{letrec {[f {lambda {n}
                                    {if0 n
                                         0
-                                        {+ {f {+ n -1}} - 1}}}]}
+                                        {+ {f {+ n -1}} -
+                                           1}}}]}
                        {f 10}})
              mt-env)
 (numV -10)))
