@@ -28,9 +28,32 @@
 (define mt-env empty)
 (define extend-env cons)
 
-(module+ test
-  (print-only-errors #t))
 
+
+;; Part 2: Plus -------------
+(define plus
+  `(lambda (x) 
+    (lambda (y) (+ x y))))
+
+;; Part 3: Times
+;; using y as counter 
+(define times
+  `(letrec {[timesX
+             (lambda (n)
+               (lambda (m)
+                 (if0 n
+                      0
+                      (+ m ((timesX (+ n -1)) m)))))]}  
+     (timesX)))
+
+
+ 
+ 
+;; (+ x (+ x (+ x ... till y=0) 
+ 
+(module+ test 
+  (print-only-errors #t))
+ 
 ;; parse ----------------------------------------
 (define (parse [s : S-Exp]) : Exp
   (cond
@@ -65,17 +88,38 @@
      (local [(define bs (s-exp->list
                          (first (s-exp->list
                                  (second (s-exp->list s))))))
-             (define id (first bs))              (define val (second bs))
+             
+             (define id (first bs))
+             (define val (second bs))
              (define body (third (s-exp->list s)))]
-       (parse `(let {[,id {,mk-rec-fun {lambda {,id} ,val}}]} ,body)))]
-     
+       
+       (parse `(let {[,id {,mk-rec-fun {lambda {,id} ,val}}]} ,body)))] 
     ; -----------------------------------------------------------------------
     
     [else (error 'parse "invalid input")]))
 
 (module+ test
+  
+  ;; Recursive Plus Test
+  (test (interp (parse (list->s-exp (list (list->s-exp (list plus `5)) `5))) mt-env)
+        (numV 10)) 
+
+  ;; Recursive Mult Test 
+  (test (interp (parse (list->s-exp (list (list->s-exp (list times `2)) `2))) mt-env)  
+        (numV 4))   
+  
+  ;; new letrec test 
+  (test (interp (parse `{letrec {[f {lambda {n} 
+                                      {if0 n 
+                                           0 
+                                           {+ {f {+ n -1}} -1}}}]} 
+                          {f 10}}) 
+                mt-env) 
+        (numV -10)) 
+  
   (test (parse `2)
         (numE 2))
+  
   (test (parse `x) ; note: backquote instead of normal quote
         (idE 'x))
   (test (parse `{+ 2 1})
@@ -131,7 +175,7 @@
           (test (interp (parse `{letrec {[f {lambda {n}
                                    {if0 n
                                         0
-                                        {+ {f {+ n -1}} - 1}}}]}
+                                        {+ {f {+ n -1}} -1}}}]}
                        {f 10}})
              mt-env)
 (numV -10)))

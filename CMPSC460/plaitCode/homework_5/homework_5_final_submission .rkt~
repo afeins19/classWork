@@ -28,9 +28,29 @@
 (define mt-env empty)
 (define extend-env cons)
 
-(module+ test
-  (print-only-errors #t))
 
+
+;; Part 2: Plus -------------
+(define plus
+  `(lambda (x) 
+    (lambda (y) (+ x y))))
+
+;; Part 3: Times
+;; using y as counter 
+(define times
+  `(letrec {[timesX
+             (lambda (n)
+               (lambda (m)
+                 (if0 n
+                      0
+                      (+ m ((timesX (+ n -1)) m)))))]}  
+     (timesX)))
+  
+;; (+ x (+ x (+ x ... till y=0) 
+ 
+(module+ test 
+  (print-only-errors #t))
+ 
 ;; parse ----------------------------------------
 (define (parse [s : S-Exp]) : Exp
   (cond
@@ -57,11 +77,46 @@
     [(s-exp-match? `{ANY ANY} s)
      (appE (parse (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
+
+    ; Parse Level Definition for LetRec -------------------------------------
+    ; local keeps id,val,body invisible to the outside 
+    
+    [(s-exp-match? `{letrec {[SYMBOL ANY]} ANY} s)
+     (local [(define bs (s-exp->list
+                         (first (s-exp->list
+                                 (second (s-exp->list s))))))
+             
+             (define id (first bs))
+             (define val (second bs))
+             (define body (third (s-exp->list s)))]
+       
+       (parse `(let {[,id {,mk-rec-fun {lambda {,id} ,val}}]} ,body)))] 
+    ; -----------------------------------------------------------------------
+    
     [else (error 'parse "invalid input")]))
 
 (module+ test
+  
+  ;; Recursive Plus Test
+  (test (interp (parse (list->s-exp (list (list->s-exp (list plus `5)) `5))) mt-env)
+        (numV 10)) 
+
+  ;; Recursive Mult Test 
+  (test (interp (parse (list->s-exp (list (list->s-exp (list times `2)) `2))) mt-env)  
+        (numV 4))  
+  
+  ;; new letrec test 
+  (test (interp (parse `{letrec {[f {lambda {n} 
+                                      {if0 n 
+                                           0 
+                                           {+ {f {+ n -1}} -1}}}]} 
+                          {f 10}}) 
+                mt-env) 
+        (numV -10)) 
+  
   (test (parse `2)
         (numE 2))
+  
   (test (parse `x) ; note: backquote instead of normal quote
         (idE 'x))
   (test (parse `{+ 2 1})
@@ -82,7 +137,7 @@
   (test/exn (parse `{{+ 1 2}})
             "invalid input"))
 
-;; interp ----------------------------------------
+;; interp ---------------------------------------- ~ YOU DONT NEED TO CHANGE INTERP IN PART 1 ~
 (define (interp [a : Exp] [env : Env]) : Value
   (type-case Exp a
     [(numE n) (numV n)]
@@ -103,6 +158,25 @@
                  thn
                  els)
              env)]))
+
+; Recursion with Y-combinator ------------------------------------------------
+(define mk-rec-fun
+`{lambda {body-proc} ;; arg in the makerec?
+   {let {[fX {lambda {fX}
+               {let {[f {lambda {x}
+                          {{fX fX} x}}]}
+                 {body-proc f}}}]}
+     {fX fX}}})
+; Testing Y-combinator ------------------------------------------------
+(module+ test
+          (test (interp (parse `{letrec {[f {lambda {n}
+                                   {if0 n
+                                        0
+                                        {+ {f {+ n -1}} -1}}}]}
+                       {f 10}})
+             mt-env)
+(numV -10)))
+; --------------------------------------------------------------------
 
 (module+ test
   (test (interp (parse `2) mt-env)
@@ -200,5 +274,10 @@
         (numV 9))
   (test (lookup 'y (extend-env
                     (bind 'x (numV 9))
-                    (extend-env (bind 'y (numV 8)) mt-env)))
+                    (extend-env (bind 'y (numV 8)) mt-env))) 
         (numV 8)))
+
+
+(define plusop `+)
+(define one `1)
+(define three `3) 
