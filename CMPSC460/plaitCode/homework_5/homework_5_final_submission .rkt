@@ -28,27 +28,20 @@
 (define mt-env empty)
 (define extend-env cons)
 
-
-
 ;; Part 2: Plus -------------
 (define plus
   `(lambda (x) 
     (lambda (y) (+ x y))))
 
-;; Part 3: Times
-;; using y as counter 
-(define times
-  `(letrec {[timesX
-             (lambda (n)
-               (lambda (m)
-                 (if0 n
-                      0
-                      (+ m ((timesX (+ n -1)) m)))))]}  
-     (timesX)))
 
+;; Part 3: Times ------------
 
- 
- 
+(define times `{lambda {m}
+                 {lambda {n}
+                   {letrec {[timesX {lambda {x}
+                                 {if0 x
+                                      0
+                                      {+ {timesX {+ x -1}} m}}}]} {timesX n}}}})
 ;; (+ x (+ x (+ x ... till y=0) 
  
 (module+ test 
