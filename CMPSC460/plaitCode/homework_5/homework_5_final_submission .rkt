@@ -42,7 +42,9 @@
                                  {if0 x
                                       0
                                       {+ {timesX {+ x -1}} m}}}]} {timesX n}}}})
-;; (+ x (+ x (+ x ... till y=0) 
+;; (+ x (+ x (+ x ... till y=0)
+
+
  
 (module+ test 
   (print-only-errors #t))
@@ -276,4 +278,15 @@
 
 (define plusop `+)
 (define one `1)
-(define three `3) 
+(define two `2)
+(define three `3)
+
+
+;; Test Code From Canvas
+
+(define args `(1 2))
+
+(parse `(+ ,args))
+
+;(appE (idE '+) (appE (numE 1) (numE 2)))
+
