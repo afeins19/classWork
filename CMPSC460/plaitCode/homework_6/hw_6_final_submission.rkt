@@ -138,7 +138,16 @@
                                      thn
                                      els) env)]
     
-                      [else (error 'interp "not a function")])) 
+                      [else (error 'interp "not a function")]))
+
+
+;; defining num-zero
+(define (num-zero? [n : Value])
+  (type-case Value n
+    [(numV n) (if (= 0 n)
+                  #t
+                  #f)]
+    [else (error 'interp "Invalid Conditional")]))
 
 
 ;; ---------- defining a lazy evaluation object? ----------
