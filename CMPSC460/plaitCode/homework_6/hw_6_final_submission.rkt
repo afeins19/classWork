@@ -5,9 +5,9 @@
   (closV [arg : Symbol]
          [body : Exp]
          [env : Env])
-  (pairV [l : Thunk] ;; stores a paired of unapplied functions 
-         [r : Thunk])
-  )
+;; -- newbies --
+  (pairV [l : Thunk]
+         [r : Thunk]))
 
 (define-type Thunk
   (delay [body : Exp]
@@ -25,15 +25,13 @@
         [body : Exp])
   (appE [fun : Exp]
         [arg : Exp])
-  
-;;---- newbies -----
   (pairE [l : Exp]
          [r : Exp])
-  (fstE [a : Exp])   ;; first of pair 
-  (sndE [a : Exp]    ;; second of pair 
-  (if0 [tst : Exp]  
-       [thn : Exp]
-       [els: Exp])))
+  (fstE [a : Exp])
+  (sndE [a : Exp])
+  (if0E [tst : Exp]
+        [thn : Exp]
+        [els : Exp]))
 
 (define-type Binding
   (bind [name : Symbol]
@@ -73,9 +71,24 @@
      (appE (parse (first (s-exp->list s)))
            (parse (second (s-exp->list s))))]
 
-    ;; --- parsing pairs and ifs ---
-    
+    ;; if0E
+    [(s-exp-match? `{if0 ANY ANY ANY} s)
+     (if0E (parse (second (s-exp->list s)))
+            (parse (third (s-exp->list s)))
+            (parse (fourth (s-exp->list s))))]
 
+    ;;pairE & friends
+    [(s-exp-match? `{pair ANY ANY} s)
+     (pairE (parse (second (s-exp->list s)))
+            (parse (second (s-exp->list s))))]
+    
+    [(s-exp-match? `{fst ANY} s)
+     (fstE (parse (second (s-exp->list s))))]
+
+    [(s-exp-match? `{snd ANY} s)
+     (sndE (parse (second (s-exp->list s))))]
+
+    
     [else (error 'parse "invalid input")]))
 
 (module+ test
@@ -109,7 +122,7 @@
     [(plusE l r) (num+ (interp l env)
                        (interp r env))]
     [(multE l r) (num* (interp l env)
-                       (interp r env))]
+                       (interp r env))] 
     [(lamE n body) (closV n body env)]
     [(appE fun arg) (type-case Value (interp fun env)
                       [(closV n body c-env)
@@ -117,21 +130,26 @@
                                      (extend-env
                                       (bind n (delay arg env (box (none))))
                                       c-env))]
+                    [else (error 'interp "not a function")])]
+    
 
     ;; -- if0e expression -> regular old if statement --- 
-    [(if0e test thn els) (interp (if (num-zero? (interp test env))
+    [(if0E test thn els) (interp (if (num-zero? (interp test env)) 
                                      thn
-                                     else) env)]
-                      [else (error 'interp "not a function")])]))
+                                     els) env)]
+    
+                      [else (error 'interp "not a function")])) 
 
 
-
+;; ---------- defining a lazy evaluation object? ----------
 (define (interp-expr [a : Exp]) : S-Exp
   (type-case Value (interp a mt-env)
-  [(numV n) (number->s-exp n)]
-  [(closV n b e) `function]
-  [else `pair]))
-  
+    [(numV n) (number->s-exp n)]
+    [(closV n b e) `function] ;; (n,b,e) = (name, body, env)  
+    [(pairV tst rst) `pair] 
+    #; [else `pair]
+    ))
+#|
 (module+ test
   (test (interp (parse `2) mt-env)
         (numV 2))
@@ -180,9 +198,10 @@
                               {let {[y 5]}
                                 {bad 2}}})
                     mt-env)
-            "free variable")
+            "free variable"))
 
-  #;
+ 
+  
   (time (interp (parse '{let {[x2 {lambda {n} {+ n n}}]}
                           {let {[x4 {lambda {n} {x2 {x2 n}}}]}
                             {let {[x16 {lambda {n} {x4 {x4 n}}}]}
@@ -191,6 +210,7 @@
                                   {x65536 1}}}}}})
                 mt-env)))
 
+|# 
 ;; force ----------------------------------------
 
 (define (force [t : Thunk]) : Value
@@ -259,3 +279,5 @@
                     (bind 'x (delay (numE 9) mt-env (box (none))))
                     (extend-env (bind 'y (delay (numE 8) mt-env (box (none)))) mt-env)))
         (delay (numE 8) mt-env (box (none)))))
+
+
