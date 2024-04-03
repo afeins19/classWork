@@ -158,7 +158,7 @@
     [(pairV tst rst) `pair] 
     #; [else `pair]
     ))
-#|
+
 (module+ test
   (test (interp (parse `2) mt-env)
         (numV 2))
@@ -210,16 +210,15 @@
             "free variable"))
 
  
-  
+  #; 
   (time (interp (parse '{let {[x2 {lambda {n} {+ n n}}]}
                           {let {[x4 {lambda {n} {x2 {x2 n}}}]}
                             {let {[x16 {lambda {n} {x4 {x4 n}}}]}
                               {let {[x256 {lambda {n} {x16 {x16 n}}}]}
                                 {let {[x65536 {lambda {n} {x256 {x256 n}}}]}
                                   {x65536 1}}}}}})
-                mt-env)))
+                mt-env))
 
-|# 
 ;; force ----------------------------------------
 
 (define (force [t : Thunk]) : Value
@@ -287,6 +286,6 @@
   (test (lookup 'y (extend-env
                     (bind 'x (delay (numE 9) mt-env (box (none))))
                     (extend-env (bind 'y (delay (numE 8) mt-env (box (none)))) mt-env)))
-        (delay (numE 8) mt-env (box (none)))))
+        (delay (numE 8) mt-env (box (none))))) 
 
-
+ 
