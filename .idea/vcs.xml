@@ -3,6 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CMPSC445/PhillyHousingPricePredictor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CMPSC445/calorai/CalorAI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CMPSC445/calorai/MyFitnessPal" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CMPSC472/OperatingSystemSimulation" vcs="Git" />
   </component>
 </project>
