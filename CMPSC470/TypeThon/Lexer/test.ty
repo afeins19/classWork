@@ -1,0 +1,3 @@
+FUN oopify(prefix) -> prefix + "oop"
+
+PRINT(oopify("something"))

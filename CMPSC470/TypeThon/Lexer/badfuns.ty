@@ -1,0 +1,51 @@
+# functions 
+
+# correct function (new keyword -> void) 
+# also notice ~ NO INDENTS ~
+def hi(s : str, x : int, y : float, z : float) : void
+    print("hi "+ s)
+print(x+y)
+end
+
+hi("Taazkir", 1, 2.0, 3.14)
+
+
+# bad function -> Type Mismatch in parameter
+# def mismatch(a : int, b : int) : int 
+#   return a + b 
+#end 
+
+#mismatch(1, 3.14)
+
+# bad function -> should return int 
+# def testNoReturn() : int
+#     print(":O")
+# end 
+
+# testNoReturn()
+
+# bad function -> incorrect return type 
+# def testIncorrectReturnType() : int 
+#     return "Not an Integer haha"
+# end 
+
+# testIncorrectReturnType()
+
+# bad function -> shouldn't return anything 
+# def testReturnFromVoid() : void
+#     return 5
+# end
+
+# testReturnFromVoid()
+
+# bad function -> incorrect syntax (no end)
+# def noEnd() : void
+#    print("this is not right")
+
+
+# bad function -> no type on parameters
+# def noParamTypes(x) : int
+#    return x 
+# end 
+
+

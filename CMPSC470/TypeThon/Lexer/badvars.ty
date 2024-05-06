@@ -1,0 +1,19 @@
+# Variables & Expressions
+
+# correct variable declaration 
+# has both colon and type
+# value type matches declared type
+#var correct : str = "correct" 
+#print(correct)
+
+# No type in variable declaration
+# var x = 10 
+
+# Type Mismatch in variable declaration 
+# var x : int = "hello" 
+# var y : str = 5 
+
+# Operator Type Mismatch
+# 1 + "fish" 
+
+

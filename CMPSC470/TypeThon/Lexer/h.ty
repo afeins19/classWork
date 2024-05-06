@@ -1,0 +1,7 @@
+def hi(s : str, x : int, y : float, z : float) : void
+    print("hi "+ s)
+    print(x+y)
+    return 1
+end
+
+hi("aaron", 2, 3.1, 22.2)
