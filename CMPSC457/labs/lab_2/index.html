@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL Graph Demo</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
+    <title>Lab 2</title>
+
 </head>
-<body>
-    <canvas id="webgl-canvas"></canvas>
+<body onload="main()">
+    <canvas id="webgl" width="1000" height="1000">
+        Error: Browser Doesnt Support Canvas
+    </canvas>
+    <script src ="../lib/webgl-utils.js"></script>
+    <script src ="../lib/webgl-debug.js"></script>
+    <script src ="../lib/cuon-utils.js"></script>
+    <script src ="../lib/cuon-matrix.js"></script>
+
     <script src="graph.js"></script> 
 </body>
 </html>
