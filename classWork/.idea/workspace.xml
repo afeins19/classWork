@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3c1e25d-882d-449f-8de1-4336e18574ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/CMPSC413.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC413/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC460/plaitCode/homework_8/typed-lambda.rkt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC463/RAWtoCompressedPY" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /Index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /Translator_Architecture.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /documentation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /language_evolution.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /post_mortem.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /product_development_plan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /specification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /tutorials.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/Documentation /whitepaper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/demo/badfuns.ty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/demo/badloopcond.ty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/demo/badvars.ty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/example.ty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/shell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/strings_with_arrows.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CMPSC470/TypeThon/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMPSC445/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CMPSC445/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2gWGp4ks8y5soBM2G5Zp2CNq2ZL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3c1e25d-882d-449f-8de1-4336e18574ee" name="Changes" comment="" />
+      <created>1715806099687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715806099687</updated>
+      <workItem from="1715806101038" duration="3000" />
+      <workItem from="1715806130151" duration="31000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
