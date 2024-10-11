@@ -90,7 +90,7 @@ function makeSerpienski(a, b, c, i, vertices, scale, offset) {
         b = scaleVertex(b, scale, offset); 
         c = scaleVertex(c, scale, offset);  
 
-        const color = [(Math.random() * i) % 1.0, (Math.random() * i) % 1.0, (Math.random() * i) % 1.0, 1.0];
+        const color = [(Math.random() * i), (Math.random() * i), (Math.random() * i), 1.0];
         colors.push(...color, ...color, ...color); // add color for each vertex
 
         // adding x,y coordinates for each triangle 
