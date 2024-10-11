@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierpinski Triangle</title>
+    <style>
+        /* Remove margins and ensure the body and html take the full screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        /* Center the canvas and make it fill the whole screen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Ensure the canvas fills the whole viewport */
+        canvas {
+            width: 100vw;  /* 100% of the viewport width */
+            height: 100vh; /* 100% of the viewport height */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="fractal.js"></script>
+</body>
+</html>
