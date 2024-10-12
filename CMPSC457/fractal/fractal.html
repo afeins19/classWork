@@ -5,29 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sierpinski Triangle</title>
     <style>
-        /* Remove margins and ensure the body and html take the full screen */
+        /* centering and removing margins */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
-        }
-        /* Center the canvas and make it fill the whole screen */
-        body {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; 
+            align-items: center;    
+            justify-content: center; 
         }
-        /* Ensure the canvas fills the whole viewport */
+        
+        /* canvas fills the whole viewport */
         canvas {
-            width: 100vw;  /* 100% of the viewport width */
-            height: 100vh; /* 100% of the viewport height */
+            width: 100vw;  
+            height: 100vh; 
             display: block;
+        }
+
+        #triangle_count_readout {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Buttons */
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 16px;
+            margin: 0 10px;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div id="triangle_count_readout">
+        Number of Triangles: <span id="num_triangles"></span>
+    </div>
+    
     <canvas id="canvas"></canvas>
+
+    <div id="controls">
+        Recursion Depth: <span id="recursion_depth"></span>
+        <div>
+            <button id="increase">MORE</button>
+            <button id="decrease">LESS</button>
+        </div>
+    </div>
+
     <script src="fractal.js"></script>
 </body>
 </html>
