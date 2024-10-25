@@ -1,16 +1,14 @@
 [tool.poetry]
-name = "learn-opencv"
+name = "hough-line-detection"
 version = "0.1.0"
-description = "learning to use opencv"
+description = ""
 authors = ["Aaron Feinberg <afeinberg35@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10"
+python = "^3.12"
+cv = "^1.0.0"
 opencv-python = "^4.10.0.84"
-numpy = "^2.1.2"
-matplotlib = "^3.9.2"
-pyqt6 = "^6.7.1"
 
 
 [build-system]

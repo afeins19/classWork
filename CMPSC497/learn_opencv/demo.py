@@ -3,6 +3,7 @@
 import cv2 as cv 
 
 IMG_LOC = 'Photos/cat.jpg'
+CAMERA_LOC = '/dev/video0'
 
 image_original = cv.imread(IMG_LOC) # read in the image
 image_grayscale = cv.imread(IMG_LOC, cv.IMREAD_GRAYSCALE)
@@ -27,28 +28,30 @@ width = image_original.shape[1]
 channels = image_original.shape[2]
 
 # converting images (bgr -> rgb and rgb -> bgr)
-rgb = cv.cvtColor(image, cv.COLOR_BGR2RGB)
-gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-hsv = cv.cvtColor(image, cv.COLOR_BGR2HSV)
+rgb = cv.cvtColor(image_original, cv.COLOR_BGR2RGB)
+gray = cv.cvtColor(image_original, cv.COLOR_BGR2GRAY)
+hsv = cv.cvtColor(image_original, cv.COLOR_BGR2HSV)
 
 # converting images to binary 
-gray = cv2.cvtColor(image_original, cv.COLOR_BGR2GRAY)
+gray = cv.cvtColor(image_original, cv.COLOR_BGR2GRAY)
 
 # BW is the binary image, 127 is threshold, max=255
-(thresh, BW) = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+(thresh, BW) = cv.threshold(gray, 127, 255, cv.THRESH_BINARY)
 
 # Displaying Video from the webcam 
-cap = cv2.VideoCapture(0) # default webcam
+print("Starting video feed...")
+cap = cv.VideoCapture(CAMERA_LOC) # default webcam
 
 # capturing frame by frame 
 while(True):
     ret, frame = cap.read()
-    if cv2.waitKey(1) & 0xFF==ord('q'): # hex for 255
+
+    cv.imshow(CAMERA_LOC,frame)
+    if cv.waitKey(1) & 0xFF==ord('q'): # hex for 255
         break
 
 cap.release()
-cv2.destroyAllWidnows() 
+cv.destroyAllWidnows() 
 
 # Dilation and Erosion 
-
 img = cv.imread('j.png', 0)
