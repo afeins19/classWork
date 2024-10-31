@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 cv = "^1.0.0"
 opencv-python = "^4.10.0.84"
+pyqt5 = "^5.15.11"
 
 
 [build-system]
