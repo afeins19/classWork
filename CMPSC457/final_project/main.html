@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Ship Simulation | Aaron Feinberg</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        canvas {
+
+            /* viewport maxed out */
+            width: 100vw;  
+            height: 100vh; 
+            display: block; 
+        }
+
+        /* control button specs */
+        .controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <button id="decreaseRate">Speed -</button>
+        <button id="increaseRate">Speed +</button>
+        <button id="spawnMeteorButton" style="position: absolute; top: 0px; left: 500px; z-index: 100;">Spawn Meteor</button>
+
+    </div>
+
+
+    <canvas id="webglCanvas"></canvas>
+    <noscript>Your browser does not support JavaScript, which is required for this simulation.</noscript>
+
+    
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/webgl-utils.js"></script>
+    
+    
+    <!-- other external libraries -->
+    <script src="mouse_controls.js"></script>
+    <script src="keyboard_controls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+    
+
+    <script>
+        window.onload = () => {
+            const canvas = document.getElementById('webglCanvas');
+            const gl = canvas.getContext('webgl');
+            if (!gl) {
+                alert('WebGL is not supported in this browser.');
+                return;
+            }
+            console.log('Canvas and WebGL initialized successfully!');
+        };
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
