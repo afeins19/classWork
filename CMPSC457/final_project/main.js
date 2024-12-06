@@ -63,7 +63,7 @@ void main() {
         // Specular lighting: subtle highlights on the lit side
         vec3 reflectDir = reflect(-lightDir, normal);
         float specularStrength = 0.3;
-        float spec = pow(max(dot(viewDir, reflectDir), 0.0), 50.0) * diffuse; // Specular tied to diffuse
+        float spec = pow(max(dot(viewDir, reflectDir), 0.0), 250.0) * diffuse; // Specular tied to diffuse
         vec3 specular = vec3(1.0) * spec * specularStrength;
 
         // Combine lighting
@@ -94,8 +94,9 @@ gl.enable(gl.DEPTH_TEST);
 
 // ******************** SIMULATION PARAMS ********************
 const MAX_RENDER_DISTANCE = 700;
-const G = 9.81 
+const G = 9.81;
 const STARS = generateStars(500, 500);
+const METEOR_SPAWN_COUNT = 10;
 // ***********************************************************
 
 
@@ -216,12 +217,13 @@ document.getElementById("decreaseRate").addEventListener("click", () => {
 
 // ---- spawn meteors ----
 document.getElementById("spawnMeteorButton").addEventListener("click", () => {
-    spawnMeteor();
+    spawnMeteors(METEOR_SPAWN_COUNT);
+    console.log(`[Spawned ${METEOR_SPAWN_COUNT} meteors] Total Count = ${meteors.length}`)
 });
 
 // ---- camera setup ----
 const camera = {
-    position: [0, 100, 200],
+    position: [400, 50, 100],
     speed: 0.3,
 };
 const keys = {};
@@ -240,23 +242,26 @@ function updateCamera() {
 
 // ---- define celestial bodies ----
 const celestialBodies = [
-    {
+    {   
+        name: "sun",
         type: "sun",
-        radius: 10, 
+        radius: 20, 
         position: [0, 0, 0],
         color: [1.0, 1.0, 0.0], // yellow
     },
     
     {
+        name: "red planet",
         type: "planet",
         radius: 1,
-        orbitRadius: 15,
+        orbitRadius: 30,
         orbitSpeed: 0.1,
         color: [1.0, 0.0, 0.0], // red
         position: { x: 0, z: 0 },
     },
 
     {
+        name: "blue planet",
         type: "planet",
         radius: 4,
         orbitRadius: 55,
@@ -276,6 +281,7 @@ const celestialBodies = [
     },
 
     {
+        name: "purple planet",
         type: "planet",
         radius: 2,
         orbitRadius: 95,
@@ -284,17 +290,19 @@ const celestialBodies = [
         position: { x: 0, z: 0 },
     },
     
+
     {
+        name: "pink planet",
         type: "planet",
-        radius: 5,
-        orbitRadius: 125,
-        orbitSpeed: 0.02,
-        color: [0.6, 0.3, 0.0], // brown
+        radius: 10,
+        orbitRadius: 140,
+        orbitSpeed: 0.01,
+        color: [1, 0.5, 0.7], // brown - orange
         position: { x: 0, z: 0 },
 
         moons: [
             {
-                radius: 0.15,
+                radius: 0.25,
                 orbitRadius: 2,
                 orbitSpeed: 0.35,
                 color: [0.8, 0.8, 0.8], // gray
@@ -302,10 +310,10 @@ const celestialBodies = [
             },
 
             {
-                radius: 0.15,
+                radius: 0.35,
                 orbitRadius: 3.5,
-                orbitSpeed: 0.05,
-                color: [0.5, 0.2, 0.2], // red-gray
+                orbitSpeed: 0.15,
+                color: [0.25, 0.75, 0.2],  // green
                 position: { x: 1, z: 1 },
             },
 
@@ -336,7 +344,7 @@ for (let i = 0; i < asteroidCount; i++) {
 }
 
 const meteors = [];
-const meteorCount = 20;
+const meteorCount = 100;
 
 // --------- RANDOM METEORS ---------
 for (let i = 0; i < meteorCount; i++) {
@@ -359,23 +367,26 @@ for (let i = 0; i < meteorCount; i++) {
     });
 }
 
-function spawnMeteor() {
-    const randomAngle = Math.random() * 2 * Math.PI; // random direction
-    const spawnDistance = 150; // distance from the center to spawn meteors
+function spawnMeteors(count) {
+    for (let i = 0; i < count; i++){
+        const randomAngle = Math.random() * 2 * Math.PI; // random direction
+        const spawnDistance = 150 - (150 * Math.random()); // distance from the center to spawn meteors
 
-    // random position far from the center
-    const startX = Math.cos(randomAngle) * spawnDistance;
-    const startZ = Math.sin(randomAngle) * spawnDistance;
+        // random position far from the center
+        const startX = Math.cos(randomAngle) * spawnDistance;
+        const startZ = Math.sin(randomAngle) * spawnDistance;
 
-    const meteor = {
-        position: { x: startX, y: 0, z: startZ },
-        velocity: { x: Math.random() * 0.5 , y: 0, z: Math.random() * 0.5  }, 
-        radius: Math.random() * 0.5 + .25 , // random radius between 0.1 and 0.6
-        color: [0.8, 0.4, 0.1], // brownish
-    };
-
-    meteors.push(meteor); // Add the new meteor to the array
-    console.log("Meteor spawned @ :", meteor.position);
+        const meteor = {
+            position: { x: startX, y: 0, z: startZ },
+            velocity: { x: Math.random() * 0.5 , y: 0, z: Math.random() * 0.5  }, 
+            radius: Math.random() * 0.5 + .25 , // random radius between 0.1 and 0.6
+            color: [0.8, 0.4, 0.1], // brownish
+        };
+        
+        meteors.push(meteor); // Add the new meteor to the array
+        console.log("Meteor spawned @ :", meteor.position);
+    }
+    
 }
 
 function initOrbits(){
@@ -427,11 +438,11 @@ function updateOrbits(time) {
         // check gravitational pull and collisions for meteors
         celestialBodies.forEach((body) => {
             if (body.type === "planet" || body.type === "moon") {
-                // calculate direction vector (planet -> meteor)
+                // calculate direction vector (body -> meteor)
                 const dx = body.position.x - meteor.position.x;
                 const dy = (body.position.y || 0) - meteor.position.y; // use 0 if body.position.y is undefined
                 const dz = body.position.z - meteor.position.z;
-                const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+                const distance = Math.sqrt(dx * dx + dy * dy + dz * dz); // get distance to body 
 
                 // add gravitational pull
                 if (distance > 1.0) { // avoid singularities at very close distances
@@ -443,8 +454,9 @@ function updateOrbits(time) {
 
                 // check for collision
                 if (distance < body.radius + meteor.radius) {
-                    console.log(`[COLLISION] METEOR -> ${body.type}!`);
+                    console.log(`[COLLISION] METEOR -> ${body.name}!`);
                     meteors.splice(i, 1); // remove meteor from the array
+                    console.log(`[Meteors Remaining] -> ${meteors.length}`);
                     return; // skip further updates for this meteor
                 }
             }
