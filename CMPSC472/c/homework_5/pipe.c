@@ -7,12 +7,10 @@
 #include <sys/wait.h> // waiting so no one reads an empty buffer 
 
 
-
 int main() {
 
     int pipe_fd[2]; // allocate space for file descriptors for ends of the pipes
 
-    
 
     // creating the pipe within the if statement 
 
@@ -22,16 +20,12 @@ int main() {
 
     }
 
-
-
     // creating a child processes
 
     pid_t pid = fork(); 
 
 
-
     // testing if child was made
-
     if(pid == -1){
 
         perror("\t\nFailed to Fork!\n");
@@ -47,7 +41,6 @@ int main() {
     }
 
 
-
     // parent process 
 
     if(pid > 0){
@@ -57,8 +50,6 @@ int main() {
         write(pipe_fd[1], parent_msg, strlen(parent_msg) + 1); // writing msg to pipe 
 
         
-
-
 
         wait(NULL); // wait for child to finish 
 
